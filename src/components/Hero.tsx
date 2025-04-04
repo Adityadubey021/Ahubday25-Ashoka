@@ -20,7 +20,11 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-4 py-24 md:py-32 flex flex-col items-center z-10 relative">
         <div className="text-center max-w-4xl mx-auto">
           <div className="mb-6 inline-block px-6 py-3 bg-festival-purple/10 text-festival-purple rounded-full text-sm font-semibold">
-            MARCH 15-16, 2025
+            APRIL 25-26, 2025
+          </div>
+          
+          <div className="mb-6 flex justify-center">
+            <img src="/lovable-uploads/402a0cba-8c65-4177-bcdd-090ce95b7db1.png" alt="Abhyuday 2025 Logo" className="h-24 md:h-32" />
           </div>
           
           <h1 className="font-montserrat font-extrabold text-5xl md:text-7xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-festival-purple via-festival-blue to-festival-purple">

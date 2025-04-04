@@ -27,7 +27,7 @@ const Registration: React.FC = () => {
                       </div>
                       <div>
                         <h4 className="font-medium">Registration Deadline</h4>
-                        <p className="text-white/80 text-sm">March 10, 2025</p>
+                        <p className="text-white/80 text-sm">April 20, 2025</p>
                       </div>
                     </div>
                     

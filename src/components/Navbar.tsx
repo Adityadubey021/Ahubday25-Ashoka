@@ -35,12 +35,26 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className={cn(
-      'fixed w-full z-50 transition-all duration-300 py-4 px-6 md:px-12',
+      'fixed w-full z-50 transition-all duration-300 py-2 px-6 md:px-12',
       scrolled ? 'bg-white/90 shadow-md backdrop-blur-sm' : 'bg-transparent'
     )}>
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-festival-purple font-bold text-2xl">
-          Abhyuday<span className="text-festival-orange">2025</span>
+        <div className="flex items-center">
+          <img 
+            src="/lovable-uploads/c196b9c3-f499-4b74-9eba-d49e443f0bac.png" 
+            alt="Ashoka Institute Logo" 
+            className="h-16 mr-3" 
+          />
+          <div className="flex flex-col items-start">
+            <img 
+              src="/lovable-uploads/e9b04beb-f4f5-46bc-8d3d-4ca11c2f1d04.png" 
+              alt="Abhyuday Logo" 
+              className="h-10 mb-1" 
+            />
+            <div className="text-festival-purple font-bold text-xs">
+              25-26 APRIL 2025
+            </div>
+          </div>
         </div>
 
         {/* Desktop Menu */}
