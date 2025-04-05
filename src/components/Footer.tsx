@@ -2,14 +2,15 @@
 import React from 'react';
 import { Phone, Mail } from 'lucide-react';
 import SocialMediaLinks from './SocialMediaLinks';
+import { SocialLink } from './SocialMediaLinks';
 
 const Footer: React.FC = () => {
-  const instituteSocialLinks = [
+  const instituteSocialLinks: SocialLink[] = [
     { type: 'linkedin', url: 'https://www.linkedin.com/in/ashokainstitute' },
     { type: 'instagram', url: 'https://www.instagram.com/ashokainstitute/' },
     { type: 'facebook', url: 'https://www.facebook.com/Ashokavaranasi' },
     { type: 'youtube', url: 'https://www.youtube.com/user/ashokainstitute/videos' }
-  ] as const;
+  ];
 
   return (
     <footer className="bg-festival-purple text-white">

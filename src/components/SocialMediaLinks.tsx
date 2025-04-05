@@ -2,7 +2,7 @@
 import React from 'react';
 import { Linkedin, Instagram, Facebook, Youtube } from 'lucide-react';
 
-interface SocialLink {
+export interface SocialLink {
   type: 'linkedin' | 'instagram' | 'facebook' | 'youtube';
   url: string;
 }

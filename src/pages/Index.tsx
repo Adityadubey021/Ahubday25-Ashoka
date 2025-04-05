@@ -5,6 +5,7 @@ import Hero from '@/components/Hero';
 import Events from '@/components/Events';
 import Registration from '@/components/Registration';
 import Coordinators from '@/components/Coordinators';
+import Sponsors from '@/components/Sponsors';
 import Footer from '@/components/Footer';
 
 const Index: React.FC = () => {
@@ -15,6 +16,7 @@ const Index: React.FC = () => {
       <Events />
       <Registration />
       <Coordinators />
+      <Sponsors />
       <Footer />
     </div>
   );

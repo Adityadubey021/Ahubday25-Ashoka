@@ -17,7 +17,25 @@ const Hero: React.FC = () => {
       <div className="absolute bottom-20 right-10 w-40 h-40 bg-festival-light-purple rounded-full blur-3xl opacity-50 animate-pulse-slow"></div>
       <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-festival-orange/20 rounded-full blur-xl opacity-40"></div>
       
+      {/* Abhyuday Logo Watermark */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5">
+        <img 
+          src="/lovable-uploads/402a0cba-8c65-4177-bcdd-090ce95b7db1.png" 
+          alt="Abhyuday Watermark" 
+          className="w-3/4 max-w-3xl"
+        />
+      </div>
+      
       <div className="container mx-auto px-4 py-24 md:py-32 flex flex-col items-center z-10 relative">
+        {/* Ashoka Institute Logo - Center Top */}
+        <div className="mb-8">
+          <img 
+            src="/lovable-uploads/c196b9c3-f499-4b74-9eba-d49e443f0bac.png" 
+            alt="Ashoka Institute Logo" 
+            className="h-24 md:h-28 bg-white p-2 rounded-lg shadow-md" 
+          />
+        </div>
+        
         <div className="text-center max-w-4xl mx-auto">
           <div className="mb-6 inline-block px-6 py-3 bg-festival-purple/10 text-festival-purple rounded-full text-sm font-semibold">
             APRIL 25-26, 2025

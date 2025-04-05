@@ -2,26 +2,22 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Phone } from 'lucide-react';
-import SocialMediaLinks from './SocialMediaLinks';
+import SocialMediaLinks, { SocialLink } from './SocialMediaLinks';
 
 interface CoordinatorProps {
   name: string;
   department: string;
   contact: string;
-  socialLinks: {
-    type: 'linkedin' | 'instagram' | 'facebook' | 'youtube';
-    url: string;
-  }[];
+  socialLinks: SocialLink[];
+  imageSrc: string;
 }
 
-const CoordinatorCard: React.FC<CoordinatorProps> = ({ name, department, contact, socialLinks }) => {
+const CoordinatorCard: React.FC<CoordinatorProps> = ({ name, department, contact, socialLinks, imageSrc }) => {
   return (
     <Card className="overflow-hidden transition-transform duration-300 hover:scale-105 border-none shadow-lg bg-white">
       <CardContent className="p-6">
-        <div className="w-20 h-20 bg-festival-light-purple rounded-full mx-auto mb-4 flex items-center justify-center">
-          <span className="text-3xl text-festival-purple font-bold">
-            {name.charAt(0)}
-          </span>
+        <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-2 border-festival-purple">
+          <img src={imageSrc} alt={name} className="w-full h-full object-cover" />
         </div>
         <h3 className="text-xl font-bold text-center text-gray-800 mb-1">{name}</h3>
         <p className="text-gray-500 text-center text-sm mb-4">{department}</p>
@@ -41,36 +37,40 @@ const Coordinators: React.FC = () => {
       name: "Aditya Dubey",
       department: "B.Tech (CSE-AIML)",
       contact: "8932056388",
+      imageSrc: "/lovable-uploads/02a20942-650a-4beb-b1cc-b61c3e592759.png",
       socialLinks: [
         { type: 'linkedin', url: 'https://www.linkedin.com/in/aditya-dubey-49129a248/' },
         { type: 'instagram', url: 'https://www.instagram.com/aditya__dubey21/' }
-      ]
+      ] as SocialLink[]
     },
     {
       name: "Diwakar Patel",
       department: "B.Tech (CSE-AIML)",
       contact: "9235508350",
+      imageSrc: "/lovable-uploads/c9438579-b726-4ee1-9a1e-fb6601f84a00.png",
       socialLinks: [
         { type: 'linkedin', url: 'https://www.linkedin.com/in/diwakar-patel-151393277/' },
         { type: 'instagram', url: 'https://www.instagram.com/diwakarpatel453t/' }
-      ]
+      ] as SocialLink[]
     },
     {
       name: "Malay Vishwakarma",
       department: "B.Tech (CSE)",
       contact: "8471059969",
+      imageSrc: "/lovable-uploads/ff0804e8-3dfc-45ee-b091-ae6b26c62022.png",
       socialLinks: [
         { type: 'linkedin', url: 'https://www.linkedin.com/in/malay-vishwakarma-45a892248/' }
-      ]
+      ] as SocialLink[]
     },
     {
       name: "Sobrat Dayal",
       department: "B.Tech (CSE)",
       contact: "9565676988",
+      imageSrc: "/lovable-uploads/b0b4ecd5-180c-465d-8d4d-b182a6cbf3a4.png",
       socialLinks: [
         { type: 'linkedin', url: 'https://www.linkedin.com/in/sobrat-dayal/' },
         { type: 'instagram', url: 'https://www.instagram.com/sobratdayal2022/' }
-      ]
+      ] as SocialLink[]
     }
   ];
 
@@ -90,6 +90,7 @@ const Coordinators: React.FC = () => {
               department={coordinator.department}
               contact={coordinator.contact}
               socialLinks={coordinator.socialLinks}
+              imageSrc={coordinator.imageSrc}
             />
           ))}
         </div>
