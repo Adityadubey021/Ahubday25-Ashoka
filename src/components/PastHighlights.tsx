@@ -46,6 +46,12 @@ const PastHighlights: React.FC = () => {
 
   const celebrities = [
     {
+      name: "Srikanth Bolla",
+      image: "/lovable-uploads/b0ddc253-c1b0-43f0-bb0e-6e4dc58b53c4.png",
+      year: "2025",
+      description: "Founder & Chairman, Bollant Industries"
+    },
+    {
       name: "Shah Rukh Khan",
       image: "/lovable-uploads/12d7033b-2246-4aa7-b962-0c16c5f0b1b6.png",
       year: "2023",

@@ -4,62 +4,44 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const Sponsors: React.FC = () => {
-  const partnerCategories = [
+  const sponsorCategories = [
     {
-      id: "hospitality",
-      title: "Hospitality Partner",
+      id: "title",
+      title: "Title Sponsors",
       logos: [
         {
-          src: "/lovable-uploads/7bc9ad5c-c020-4c7c-977e-9c6ac47c5fc6.png",
+          src: "/lovable-uploads/2082213f-e96d-4935-ac60-2148f794db68.png",
           alt: "Hotel Surbhi International",
           width: "full"
-        }
-      ]
-    },
-    {
-      id: "media",
-      title: "Media Partners",
-      logos: [
+        },
         {
-          src: "/lovable-uploads/25cffb13-41e1-4db3-a82e-a7aa7f95b8d8.png",
+          src: "/lovable-uploads/c7ba7cf9-3b43-4da9-bd75-03be05af6f50.png",
+          alt: "Radio Partners",
+          width: "full"
+        },
+        {
+          src: "/lovable-uploads/e859757b-393b-4a27-a844-2110118a7d0a.png",
           alt: "Print & Electronic Media Partners",
           width: "full"
         },
         {
-          src: "/lovable-uploads/ab6f3022-8287-424a-9124-442d51020929.png",
-          alt: "Radio Partners",
-          width: "full"
-        }
-      ]
-    },
-    {
-      id: "gold",
-      title: "Gold Sponsors",
-      logos: [
-        {
-          src: "/lovable-uploads/1606c6f6-bc83-4c8b-8cad-ef83d84695a2.png",
-          alt: "Yamaha & Others",
+          src: "/lovable-uploads/2822850f-4175-4436-bb6d-0ad8998dd562.png",
+          alt: "Bisleri, Panasonic & Other Sponsors",
           width: "full"
         },
         {
-          src: "/lovable-uploads/fd7b62ef-4ddf-4532-a3a2-4b4ac74e72ca.png",
+          src: "/lovable-uploads/c327ce66-383b-4559-9b08-bbfd70c742d5.png",
+          alt: "V Mart",
+          width: "full"
+        },
+        {
+          src: "/lovable-uploads/4f4a0623-8a83-41b8-b1db-0ed22d303d8e.png",
           alt: "Govind Vastralay",
           width: "full"
         },
         {
-          src: "/lovable-uploads/85a7f188-fe69-4e63-974c-995848616a92.png",
-          alt: "V Mart",
-          width: "full"
-        }
-      ]
-    },
-    {
-      id: "silver",
-      title: "Silver Sponsors",
-      logos: [
-        {
-          src: "/lovable-uploads/ff89fb9f-5873-47d7-bc41-f8c10da58e74.png",
-          alt: "Bisleri, Panasonic & Others",
+          src: "/lovable-uploads/0fe9e59b-7638-4ce5-ae37-d538b621e54e.png",
+          alt: "Yamaha & Other Sponsors",
           width: "full"
         }
       ]
@@ -100,22 +82,11 @@ const Sponsors: React.FC = () => {
             </div>
           </div>
 
-          {/* Partner Categories Tabs */}
-          <Tabs defaultValue="hospitality" className="w-full max-w-5xl mt-8">
-            <TabsList className="w-full grid grid-cols-2 md:grid-cols-4 bg-festival-light-purple/50 rounded-lg p-1">
-              {partnerCategories.map(category => (
-                <TabsTrigger 
-                  key={category.id}
-                  value={category.id}
-                  className="text-sm md:text-base data-[state=active]:bg-festival-purple data-[state=active]:text-white"
-                >
-                  {category.title}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-            
-            {partnerCategories.map(category => (
-              <TabsContent key={category.id} value={category.id} className="mt-6">
+          {/* Sponsor Categories */}
+          <div className="grid grid-cols-1 gap-y-8 max-w-5xl w-full">
+            {sponsorCategories.map(category => (
+              <div key={category.id} className="w-full">
+                <h3 className="text-xl font-semibold text-gray-700 mb-6 text-center">{category.title}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {category.logos.map((logo, idx) => (
                     <Card key={idx} className="overflow-hidden shadow-md hover:shadow-lg transition-all">
@@ -129,9 +100,35 @@ const Sponsors: React.FC = () => {
                     </Card>
                   ))}
                 </div>
-              </TabsContent>
+              </div>
             ))}
-          </Tabs>
+          </div>
+
+          {/* Chief Guest Section */}
+          <div className="mt-16 max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold text-festival-purple mb-6 text-center">Special Guest - Day 2</h3>
+            <Card className="overflow-hidden shadow-lg border-0">
+              <div className="grid grid-cols-1 md:grid-cols-2">
+                <div className="p-4 md:p-6 flex flex-col justify-center">
+                  <h4 className="text-xl font-bold text-festival-purple mb-2">Mr. Srikanth Bolla</h4>
+                  <p className="text-gray-600 font-medium mb-2">Founder & Chairman, Bollant Industries</p>
+                  <p className="text-gray-500 text-sm">
+                    Despite being born blind, Srikanth Bolla became the first international blind student at MIT and later founded Bollant Industries, creating sustainable packaging solutions and employment opportunities for people with disabilities.
+                  </p>
+                  <div className="mt-4 inline-block px-4 py-2 bg-festival-light-purple text-festival-purple rounded-lg font-semibold text-sm">
+                    Special Talk
+                  </div>
+                </div>
+                <div>
+                  <img 
+                    src="/lovable-uploads/b0ddc253-c1b0-43f0-bb0e-6e4dc58b53c4.png" 
+                    alt="Mr. Srikanth Bolla" 
+                    className="w-full h-full object-cover object-center"
+                  />
+                </div>
+              </div>
+            </Card>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
             <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow transition-shadow flex flex-col items-center justify-center text-center">
