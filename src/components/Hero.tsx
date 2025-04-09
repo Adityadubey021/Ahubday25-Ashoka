@@ -11,11 +11,15 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen bg-gradient-to-b from-festival-light-purple/40 to-white pt-20">
-      {/* Decorative elements */}
+    <section id="home" className="relative min-h-screen bg-gradient-to-b from-festival-light-purple/40 to-white pt-20 overflow-hidden">
+      {/* Enhanced 3D Decorative elements */}
       <div className="absolute top-20 left-10 w-32 h-32 bg-festival-light-blue rounded-full blur-3xl opacity-50 animate-float"></div>
       <div className="absolute bottom-20 right-10 w-40 h-40 bg-festival-light-purple rounded-full blur-3xl opacity-50 animate-pulse-slow"></div>
       <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-festival-orange/20 rounded-full blur-xl opacity-40"></div>
+      
+      {/* Dynamic moving shapes */}
+      <div className="absolute top-1/4 left-1/4 w-16 h-16 bg-festival-blue/20 rounded-full blur-xl opacity-40 animate-float" style={{animationDelay: '1s', animationDuration: '7s'}}></div>
+      <div className="absolute bottom-1/3 left-1/3 w-20 h-20 bg-festival-orange/30 rounded-full blur-xl opacity-30 animate-float" style={{animationDelay: '2s', animationDuration: '8s'}}></div>
       
       {/* Abhyuday Logo Watermark */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5">
@@ -37,16 +41,18 @@ const Hero: React.FC = () => {
         </div>
         
         <div className="text-center max-w-4xl mx-auto">
-          <div className="mb-6 inline-block px-6 py-3 bg-festival-purple/10 text-festival-purple rounded-full text-sm font-semibold">
+          <div className="mb-6 inline-block px-6 py-3 bg-festival-purple/10 text-festival-purple rounded-full text-sm font-semibold animate-pulse-slow">
             APRIL 25-26, 2025
           </div>
           
-          <div className="mb-6 flex justify-center">
-            <img src="/lovable-uploads/402a0cba-8c65-4177-bcdd-090ce95b7db1.png" alt="Abhyuday 2025 Logo" className="h-24 md:h-32" />
+          <div className="mb-6 flex justify-center relative">
+            <div className="absolute -inset-5 bg-gradient-to-r from-festival-blue/20 via-festival-purple/20 to-festival-orange/20 rounded-full blur-xl animate-pulse-slow opacity-70"></div>
+            <img src="/lovable-uploads/402a0cba-8c65-4177-bcdd-090ce95b7db1.png" alt="Abhyuday 2025 Logo" className="h-24 md:h-32 relative z-10" />
           </div>
           
-          <h1 className="font-montserrat font-extrabold text-5xl md:text-7xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-festival-purple via-festival-blue to-festival-purple">
-            ABHYUDAY 2025
+          <h1 className="font-montserrat font-extrabold text-5xl md:text-7xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-festival-purple via-festival-blue to-festival-purple relative">
+            <span className="animate-float inline-block" style={{animationDuration: '6s'}}>ABHYUDAY 2025</span>
+            <div className="absolute -inset-2 bg-gradient-to-r from-festival-blue/20 via-festival-purple/20 to-festival-orange/20 rounded-xl blur-md -z-10"></div>
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 font-light text-gray-700">
@@ -59,7 +65,7 @@ const Hero: React.FC = () => {
             <Button 
               onClick={scrollToRegistration}
               size="lg" 
-              className="bg-festival-orange hover:bg-orange-600 text-white font-semibold text-lg px-10"
+              className="bg-festival-orange hover:bg-orange-600 text-white font-semibold text-lg px-10 shadow-lg shadow-festival-orange/30 hover:shadow-festival-orange/50 transition-all"
             >
               Register Now
             </Button>
@@ -67,26 +73,36 @@ const Hero: React.FC = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="border-festival-purple text-festival-purple hover:bg-festival-purple/10 font-semibold text-lg px-10"
+              className="border-festival-purple text-festival-purple hover:bg-festival-purple/10 font-semibold text-lg px-10 shadow-md hover:shadow-lg transition-all"
               onClick={() => document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Explore Events
             </Button>
           </div>
+
+          {/* CTA for schedule */}
+          <div className="mt-6">
+            <button 
+              onClick={() => document.getElementById('schedule')?.scrollIntoView({ behavior: 'smooth' })}
+              className="text-festival-purple hover:text-festival-blue underline underline-offset-4 transition-colors"
+            >
+              View Full Schedule
+            </button>
+          </div>
         </div>
         
         <div className="mt-16 flex flex-wrap justify-center gap-8">
-          <div className="bg-white/80 backdrop-blur p-6 rounded-xl shadow-lg flex items-center justify-center flex-col w-48">
+          <div className="bg-white/80 backdrop-blur p-6 rounded-xl shadow-lg flex items-center justify-center flex-col w-48 hover:shadow-xl transition-all hover:-translate-y-1">
             <div className="text-3xl font-bold text-festival-purple">15+</div>
             <div className="text-gray-600 font-medium">Events</div>
           </div>
           
-          <div className="bg-white/80 backdrop-blur p-6 rounded-xl shadow-lg flex items-center justify-center flex-col w-48">
+          <div className="bg-white/80 backdrop-blur p-6 rounded-xl shadow-lg flex items-center justify-center flex-col w-48 hover:shadow-xl transition-all hover:-translate-y-1">
             <div className="text-3xl font-bold text-festival-purple">500+</div>
             <div className="text-gray-600 font-medium">Participants</div>
           </div>
           
-          <div className="bg-white/80 backdrop-blur p-6 rounded-xl shadow-lg flex items-center justify-center flex-col w-48">
+          <div className="bg-white/80 backdrop-blur p-6 rounded-xl shadow-lg flex items-center justify-center flex-col w-48 hover:shadow-xl transition-all hover:-translate-y-1">
             <div className="text-3xl font-bold text-festival-purple">₹50K+</div>
             <div className="text-gray-600 font-medium">Prize Pool</div>
           </div>
