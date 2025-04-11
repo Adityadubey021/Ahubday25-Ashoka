@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
   return <nav className={cn('fixed w-full z-50 transition-all duration-300 py-2 px-6 md:px-12', scrolled ? 'bg-white/90 shadow-md backdrop-blur-sm' : 'bg-transparent')}>
       <div className="container mx-auto flex justify-between items-center bg-zinc-500">
         <div className="flex items-center">
-          <img alt="Ashoka Institute Logo" src="/lovable-uploads/3e78fd41-73df-48fd-af89-98e3f1b0480c.png" className="h-50 mr-35" />
+          <img alt="Ashoka Institute Logo" src="/lovable-uploads/3e78fd41-73df-48fd-af89-98e3f1b0480c.png" className="h-20 mr-5" />
           <div className="flex flex-col items-start">
             <img src="/lovable-uploads/2bf9a200-0cb6-4a41-8756-2674b29875c7.png" alt="Abhyuday Logo" className="h-10 mb-1" />
             
