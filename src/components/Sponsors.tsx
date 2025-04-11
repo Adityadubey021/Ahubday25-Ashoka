@@ -1,9 +1,31 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const Sponsors: React.FC = () => {
+  const partnerLogos = [
+    {
+      src: "/lovable-uploads/9b112e09-6df4-4fba-84d6-17d3eb43a5cc.png",
+      alt: "IEEE",
+      category: "Technical Partner"
+    },
+    {
+      src: "/lovable-uploads/962aa6b0-f073-45eb-9f2b-ddd4a89596b5.png",
+      alt: "CSI",
+      category: "Knowledge Partner"
+    },
+    {
+      src: "/lovable-uploads/26fd8b4e-ff13-4a73-bad2-23bab1d9c31b.png",
+      alt: "IIC",
+      category: "Innovation Partner"
+    },
+    {
+      src: "/lovable-uploads/f6580ef9-d95f-4237-b141-c645952ecfce.png",
+      alt: "IE",
+      category: "Excellence Partner"
+    }
+  ];
+
   const sponsorCategories = [
     {
       id: "title",
@@ -57,7 +79,7 @@ const Sponsors: React.FC = () => {
       {/* Abhyuday Logo Watermark */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5">
         <img 
-          src="/lovable-uploads/402a0cba-8c65-4177-bcdd-090ce95b7db1.png" 
+          src="/lovable-uploads/cc24c81f-4e39-450d-b4ab-1c850d241296.png" 
           alt="Abhyuday Watermark" 
           className="w-3/4 max-w-3xl"
         />
@@ -65,7 +87,7 @@ const Sponsors: React.FC = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 text-festival-purple font-montserrat">Our Sponsors</h2>
+          <h2 className="text-4xl font-bold mb-4 text-festival-purple font-montserrat">Our Sponsors & Partners</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">Proudly supported by leading organizations</p>
         </div>
         
@@ -79,6 +101,26 @@ const Sponsors: React.FC = () => {
                 className="w-full h-auto" 
               />
               <p className="text-center text-gray-500 mt-4 text-sm font-medium">Ab code karega India</p>
+            </div>
+          </div>
+
+          {/* Technical Partners */}
+          <div className="mb-12 w-full max-w-5xl">
+            <h3 className="text-xl text-center font-semibold text-gray-700 mb-6">Technical Partners</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+              {partnerLogos.map((logo, idx) => (
+                <Card key={idx} className="overflow-hidden shadow-md hover:shadow-lg transition-all">
+                  <CardContent className="p-6 flex flex-col items-center justify-center bg-white">
+                    <img
+                      src={logo.src}
+                      alt={logo.alt}
+                      className="h-20 object-contain mb-3"
+                    />
+                    <p className="text-center text-gray-700 font-medium">{logo.alt}</p>
+                    <p className="text-center text-gray-500 text-sm">{logo.category}</p>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
 

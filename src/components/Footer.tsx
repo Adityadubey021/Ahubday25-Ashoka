@@ -1,15 +1,15 @@
 
 import React from 'react';
-import { Phone, Mail } from 'lucide-react';
+import { Phone, Mail, Globe, MapPin } from 'lucide-react';
 import SocialMediaLinks from './SocialMediaLinks';
 import { SocialLink } from './SocialMediaLinks';
 
 const Footer: React.FC = () => {
   const instituteSocialLinks: SocialLink[] = [
-    { type: 'linkedin', url: 'https://www.linkedin.com/in/ashokainstitute' },
-    { type: 'instagram', url: 'https://www.instagram.com/ashokainstitute/' },
+    { type: 'instagram', url: 'https://www.instagram.com/ashokainstitute?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D' },
+    { type: 'linkedin', url: 'https://www.linkedin.com/in/ashokainstitute/' },
     { type: 'facebook', url: 'https://www.facebook.com/Ashokavaranasi' },
-    { type: 'youtube', url: 'https://www.youtube.com/user/ashokainstitute/videos' }
+    { type: 'twitter', url: 'https://twitter.com/aitmvnsz' }
   ];
 
   return (
@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
           <div>
             <div className="flex items-center mb-4">
               <img 
-                src="/lovable-uploads/c196b9c3-f499-4b74-9eba-d49e443f0bac.png" 
+                src="/lovable-uploads/41e5a39c-151c-4f70-ba93-378ff78a6434.png" 
                 alt="Ashoka Institute Logo" 
                 className="h-16 mr-2 bg-white p-1 rounded" 
               />
@@ -47,7 +47,13 @@ const Footer: React.FC = () => {
                 <a href="#registration" className="hover:text-white transition-colors">Registration</a>
               </li>
               <li>
-                <a href="#coordinators" className="hover:text-white transition-colors">Coordinators</a>
+                <a href="#schedule" className="hover:text-white transition-colors">Schedule</a>
+              </li>
+              <li>
+                <a href="https://ashokainstitute.com/" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-white transition-colors">
+                  <Globe size={16} className="mr-2" />
+                  <span>ashokainstitute.com</span>
+                </a>
               </li>
             </ul>
           </div>
@@ -57,15 +63,20 @@ const Footer: React.FC = () => {
             <div className="space-y-3 text-white/80">
               <p className="flex items-center">
                 <Phone size={16} className="mr-2" />
-                <span>+91 8932056388</span>
+                <span>+91-9198840005, +91-9198840006</span>
               </p>
               <p className="flex items-center">
                 <Mail size={16} className="mr-2" />
-                <span>abhyuday@ashoka.edu.in</span>
+                <span>abhyuday@ashokainstitute.com</span>
               </p>
-              <address className="not-italic">
-                Ashoka Institute of Technology and Management,<br />
-                Varanasi Road, Uttar Pradesh
+              <p className="flex items-center">
+                <Mail size={16} className="mr-2" />
+                <span>info@ashokainstitute.com</span>
+              </p>
+              <address className="not-italic flex items-start">
+                <MapPin size={16} className="mr-2 mt-1" />
+                <span>Ashoka Institute of Technology and Management,<br />
+                Varanasi, Uttar Pradesh</span>
               </address>
             </div>
           </div>
@@ -76,8 +87,7 @@ const Footer: React.FC = () => {
             © 2025 Ashoka Institute of Technology and Management. All rights reserved.
           </div>
           <div className="text-white/80 text-sm text-center">
-            <div>Designed for Abhyuday 2025 | Annual Tech Fest</div>
-            <div className="font-medium mt-1">Design by @ADITYA DUBEY</div>
+            <div>Designed for Abhyuday 2025 | State Level Lit-Tech Fiesta</div>
           </div>
         </div>
       </div>

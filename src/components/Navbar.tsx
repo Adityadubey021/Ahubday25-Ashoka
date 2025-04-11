@@ -41,13 +41,13 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <img 
-            src="/lovable-uploads/c196b9c3-f499-4b74-9eba-d49e443f0bac.png" 
+            src="/lovable-uploads/41e5a39c-151c-4f70-ba93-378ff78a6434.png" 
             alt="Ashoka Institute Logo" 
             className="h-16 mr-3" 
           />
           <div className="flex flex-col items-start">
             <img 
-              src="/lovable-uploads/e9b04beb-f4f5-46bc-8d3d-4ca11c2f1d04.png" 
+              src="/lovable-uploads/2bf9a200-0cb6-4a41-8756-2674b29875c7.png" 
               alt="Abhyuday Logo" 
               className="h-10 mb-1" 
             />
@@ -68,8 +68,8 @@ const Navbar: React.FC = () => {
           <button onClick={() => scrollToSection('registration')} className="text-gray-800 hover:text-festival-purple font-medium">
             Registration
           </button>
-          <button onClick={() => scrollToSection('coordinators')} className="text-gray-800 hover:text-festival-purple font-medium">
-            Coordinators
+          <button onClick={() => scrollToSection('schedule')} className="text-gray-800 hover:text-festival-purple font-medium">
+            Schedule
           </button>
         </div>
 
@@ -104,8 +104,8 @@ const Navbar: React.FC = () => {
             <button onClick={() => scrollToSection('registration')} className="text-gray-800 hover:text-festival-purple font-medium">
               Registration
             </button>
-            <button onClick={() => scrollToSection('coordinators')} className="text-gray-800 hover:text-festival-purple font-medium">
-              Coordinators
+            <button onClick={() => scrollToSection('schedule')} className="text-gray-800 hover:text-festival-purple font-medium">
+              Schedule
             </button>
             
             <Button 

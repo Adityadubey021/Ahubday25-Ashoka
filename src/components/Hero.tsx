@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
       {/* Abhyuday Logo Watermark */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5">
         <img 
-          src="/lovable-uploads/402a0cba-8c65-4177-bcdd-090ce95b7db1.png" 
+          src="/lovable-uploads/cc24c81f-4e39-450d-b4ab-1c850d241296.png" 
           alt="Abhyuday Watermark" 
           className="w-3/4 max-w-3xl"
         />
@@ -34,20 +34,20 @@ const Hero: React.FC = () => {
         {/* Ashoka Institute Logo - Center Top */}
         <div className="mb-8">
           <img 
-            src="/lovable-uploads/c196b9c3-f499-4b74-9eba-d49e443f0bac.png" 
+            src="/lovable-uploads/41e5a39c-151c-4f70-ba93-378ff78a6434.png" 
             alt="Ashoka Institute Logo" 
-            className="h-24 md:h-28 bg-white p-2 rounded-lg shadow-md" 
+            className="h-36 md:h-40 bg-white p-3 rounded-lg shadow-md" 
           />
         </div>
         
         <div className="text-center max-w-4xl mx-auto">
-          <div className="mb-6 inline-block px-6 py-3 bg-festival-purple/10 text-festival-purple rounded-full text-sm font-semibold animate-pulse-slow">
-            APRIL 25-26, 2025
-          </div>
-          
           <div className="mb-6 flex justify-center relative">
             <div className="absolute -inset-5 bg-gradient-to-r from-festival-blue/20 via-festival-purple/20 to-festival-orange/20 rounded-full blur-xl animate-pulse-slow opacity-70"></div>
-            <img src="/lovable-uploads/402a0cba-8c65-4177-bcdd-090ce95b7db1.png" alt="Abhyuday 2025 Logo" className="h-24 md:h-32 relative z-10" />
+            <img src="/lovable-uploads/75970e15-e023-4b7d-812d-23008a3915a0.png" alt="Abhyuday 2025 Logo" className="h-40 md:h-48 relative z-10" />
+          </div>
+          
+          <div className="mb-6 inline-block px-6 py-3 bg-festival-purple/10 text-festival-purple rounded-full text-sm font-semibold animate-pulse-slow">
+            APRIL 25-26, 2025
           </div>
           
           <h1 className="font-montserrat font-extrabold text-5xl md:text-7xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-festival-purple via-festival-blue to-festival-purple relative">
@@ -55,11 +55,22 @@ const Hero: React.FC = () => {
             <div className="absolute -inset-2 bg-gradient-to-r from-festival-blue/20 via-festival-purple/20 to-festival-orange/20 rounded-xl blur-md -z-10"></div>
           </h1>
           
+          <p className="text-2xl md:text-3xl mb-2 font-bold text-[#D4AF37] font-['Playfair_Display']">
+            STATE LEVEL LIT-TECH FIESTA
+          </p>
+          
           <p className="text-xl md:text-2xl mb-8 font-light text-gray-700">
             <span className="font-semibold">Where Innovation Meets Creativity!</span>
             <br />
-            <span className="text-base md:text-lg">Ashoka Institute of Technology and Management</span>
+            <span className="text-base md:text-lg">Ashoka Institute of Technology and Management, Varanasi</span>
           </p>
+          
+          <div className="flex flex-wrap justify-center gap-6 mb-10">
+            <img src="/lovable-uploads/9b112e09-6df4-4fba-84d6-17d3eb43a5cc.png" alt="IEEE" className="h-16 bg-white p-2 rounded-lg shadow-sm" />
+            <img src="/lovable-uploads/962aa6b0-f073-45eb-9f2b-ddd4a89596b5.png" alt="CSI" className="h-16 bg-white p-2 rounded-lg shadow-sm" />
+            <img src="/lovable-uploads/26fd8b4e-ff13-4a73-bad2-23bab1d9c31b.png" alt="IIC" className="h-16 bg-white p-2 rounded-lg shadow-sm" />
+            <img src="/lovable-uploads/f6580ef9-d95f-4237-b141-c645952ecfce.png" alt="IE" className="h-16 bg-white p-2 rounded-lg shadow-sm" />
+          </div>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button 
