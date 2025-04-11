@@ -13,8 +13,12 @@ const Footer: React.FC = () => {
     { type: 'youtube', url: 'https://www.youtube.com/user/ashokainstitute/videos' }
   ];
 
+  const openRegistrationForm = () => {
+    window.open("https://docs.google.com/forms/d/e/1FAIpQLSfd3gaB4TXlIKNanGRxXfiVsnANlwmeRgu4wSESAynpNnawcw/viewform?usp=sharing", "_blank");
+  };
+
   return (
-    <footer className="bg-festival-purple text-white">
+    <footer className="bg-festival-dark-purple text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
@@ -22,7 +26,7 @@ const Footer: React.FC = () => {
               <img 
                 src="/lovable-uploads/41e5a39c-151c-4f70-ba93-378ff78a6434.png" 
                 alt="Ashoka Institute Logo" 
-                className="h-16 mr-2 bg-white p-1 rounded" 
+                className="h-16 mr-2 bg-white/10 p-1 rounded" 
               />
               <div className="flex flex-col ml-2">
                 <h3 className="text-xl font-bold">Abhyuday 2025</h3>
@@ -51,10 +55,10 @@ const Footer: React.FC = () => {
                 <a href="#events" className="hover:text-white transition-colors">Events</a>
               </li>
               <li>
-                <a href="#registration" className="hover:text-white transition-colors">Registration</a>
+                <a href="#coordinators" className="hover:text-white transition-colors">Coordinators</a>
               </li>
               <li>
-                <a href="#coordinators" className="hover:text-white transition-colors">Coordinators</a>
+                <a onClick={openRegistrationForm} className="hover:text-white transition-colors cursor-pointer">Register Now</a>
               </li>
               <li>
                 <a href="https://ashokainstitute.com/" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-white transition-colors">

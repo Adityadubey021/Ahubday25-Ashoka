@@ -68,11 +68,13 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				festival: {
-					'purple': '#6E59A5',
-					'light-purple': '#E5DEFF',
-					'blue': '#1EAEDB',
-					'light-blue': '#D3E4FD',
+					'purple': '#9272C2',
+					'light-purple': '#4D2D81',
+					'blue': '#3E8CCC',
+					'light-blue': '#17477E',
 					'orange': '#F97316',
+					'dark': '#1A1F2C',
+					'dark-purple': '#2D1A45'
 				}
 			},
 			borderRadius: {

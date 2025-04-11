@@ -3,7 +3,6 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Events from '@/components/Events';
-import Registration from '@/components/Registration';
 import Coordinators from '@/components/Coordinators';
 import Sponsors from '@/components/Sponsors';
 import Footer from '@/components/Footer';
@@ -12,13 +11,12 @@ import AboutEvent from '@/components/AboutEvent';
 
 const Index: React.FC = () => {
   return (
-    <div className="font-poppins min-h-screen bg-white">
+    <div className="font-poppins min-h-screen bg-festival-dark text-white">
       <Navbar />
       <Hero />
       <AboutEvent />
       <Schedule />
       <Events />
-      <Registration />
       <Coordinators />
       <Sponsors />
       <Footer />
