@@ -16,6 +16,7 @@ const Navbar: React.FC = () => {
         setScrolled(false);
       }
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -27,79 +28,90 @@ const Navbar: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({
-        behavior: 'smooth'
-      });
+      section.scrollIntoView({ behavior: 'smooth' });
     }
     setIsMenuOpen(false);
   };
 
-  const openRegistrationForm = () => {
-    window.open("https://docs.google.com/forms/d/e/1FAIpQLSfd3gaB4TXlIKNanGRxXfiVsnANlwmeRgu4wSESAynpNnawcw/viewform?usp=sharing", "_blank");
-  };
-
   return (
-    <nav className={cn('fixed w-full z-50 transition-all duration-300 py-2 px-6 md:px-12', 
-      scrolled ? 'bg-festival-dark/90 shadow-md backdrop-blur-sm' : 'bg-transparent')}>
+    <nav className={cn(
+      'fixed w-full z-50 transition-all duration-300 py-2 px-6 md:px-12',
+      scrolled ? 'bg-white/90 shadow-md backdrop-blur-sm' : 'bg-transparent'
+    )}>
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
-          <img alt="Ashoka Institute Logo" src="/lovable-uploads/3e78fd41-73df-48fd-af89-98e3f1b0480c.png" className="h-20 mr-5" />
+          <img 
+            src="/lovable-uploads/41e5a39c-151c-4f70-ba93-378ff78a6434.png" 
+            alt="Ashoka Institute Logo" 
+            className="h-16 mr-3" 
+          />
           <div className="flex flex-col items-start">
-            <img src="/lovable-uploads/2bf9a200-0cb6-4a41-8756-2674b29875c7.png" alt="Abhyuday Logo" className="h-10 mb-1" />
+            <img 
+              src="/lovable-uploads/2bf9a200-0cb6-4a41-8756-2674b29875c7.png" 
+              alt="Abhyuday Logo" 
+              className="h-10 mb-1" 
+            />
+            <div className="text-festival-purple font-bold text-xs">
+              25-26 APRIL 2025
+            </div>
           </div>
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6">
-          <button onClick={() => scrollToSection('home')} className="text-white hover:text-festival-teal font-medium transition-colors">
+        <div className="hidden md:flex space-x-8">
+          <button onClick={() => scrollToSection('home')} className="text-gray-800 hover:text-festival-purple font-medium">
             Home
           </button>
-          <button onClick={() => scrollToSection('about')} className="text-white hover:text-festival-teal font-medium transition-colors">
-            About the Event
-          </button>
-          <button onClick={() => scrollToSection('schedule')} className="text-white hover:text-festival-teal font-medium transition-colors">
-            Schedule
-          </button>
-          <button onClick={() => scrollToSection('events')} className="text-white hover:text-festival-teal font-medium transition-colors">
+          <button onClick={() => scrollToSection('events')} className="text-gray-800 hover:text-festival-purple font-medium">
             Events
           </button>
-          <button onClick={() => scrollToSection('coordinators')} className="text-white hover:text-festival-teal font-medium transition-colors">
-            Coordinators
+          <button onClick={() => scrollToSection('registration')} className="text-gray-800 hover:text-festival-purple font-medium">
+            Registration
+          </button>
+          <button onClick={() => scrollToSection('schedule')} className="text-gray-800 hover:text-festival-purple font-medium">
+            Schedule
           </button>
         </div>
 
         {/* Register Button */}
-        <Button onClick={openRegistrationForm} className="hidden md:block bg-festival-teal hover:bg-festival-teal/80 text-black font-medium btn-glow">
+        <Button 
+          onClick={() => scrollToSection('registration')}
+          className="hidden md:block bg-festival-orange hover:bg-orange-600 text-white font-medium"
+        >
           Register Now
         </Button>
 
         {/* Mobile Menu Button */}
-        <button onClick={toggleMenu} className="md:hidden text-white focus:outline-none" aria-label="Toggle menu">
+        <button
+          onClick={toggleMenu}
+          className="md:hidden text-gray-800 focus:outline-none"
+          aria-label="Toggle menu"
+        >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-festival-dark/95 backdrop-blur-lg absolute top-full left-0 right-0 shadow-md p-5">
+        <div className="md:hidden bg-white absolute top-full left-0 right-0 shadow-md p-5">
           <div className="flex flex-col space-y-4">
-            <button onClick={() => scrollToSection('home')} className="text-white hover:text-festival-teal font-medium transition-colors">
+            <button onClick={() => scrollToSection('home')} className="text-gray-800 hover:text-festival-purple font-medium">
               Home
             </button>
-            <button onClick={() => scrollToSection('about')} className="text-white hover:text-festival-teal font-medium transition-colors">
-              About the Event
-            </button>
-            <button onClick={() => scrollToSection('schedule')} className="text-white hover:text-festival-teal font-medium transition-colors">
-              Schedule
-            </button>
-            <button onClick={() => scrollToSection('events')} className="text-white hover:text-festival-teal font-medium transition-colors">
+            <button onClick={() => scrollToSection('events')} className="text-gray-800 hover:text-festival-purple font-medium">
               Events
             </button>
-            <button onClick={() => scrollToSection('coordinators')} className="text-white hover:text-festival-teal font-medium transition-colors">
-              Coordinators
+            <button onClick={() => scrollToSection('registration')} className="text-gray-800 hover:text-festival-purple font-medium">
+              Registration
+            </button>
+            <button onClick={() => scrollToSection('schedule')} className="text-gray-800 hover:text-festival-purple font-medium">
+              Schedule
             </button>
             
-            <Button onClick={openRegistrationForm} className="bg-festival-teal hover:bg-festival-teal/80 text-black font-medium btn-glow">
+            <Button 
+              onClick={() => scrollToSection('registration')}
+              className="bg-festival-orange hover:bg-orange-600 text-white font-medium"
+            >
               Register Now
             </Button>
           </div>
