@@ -8,16 +8,16 @@ import Coordinators from '@/components/Coordinators';
 import Sponsors from '@/components/Sponsors';
 import Footer from '@/components/Footer';
 import Schedule from '@/components/Schedule';
-import PastHighlights from '@/components/PastHighlights';
+import AboutEvent from '@/components/AboutEvent';
 
 const Index: React.FC = () => {
   return (
     <div className="font-poppins min-h-screen bg-white">
       <Navbar />
       <Hero />
+      <AboutEvent />
       <Schedule />
       <Events />
-      <PastHighlights />
       <Registration />
       <Coordinators />
       <Sponsors />

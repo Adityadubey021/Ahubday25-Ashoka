@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from './ui/navigation-menu';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,9 +59,15 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex space-x-6">
           <button onClick={() => scrollToSection('home')} className="text-gray-800 hover:text-festival-purple font-medium">
             Home
+          </button>
+          <button onClick={() => scrollToSection('about')} className="text-gray-800 hover:text-festival-purple font-medium">
+            About the Event
+          </button>
+          <button onClick={() => scrollToSection('schedule')} className="text-gray-800 hover:text-festival-purple font-medium">
+            Schedule
           </button>
           <button onClick={() => scrollToSection('events')} className="text-gray-800 hover:text-festival-purple font-medium">
             Events
@@ -68,8 +75,8 @@ const Navbar: React.FC = () => {
           <button onClick={() => scrollToSection('registration')} className="text-gray-800 hover:text-festival-purple font-medium">
             Registration
           </button>
-          <button onClick={() => scrollToSection('schedule')} className="text-gray-800 hover:text-festival-purple font-medium">
-            Schedule
+          <button onClick={() => scrollToSection('coordinators')} className="text-gray-800 hover:text-festival-purple font-medium">
+            Coordinators
           </button>
         </div>
 
@@ -98,14 +105,20 @@ const Navbar: React.FC = () => {
             <button onClick={() => scrollToSection('home')} className="text-gray-800 hover:text-festival-purple font-medium">
               Home
             </button>
+            <button onClick={() => scrollToSection('about')} className="text-gray-800 hover:text-festival-purple font-medium">
+              About the Event
+            </button>
+            <button onClick={() => scrollToSection('schedule')} className="text-gray-800 hover:text-festival-purple font-medium">
+              Schedule
+            </button>
             <button onClick={() => scrollToSection('events')} className="text-gray-800 hover:text-festival-purple font-medium">
               Events
             </button>
             <button onClick={() => scrollToSection('registration')} className="text-gray-800 hover:text-festival-purple font-medium">
               Registration
             </button>
-            <button onClick={() => scrollToSection('schedule')} className="text-gray-800 hover:text-festival-purple font-medium">
-              Schedule
+            <button onClick={() => scrollToSection('coordinators')} className="text-gray-800 hover:text-festival-purple font-medium">
+              Coordinators
             </button>
             
             <Button 

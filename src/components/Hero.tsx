@@ -1,8 +1,37 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 
 const Hero: React.FC = () => {
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
+
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      const eventDate = new Date('April 25, 2025 09:00:00').getTime();
+      const now = new Date().getTime();
+      const difference = eventDate - now;
+      
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((difference % (1000 * 60)) / 1000)
+        });
+      }
+    };
+
+    const timer = setInterval(calculateTimeLeft, 1000);
+    calculateTimeLeft();
+    
+    return () => clearInterval(timer);
+  }, []);
+
   const scrollToRegistration = () => {
     const registrationSection = document.getElementById('registration');
     if (registrationSection) {
@@ -38,6 +67,7 @@ const Hero: React.FC = () => {
             alt="Ashoka Institute Logo" 
             className="h-36 md:h-40 bg-white p-3 rounded-lg shadow-md" 
           />
+          <h1 className="text-lg md:text-xl font-bold mt-2 text-gray-800">ASHOKA INSTITUTE OF TECHNOLOGY AND MANAGEMENT</h1>
         </div>
         
         <div className="text-center max-w-4xl mx-auto">
@@ -47,7 +77,7 @@ const Hero: React.FC = () => {
           </div>
           
           <div className="mb-6 inline-block px-6 py-3 bg-festival-purple/10 text-festival-purple rounded-full text-sm font-semibold animate-pulse-slow">
-            APRIL 25-26, 2025
+            25-26 APRIL 2025
           </div>
           
           <h1 className="font-montserrat font-extrabold text-5xl md:text-7xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-festival-purple via-festival-blue to-festival-purple relative">
@@ -58,6 +88,26 @@ const Hero: React.FC = () => {
           <p className="text-2xl md:text-3xl mb-2 font-bold text-[#D4AF37] font-['Playfair_Display']">
             STATE LEVEL LIT-TECH FIESTA
           </p>
+
+          {/* Countdown Timer */}
+          <div className="grid grid-cols-4 gap-4 mt-6 mb-8 max-w-lg mx-auto">
+            <div className="bg-white/80 backdrop-blur p-3 rounded-lg shadow-lg">
+              <div className="text-3xl font-bold text-festival-purple">{timeLeft.days}</div>
+              <div className="text-gray-600 text-sm">Days</div>
+            </div>
+            <div className="bg-white/80 backdrop-blur p-3 rounded-lg shadow-lg">
+              <div className="text-3xl font-bold text-festival-purple">{timeLeft.hours}</div>
+              <div className="text-gray-600 text-sm">Hours</div>
+            </div>
+            <div className="bg-white/80 backdrop-blur p-3 rounded-lg shadow-lg">
+              <div className="text-3xl font-bold text-festival-purple">{timeLeft.minutes}</div>
+              <div className="text-gray-600 text-sm">Minutes</div>
+            </div>
+            <div className="bg-white/80 backdrop-blur p-3 rounded-lg shadow-lg">
+              <div className="text-3xl font-bold text-festival-purple">{timeLeft.seconds}</div>
+              <div className="text-gray-600 text-sm">Seconds</div>
+            </div>
+          </div>
           
           <p className="text-xl md:text-2xl mb-8 font-light text-gray-700">
             <span className="font-semibold">Where Innovation Meets Creativity!</span>
@@ -85,20 +135,19 @@ const Hero: React.FC = () => {
               variant="outline" 
               size="lg" 
               className="border-festival-purple text-festival-purple hover:bg-festival-purple/10 font-semibold text-lg px-10 shadow-md hover:shadow-lg transition-all"
+              onClick={() => document.getElementById('schedule')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              View Schedule
+            </Button>
+            
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="border-festival-blue text-festival-blue hover:bg-festival-blue/10 font-semibold text-lg px-10 shadow-md hover:shadow-lg transition-all"
               onClick={() => document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Explore Events
             </Button>
-          </div>
-
-          {/* CTA for schedule */}
-          <div className="mt-6">
-            <button 
-              onClick={() => document.getElementById('schedule')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-festival-purple hover:text-festival-blue underline underline-offset-4 transition-colors"
-            >
-              View Full Schedule
-            </button>
           </div>
         </div>
         

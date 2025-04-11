@@ -1,77 +1,99 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Phone } from 'lucide-react';
-import SocialMediaLinks, { SocialLink } from './SocialMediaLinks';
+import { Mail, Phone } from 'lucide-react';
 
 interface CoordinatorProps {
   name: string;
-  department: string;
-  contact: string;
-  socialLinks: SocialLink[];
-  imageSrc: string;
+  role: string;
+  email: string;
+  phone: string;
+  imageSrc?: string;
 }
 
-const CoordinatorCard: React.FC<CoordinatorProps> = ({ name, department, contact, socialLinks, imageSrc }) => {
+const CoordinatorCard: React.FC<CoordinatorProps> = ({ name, role, email, phone, imageSrc }) => {
   return (
-    <Card className="overflow-hidden transition-transform duration-300 hover:scale-105 border-none shadow-lg bg-white">
-      <CardContent className="p-6">
-        <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-2 border-festival-purple">
-          <img src={imageSrc} alt={name} className="w-full h-full object-cover" />
+    <Card className="overflow-hidden hover:shadow-xl transition-all">
+      <CardContent className="p-0">
+        <div className="aspect-square bg-gray-200 overflow-hidden">
+          <img
+            src={imageSrc || "https://via.placeholder.com/300?text=Coordinator"}
+            alt={name}
+            className="w-full h-full object-cover object-center"
+          />
         </div>
-        <h3 className="text-xl font-bold text-center text-gray-800 mb-1">{name}</h3>
-        <p className="text-gray-500 text-center text-sm mb-4">{department}</p>
-        <div className="flex items-center justify-center space-x-2 bg-festival-light-purple/50 py-2 px-4 rounded-full mb-4">
-          <Phone size={16} className="text-festival-purple" />
-          <span className="text-festival-purple font-medium">{contact}</span>
+        <div className="p-6">
+          <h3 className="text-xl font-bold mb-1 text-festival-purple">{name}</h3>
+          <p className="text-gray-600 mb-4">{role}</p>
+          <div className="space-y-2">
+            <div className="flex items-center">
+              <Mail size={16} className="text-gray-500 mr-2" />
+              <a href={`mailto:${email}`} className="text-sm text-gray-700 hover:text-festival-purple">{email}</a>
+            </div>
+            <div className="flex items-center">
+              <Phone size={16} className="text-gray-500 mr-2" />
+              <a href={`tel:${phone}`} className="text-sm text-gray-700 hover:text-festival-purple">{phone}</a>
+            </div>
+          </div>
         </div>
-        <SocialMediaLinks links={socialLinks} className="justify-center" />
       </CardContent>
     </Card>
   );
 };
 
 const Coordinators: React.FC = () => {
-  const coordinators = [
+  const studentCoordinators = [
     {
-      name: "Aditya Dubey",
-      department: "B.Tech (CSE-AIML)",
-      contact: "8932056388",
-      imageSrc: "/lovable-uploads/02a20942-650a-4beb-b1cc-b61c3e592759.png",
-      socialLinks: [
-        { type: 'linkedin', url: 'https://www.linkedin.com/in/aditya-dubey-49129a248/' },
-        { type: 'instagram', url: 'https://www.instagram.com/aditya__dubey21/' }
-      ] as SocialLink[]
+      name: "Aditya Kumar",
+      role: "Student Coordinator (Technical Events)",
+      email: "aditya.kumar@ashokainstitute.com",
+      phone: "+91-9876543210",
     },
     {
-      name: "Diwakar Patel",
-      department: "B.Tech (CSE-AIML)",
-      contact: "9235508350",
-      imageSrc: "/lovable-uploads/c9438579-b726-4ee1-9a1e-fb6601f84a00.png",
-      socialLinks: [
-        { type: 'linkedin', url: 'https://www.linkedin.com/in/diwakar-patel-151393277/' },
-        { type: 'instagram', url: 'https://www.instagram.com/diwakarpatel453t/' }
-      ] as SocialLink[]
+      name: "Priya Singh",
+      role: "Student Coordinator (Literary Events)",
+      email: "priya.singh@ashokainstitute.com",
+      phone: "+91-9876543211",
     },
     {
-      name: "Malay Vishwakarma",
-      department: "B.Tech (CSE)",
-      contact: "8471059969",
-      imageSrc: "/lovable-uploads/ff0804e8-3dfc-45ee-b091-ae6b26c62022.png",
-      socialLinks: [
-        { type: 'linkedin', url: 'https://www.linkedin.com/in/malay-vishwakarma-45a892248/' }
-      ] as SocialLink[]
+      name: "Rahul Sharma",
+      role: "Student Coordinator (Robotics)",
+      email: "rahul.sharma@ashokainstitute.com",
+      phone: "+91-9876543212",
     },
     {
-      name: "Sobrat Dayal",
-      department: "B.Tech (CSE)",
-      contact: "9565676988",
-      imageSrc: "/lovable-uploads/b0b4ecd5-180c-465d-8d4d-b182a6cbf3a4.png",
-      socialLinks: [
-        { type: 'linkedin', url: 'https://www.linkedin.com/in/sobrat-dayal/' },
-        { type: 'instagram', url: 'https://www.instagram.com/sobratdayal2022/' }
-      ] as SocialLink[]
-    }
+      name: "Ananya Patel",
+      role: "Student Coordinator (Management)",
+      email: "ananya.patel@ashokainstitute.com",
+      phone: "+91-9876543213",
+    },
+  ];
+
+  const facultyCoordinators = [
+    {
+      name: "Dr. Rajesh Kumar",
+      role: "Faculty Coordinator (Technical Events)",
+      email: "rajesh.kumar@ashokainstitute.com",
+      phone: "+91-9876543214",
+    },
+    {
+      name: "Dr. Meera Verma",
+      role: "Faculty Coordinator (Literary Events)",
+      email: "meera.verma@ashokainstitute.com",
+      phone: "+91-9876543215",
+    },
+    {
+      name: "Prof. Sanjeev Mishra",
+      role: "Overall Event Coordinator",
+      email: "sanjeev.mishra@ashokainstitute.com",
+      phone: "+91-9876543216",
+    },
+    {
+      name: "Dr. Anita Singh",
+      role: "Faculty Coordinator (Management Events)",
+      email: "anita.singh@ashokainstitute.com",
+      phone: "+91-9876543217",
+    },
   ];
 
   return (
@@ -79,20 +101,37 @@ const Coordinators: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4 text-festival-purple font-montserrat">Event Coordinators</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">Connect with our event coordinators for any queries regarding the events or registration process.</p>
+          <p className="text-gray-600 max-w-2xl mx-auto">Meet the team behind Abhyuday 2025 and feel free to reach out if you have any questions.</p>
         </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          {coordinators.map((coordinator, index) => (
-            <CoordinatorCard
-              key={index}
-              name={coordinator.name}
-              department={coordinator.department}
-              contact={coordinator.contact}
-              socialLinks={coordinator.socialLinks}
-              imageSrc={coordinator.imageSrc}
-            />
-          ))}
+        
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold mb-8 text-festival-purple border-l-4 border-festival-orange pl-4">Faculty Coordinators</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {facultyCoordinators.map((coordinator, index) => (
+              <CoordinatorCard
+                key={index}
+                name={coordinator.name}
+                role={coordinator.role}
+                email={coordinator.email}
+                phone={coordinator.phone}
+              />
+            ))}
+          </div>
+        </div>
+        
+        <div>
+          <h3 className="text-2xl font-bold mb-8 text-festival-purple border-l-4 border-festival-orange pl-4">Student Coordinators</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {studentCoordinators.map((coordinator, index) => (
+              <CoordinatorCard
+                key={index}
+                name={coordinator.name}
+                role={coordinator.role}
+                email={coordinator.email}
+                phone={coordinator.phone}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

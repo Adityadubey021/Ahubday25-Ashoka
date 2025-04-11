@@ -41,13 +41,19 @@ const Footer: React.FC = () => {
                 <a href="#home" className="hover:text-white transition-colors">Home</a>
               </li>
               <li>
+                <a href="#about" className="hover:text-white transition-colors">About the Event</a>
+              </li>
+              <li>
+                <a href="#schedule" className="hover:text-white transition-colors">Schedule</a>
+              </li>
+              <li>
                 <a href="#events" className="hover:text-white transition-colors">Events</a>
               </li>
               <li>
                 <a href="#registration" className="hover:text-white transition-colors">Registration</a>
               </li>
               <li>
-                <a href="#schedule" className="hover:text-white transition-colors">Schedule</a>
+                <a href="#coordinators" className="hover:text-white transition-colors">Coordinators</a>
               </li>
               <li>
                 <a href="https://ashokainstitute.com/" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-white transition-colors">
