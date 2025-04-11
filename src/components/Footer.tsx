@@ -6,10 +6,11 @@ import { SocialLink } from './SocialMediaLinks';
 
 const Footer: React.FC = () => {
   const instituteSocialLinks: SocialLink[] = [
-    { type: 'instagram', url: 'https://www.instagram.com/ashokainstitute?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D' },
+    { type: 'instagram', url: 'https://www.instagram.com/ashokainstitute/' },
     { type: 'linkedin', url: 'https://www.linkedin.com/in/ashokainstitute/' },
     { type: 'facebook', url: 'https://www.facebook.com/Ashokavaranasi' },
-    { type: 'twitter', url: 'https://twitter.com/aitmvnsz' }
+    { type: 'twitter', url: 'https://twitter.com/aitmvnsz' },
+    { type: 'youtube', url: 'https://www.youtube.com/user/ashokainstitute/videos' }
   ];
 
   return (
@@ -94,6 +95,7 @@ const Footer: React.FC = () => {
           </div>
           <div className="text-white/80 text-sm text-center">
             <div>Designed for Abhyuday 2025 | State Level Lit-Tech Fiesta</div>
+            <div className="mt-1">Design by <a href="#" className="text-white hover:text-festival-orange">@TECHxVEDA</a></div>
           </div>
         </div>
       </div>
