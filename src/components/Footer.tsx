@@ -1,28 +1,27 @@
-
 import React from 'react';
 import { Phone, Mail, Globe, MapPin } from 'lucide-react';
 import SocialMediaLinks from './SocialMediaLinks';
 import { SocialLink } from './SocialMediaLinks';
-
 const Footer: React.FC = () => {
-  const instituteSocialLinks: SocialLink[] = [
-    { type: 'instagram', url: 'https://www.instagram.com/ashokainstitute?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D' },
-    { type: 'linkedin', url: 'https://www.linkedin.com/in/ashokainstitute/' },
-    { type: 'facebook', url: 'https://www.facebook.com/Ashokavaranasi' },
-    { type: 'twitter', url: 'https://twitter.com/aitmvnsz' }
-  ];
-
-  return (
-    <footer className="bg-festival-purple text-white">
+  const instituteSocialLinks: SocialLink[] = [{
+    type: 'instagram',
+    url: 'https://www.instagram.com/ashokainstitute?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D'
+  }, {
+    type: 'linkedin',
+    url: 'https://www.linkedin.com/in/ashokainstitute/'
+  }, {
+    type: 'facebook',
+    url: 'https://www.facebook.com/Ashokavaranasi'
+  }, {
+    type: 'twitter',
+    url: 'https://twitter.com/aitmvnsz'
+  }];
+  return <footer className="bg-festival-purple text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center mb-4">
-              <img 
-                src="/lovable-uploads/41e5a39c-151c-4f70-ba93-378ff78a6434.png" 
-                alt="Ashoka Institute Logo" 
-                className="h-16 mr-2 bg-white p-1 rounded" 
-              />
+              <img alt="Ashoka Institute Logo" src="/lovable-uploads/6eb1861d-a9d6-4adb-93b5-22f28bb886c5.png" className="h-16 mr-2 bg-white p-1 rounded object-fill" />
               <div className="flex flex-col ml-2">
                 <h3 className="text-xl font-bold">Abhyuday 2025</h3>
                 <p className="text-sm text-white/80">April 25-26, 2025</p>
@@ -87,12 +86,10 @@ const Footer: React.FC = () => {
             © 2025 Ashoka Institute of Technology and Management. All rights reserved.
           </div>
           <div className="text-white/80 text-sm text-center">
-            <div>Designed for Abhyuday 2025 | State Level Lit-Tech Fiesta</div>
+            <div>Designed for TECHxVEDA 2025 | State Level Lit-Tech Fiesta</div>
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
