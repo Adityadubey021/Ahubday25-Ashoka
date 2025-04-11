@@ -1,88 +1,64 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-
 const Sponsors: React.FC = () => {
-  const partnerLogos = [
-    {
-      src: "/lovable-uploads/9b112e09-6df4-4fba-84d6-17d3eb43a5cc.png",
-      alt: "IEEE",
-      category: "Technical Partner"
-    },
-    {
-      src: "/lovable-uploads/962aa6b0-f073-45eb-9f2b-ddd4a89596b5.png",
-      alt: "CSI",
-      category: "Knowledge Partner"
-    },
-    {
-      src: "/lovable-uploads/26fd8b4e-ff13-4a73-bad2-23bab1d9c31b.png",
-      alt: "IIC",
-      category: "Innovation Partner"
-    },
-    {
-      src: "/lovable-uploads/f6580ef9-d95f-4237-b141-c645952ecfce.png",
-      alt: "IE",
-      category: "Excellence Partner"
-    }
-  ];
-
-  const sponsorCategories = [
-    {
-      id: "title",
-      title: "Title Sponsors",
-      logos: [
-        {
-          src: "/lovable-uploads/2082213f-e96d-4935-ac60-2148f794db68.png",
-          alt: "Hotel Surbhi International",
-          width: "full"
-        },
-        {
-          src: "/lovable-uploads/c7ba7cf9-3b43-4da9-bd75-03be05af6f50.png",
-          alt: "Radio Partners",
-          width: "full"
-        },
-        {
-          src: "/lovable-uploads/e859757b-393b-4a27-a844-2110118a7d0a.png",
-          alt: "Print & Electronic Media Partners",
-          width: "full"
-        },
-        {
-          src: "/lovable-uploads/2822850f-4175-4436-bb6d-0ad8998dd562.png",
-          alt: "Bisleri, Panasonic & Other Sponsors",
-          width: "full"
-        },
-        {
-          src: "/lovable-uploads/c327ce66-383b-4559-9b08-bbfd70c742d5.png",
-          alt: "V Mart",
-          width: "full"
-        },
-        {
-          src: "/lovable-uploads/4f4a0623-8a83-41b8-b1db-0ed22d303d8e.png",
-          alt: "Govind Vastralay",
-          width: "full"
-        },
-        {
-          src: "/lovable-uploads/0fe9e59b-7638-4ce5-ae37-d538b621e54e.png",
-          alt: "Yamaha & Other Sponsors",
-          width: "full"
-        }
-      ]
-    }
-  ];
-
-  return (
-    <section className="py-16 bg-white relative overflow-hidden">
+  const partnerLogos = [{
+    src: "/lovable-uploads/9b112e09-6df4-4fba-84d6-17d3eb43a5cc.png",
+    alt: "IEEE",
+    category: "Technical Partner"
+  }, {
+    src: "/lovable-uploads/962aa6b0-f073-45eb-9f2b-ddd4a89596b5.png",
+    alt: "CSI",
+    category: "Knowledge Partner"
+  }, {
+    src: "/lovable-uploads/26fd8b4e-ff13-4a73-bad2-23bab1d9c31b.png",
+    alt: "IIC",
+    category: "Innovation Partner"
+  }, {
+    src: "/lovable-uploads/f6580ef9-d95f-4237-b141-c645952ecfce.png",
+    alt: "IE",
+    category: "Excellence Partner"
+  }];
+  const sponsorCategories = [{
+    id: "title",
+    title: "Title Sponsors",
+    logos: [{
+      src: "/lovable-uploads/2082213f-e96d-4935-ac60-2148f794db68.png",
+      alt: "Hotel Surbhi International",
+      width: "full"
+    }, {
+      src: "/lovable-uploads/c7ba7cf9-3b43-4da9-bd75-03be05af6f50.png",
+      alt: "Radio Partners",
+      width: "full"
+    }, {
+      src: "/lovable-uploads/e859757b-393b-4a27-a844-2110118a7d0a.png",
+      alt: "Print & Electronic Media Partners",
+      width: "full"
+    }, {
+      src: "/lovable-uploads/2822850f-4175-4436-bb6d-0ad8998dd562.png",
+      alt: "Bisleri, Panasonic & Other Sponsors",
+      width: "full"
+    }, {
+      src: "/lovable-uploads/c327ce66-383b-4559-9b08-bbfd70c742d5.png",
+      alt: "V Mart",
+      width: "full"
+    }, {
+      src: "/lovable-uploads/4f4a0623-8a83-41b8-b1db-0ed22d303d8e.png",
+      alt: "Govind Vastralay",
+      width: "full"
+    }, {
+      src: "/lovable-uploads/0fe9e59b-7638-4ce5-ae37-d538b621e54e.png",
+      alt: "Yamaha & Other Sponsors",
+      width: "full"
+    }]
+  }];
+  return <section className="py-16 bg-white relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-20 left-10 w-32 h-32 bg-festival-light-purple rounded-full blur-3xl opacity-40 animate-float"></div>
       <div className="absolute bottom-20 right-10 w-40 h-40 bg-festival-orange/20 rounded-full blur-3xl opacity-30 animate-pulse-slow"></div>
       
       {/* Abhyuday Logo Watermark */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5">
-        <img 
-          src="/lovable-uploads/cc24c81f-4e39-450d-b4ab-1c850d241296.png" 
-          alt="Abhyuday Watermark" 
-          className="w-3/4 max-w-3xl"
-        />
+        <img src="/lovable-uploads/cc24c81f-4e39-450d-b4ab-1c850d241296.png" alt="Abhyuday Watermark" className="w-3/4 max-w-3xl" />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -92,58 +68,34 @@ const Sponsors: React.FC = () => {
         </div>
         
         <div className="flex flex-col items-center justify-center">
-          <div className="mb-12">
-            <h3 className="text-xl text-center font-semibold text-gray-700 mb-6">Title Sponsor</h3>
-            <div className="max-w-md mx-auto bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-              <img 
-                src="/lovable-uploads/1b470e91-c18a-4976-8bc5-84d13d690ef4.png" 
-                alt="TECHxVEDA" 
-                className="w-full h-auto" 
-              />
-              <p className="text-center text-gray-500 mt-4 text-sm font-medium">Ab code karega India</p>
-            </div>
-          </div>
+          
 
           {/* Technical Partners */}
           <div className="mb-12 w-full max-w-5xl">
             <h3 className="text-xl text-center font-semibold text-gray-700 mb-6">Technical Partners</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-              {partnerLogos.map((logo, idx) => (
-                <Card key={idx} className="overflow-hidden shadow-md hover:shadow-lg transition-all">
+              {partnerLogos.map((logo, idx) => <Card key={idx} className="overflow-hidden shadow-md hover:shadow-lg transition-all">
                   <CardContent className="p-6 flex flex-col items-center justify-center bg-white">
-                    <img
-                      src={logo.src}
-                      alt={logo.alt}
-                      className="h-20 object-contain mb-3"
-                    />
+                    <img src={logo.src} alt={logo.alt} className="h-20 object-contain mb-3" />
                     <p className="text-center text-gray-700 font-medium">{logo.alt}</p>
                     <p className="text-center text-gray-500 text-sm">{logo.category}</p>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
 
           {/* Sponsor Categories */}
           <div className="grid grid-cols-1 gap-y-8 max-w-5xl w-full">
-            {sponsorCategories.map(category => (
-              <div key={category.id} className="w-full">
+            {sponsorCategories.map(category => <div key={category.id} className="w-full">
                 <h3 className="text-xl font-semibold text-gray-700 mb-6 text-center">{category.title}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {category.logos.map((logo, idx) => (
-                    <Card key={idx} className="overflow-hidden shadow-md hover:shadow-lg transition-all">
+                  {category.logos.map((logo, idx) => <Card key={idx} className="overflow-hidden shadow-md hover:shadow-lg transition-all">
                       <CardContent className="p-6 flex items-center justify-center bg-white">
-                        <img
-                          src={logo.src}
-                          alt={logo.alt}
-                          className={`w-${logo.width} h-auto max-h-48 object-contain`}
-                        />
+                        <img src={logo.src} alt={logo.alt} className={`w-${logo.width} h-auto max-h-48 object-contain`} />
                       </CardContent>
-                    </Card>
-                  ))}
+                    </Card>)}
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           {/* Chief Guest Section */}
@@ -162,40 +114,18 @@ const Sponsors: React.FC = () => {
                   </div>
                 </div>
                 <div>
-                  <img 
-                    src="/lovable-uploads/b0ddc253-c1b0-43f0-bb0e-6e4dc58b53c4.png" 
-                    alt="Mr. Srikanth Bolla" 
-                    className="w-full h-full object-cover object-center"
-                  />
+                  <img src="/lovable-uploads/b0ddc253-c1b0-43f0-bb0e-6e4dc58b53c4.png" alt="Mr. Srikanth Bolla" className="w-full h-full object-cover object-center" />
                 </div>
               </div>
             </Card>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
-            <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow transition-shadow flex flex-col items-center justify-center text-center">
-              <div className="h-16 w-16 bg-festival-light-purple/50 rounded-full flex items-center justify-center mb-3">
-                <span className="text-2xl font-bold text-festival-purple">MS</span>
-              </div>
-              <h4 className="font-semibold text-festival-purple">MindSpark Technologies</h4>
-              <p className="text-sm text-gray-500 mt-1">Technology Partner</p>
-            </div>
             
-            <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow transition-shadow flex flex-col items-center justify-center text-center">
-              <div className="h-16 w-16 bg-festival-light-purple/50 rounded-full flex items-center justify-center mb-3">
-                <span className="text-2xl font-bold text-festival-purple">CS</span>
-              </div>
-              <h4 className="font-semibold text-festival-purple">CodeSprint</h4>
-              <p className="text-sm text-gray-500 mt-1">Coding Challenge Partner</p>
-            </div>
             
-            <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow transition-shadow flex flex-col items-center justify-center text-center">
-              <div className="h-16 w-16 bg-festival-light-purple/50 rounded-full flex items-center justify-center mb-3">
-                <span className="text-2xl font-bold text-festival-purple">TN</span>
-              </div>
-              <h4 className="font-semibold text-festival-purple">TechNova</h4>
-              <p className="text-sm text-gray-500 mt-1">Innovation Partner</p>
-            </div>
+            
+            
+            
           </div>
 
           <div className="mt-12">
@@ -205,8 +135,6 @@ const Sponsors: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Sponsors;

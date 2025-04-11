@@ -1,7 +1,5 @@
-
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
-
 const Hero: React.FC = () => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -9,64 +7,57 @@ const Hero: React.FC = () => {
     minutes: 0,
     seconds: 0
   });
-
   useEffect(() => {
     const calculateTimeLeft = () => {
       const eventDate = new Date('April 25, 2025 09:00:00').getTime();
       const now = new Date().getTime();
       const difference = eventDate - now;
-      
       if (difference > 0) {
         setTimeLeft({
           days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-          minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((difference % (1000 * 60)) / 1000)
+          hours: Math.floor(difference % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)),
+          minutes: Math.floor(difference % (1000 * 60 * 60) / (1000 * 60)),
+          seconds: Math.floor(difference % (1000 * 60) / 1000)
         });
       }
     };
-
     const timer = setInterval(calculateTimeLeft, 1000);
     calculateTimeLeft();
-    
     return () => clearInterval(timer);
   }, []);
-
   const scrollToRegistration = () => {
     const registrationSection = document.getElementById('registration');
     if (registrationSection) {
-      registrationSection.scrollIntoView({ behavior: 'smooth' });
+      registrationSection.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <section id="home" className="relative min-h-screen bg-gradient-to-b from-festival-light-purple/40 to-white pt-20 overflow-hidden">
+  return <section id="home" className="relative min-h-screen bg-gradient-to-b from-festival-light-purple/40 to-white pt-20 overflow-hidden">
       {/* Enhanced 3D Decorative elements */}
       <div className="absolute top-20 left-10 w-32 h-32 bg-festival-light-blue rounded-full blur-3xl opacity-50 animate-float"></div>
       <div className="absolute bottom-20 right-10 w-40 h-40 bg-festival-light-purple rounded-full blur-3xl opacity-50 animate-pulse-slow"></div>
       <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-festival-orange/20 rounded-full blur-xl opacity-40"></div>
       
       {/* Dynamic moving shapes */}
-      <div className="absolute top-1/4 left-1/4 w-16 h-16 bg-festival-blue/20 rounded-full blur-xl opacity-40 animate-float" style={{animationDelay: '1s', animationDuration: '7s'}}></div>
-      <div className="absolute bottom-1/3 left-1/3 w-20 h-20 bg-festival-orange/30 rounded-full blur-xl opacity-30 animate-float" style={{animationDelay: '2s', animationDuration: '8s'}}></div>
+      <div className="absolute top-1/4 left-1/4 w-16 h-16 bg-festival-blue/20 rounded-full blur-xl opacity-40 animate-float" style={{
+      animationDelay: '1s',
+      animationDuration: '7s'
+    }}></div>
+      <div className="absolute bottom-1/3 left-1/3 w-20 h-20 bg-festival-orange/30 rounded-full blur-xl opacity-30 animate-float" style={{
+      animationDelay: '2s',
+      animationDuration: '8s'
+    }}></div>
       
       {/* Abhyuday Logo Watermark */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5">
-        <img 
-          src="/lovable-uploads/cc24c81f-4e39-450d-b4ab-1c850d241296.png" 
-          alt="Abhyuday Watermark" 
-          className="w-3/4 max-w-3xl"
-        />
+        <img src="/lovable-uploads/cc24c81f-4e39-450d-b4ab-1c850d241296.png" alt="Abhyuday Watermark" className="w-3/4 max-w-3xl" />
       </div>
       
       <div className="container mx-auto px-4 py-24 md:py-32 flex flex-col items-center z-10 relative">
         {/* Ashoka Institute Logo - Center Top */}
         <div className="mb-8">
-          <img 
-            src="/lovable-uploads/41e5a39c-151c-4f70-ba93-378ff78a6434.png" 
-            alt="Ashoka Institute Logo" 
-            className="h-36 md:h-40 bg-white p-3 rounded-lg shadow-md" 
-          />
+          
           <h1 className="text-lg md:text-xl font-bold mt-2 text-gray-800">ASHOKA INSTITUTE OF TECHNOLOGY AND MANAGEMENT</h1>
         </div>
         
@@ -81,11 +72,13 @@ const Hero: React.FC = () => {
           </div>
           
           <h1 className="font-montserrat font-extrabold text-5xl md:text-7xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-festival-purple via-festival-blue to-festival-purple relative">
-            <span className="animate-float inline-block" style={{animationDuration: '6s'}}>ABHYUDAY 2025</span>
+            <span className="animate-float inline-block" style={{
+            animationDuration: '6s'
+          }}>ABHYUDAY 2025</span>
             <div className="absolute -inset-2 bg-gradient-to-r from-festival-blue/20 via-festival-purple/20 to-festival-orange/20 rounded-xl blur-md -z-10"></div>
           </h1>
           
-          <p className="text-2xl md:text-3xl mb-2 font-bold text-[#D4AF37] font-['Playfair_Display']">
+          <p className="text-2xl mb-2 text-[#D4AF37] font-['Playfair_Display'] md:text-3xl font-extrabold">
             STATE LEVEL LIT-TECH FIESTA
           </p>
 
@@ -110,9 +103,9 @@ const Hero: React.FC = () => {
           </div>
           
           <p className="text-xl md:text-2xl mb-8 font-light text-gray-700">
-            <span className="font-semibold">Where Innovation Meets Creativity!</span>
+            <span className="font-extrabold">Where Innovation Meets Creativity!</span>
             <br />
-            <span className="text-base md:text-lg">Ashoka Institute of Technology and Management, Varanasi</span>
+            <span className="text-base md:text-lg font-bold text-blue-800">Ashoka Institute of Technology and Management, Varanasi</span>
           </p>
           
           <div className="flex flex-wrap justify-center gap-6 mb-10">
@@ -123,29 +116,19 @@ const Hero: React.FC = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button 
-              onClick={scrollToRegistration}
-              size="lg" 
-              className="bg-festival-orange hover:bg-orange-600 text-white font-semibold text-lg px-10 shadow-lg shadow-festival-orange/30 hover:shadow-festival-orange/50 transition-all"
-            >
+            <Button onClick={scrollToRegistration} size="lg" className="bg-festival-orange hover:bg-orange-600 text-white font-semibold text-lg px-10 shadow-lg shadow-festival-orange/30 hover:shadow-festival-orange/50 transition-all">
               Register Now
             </Button>
             
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="border-festival-purple text-festival-purple hover:bg-festival-purple/10 font-semibold text-lg px-10 shadow-md hover:shadow-lg transition-all"
-              onClick={() => document.getElementById('schedule')?.scrollIntoView({ behavior: 'smooth' })}
-            >
+            <Button variant="outline" size="lg" className="border-festival-purple text-festival-purple hover:bg-festival-purple/10 font-semibold text-lg px-10 shadow-md hover:shadow-lg transition-all" onClick={() => document.getElementById('schedule')?.scrollIntoView({
+            behavior: 'smooth'
+          })}>
               View Schedule
             </Button>
             
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="border-festival-blue text-festival-blue hover:bg-festival-blue/10 font-semibold text-lg px-10 shadow-md hover:shadow-lg transition-all"
-              onClick={() => document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' })}
-            >
+            <Button variant="outline" size="lg" className="border-festival-blue text-festival-blue hover:bg-festival-blue/10 font-semibold text-lg px-10 shadow-md hover:shadow-lg transition-all" onClick={() => document.getElementById('events')?.scrollIntoView({
+            behavior: 'smooth'
+          })}>
               Explore Events
             </Button>
           </div>
@@ -170,8 +153,6 @@ const Hero: React.FC = () => {
       </div>
       
       <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"></div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
