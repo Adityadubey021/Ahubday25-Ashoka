@@ -1,9 +1,9 @@
 
 import React from 'react';
-import { Linkedin, Instagram } from 'lucide-react';
+import { Linkedin, Instagram, Facebook, Youtube, Twitter } from 'lucide-react';
 
 export interface SocialLink {
-  type: 'linkedin' | 'instagram';
+  type: 'linkedin' | 'instagram' | 'facebook' | 'youtube' | 'twitter';
   url: string;
 }
 
@@ -19,6 +19,12 @@ const SocialMediaCoordinatorLinks: React.FC<SocialMediaCoordinatorLinksProps> = 
         return <Linkedin size={18} />;
       case 'instagram':
         return <Instagram size={18} />;
+      case 'facebook':
+        return <Facebook size={18} />;
+      case 'youtube':
+        return <Youtube size={18} />;
+      case 'twitter':
+        return <Twitter size={18} />;
       default:
         return null;
     }

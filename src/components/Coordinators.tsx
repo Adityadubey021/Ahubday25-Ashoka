@@ -1,13 +1,7 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Mail, Phone, Linkedin, Instagram } from 'lucide-react';
-import SocialMediaCoordinatorLinks from './SocialMediaCoordinatorLinks';
-
-interface SocialLink {
-  type: 'linkedin' | 'instagram';
-  url: string;
-}
+import SocialMediaCoordinatorLinks, { SocialLink } from './SocialMediaCoordinatorLinks';
 
 interface CoordinatorProps {
   name: string;
@@ -62,8 +56,8 @@ const Coordinators: React.FC = () => {
       phone: "+91-8932056388",
       imageSrc: "/lovable-uploads/44a2b30a-cc33-4e15-bf3b-16f99c0764ad.png",
       socialLinks: [
-        { type: "linkedin", url: "https://www.linkedin.com/in/aditya-dubey-49129a248/" },
-        { type: "instagram", url: "https://www.instagram.com/aditya__dubey21/" }
+        { type: "linkedin" as const, url: "https://www.linkedin.com/in/aditya-dubey-49129a248/" },
+        { type: "instagram" as const, url: "https://www.instagram.com/aditya__dubey21/" }
       ]
     },
     {
@@ -72,8 +66,8 @@ const Coordinators: React.FC = () => {
       phone: "+91-9235508350",
       imageSrc: "/lovable-uploads/7b1f60f9-503e-422f-b831-a2d8b217ba1a.png",
       socialLinks: [
-        { type: "linkedin", url: "https://www.linkedin.com/in/diwakar-patel-151393277/" },
-        { type: "instagram", url: "https://www.instagram.com/diwakarpatel453t/" }
+        { type: "linkedin" as const, url: "https://www.linkedin.com/in/diwakar-patel-151393277/" },
+        { type: "instagram" as const, url: "https://www.instagram.com/diwakarpatel453t/" }
       ]
     },
     {
@@ -82,8 +76,8 @@ const Coordinators: React.FC = () => {
       phone: "+91-8318180062",
       imageSrc: "/lovable-uploads/c5a4b73d-428b-4255-b313-49665349f587.png",
       socialLinks: [
-        { type: "linkedin", url: "https://www.instagram.com/swami_singh_smartest/" },
-        { type: "instagram", url: "https://www.instagram.com/swami_singh_smartest/" }
+        { type: "instagram" as const, url: "https://www.instagram.com/swami_singh_smartest/" },
+        { type: "instagram" as const, url: "https://www.instagram.com/swami_singh_smartest/" }
       ]
     },
     {
@@ -92,7 +86,7 @@ const Coordinators: React.FC = () => {
       phone: "+91-8471059969",
       imageSrc: "/lovable-uploads/8cba9d73-9b2a-4c9e-88fe-62e91ec6e85a.png",
       socialLinks: [
-        { type: "linkedin", url: "https://www.linkedin.com/in/malay-vishwakarma-45a892248/" }
+        { type: "linkedin" as const, url: "https://www.linkedin.com/in/malay-vishwakarma-45a892248/" }
       ]
     },
     {
@@ -101,8 +95,8 @@ const Coordinators: React.FC = () => {
       phone: "+91-9565676988",
       imageSrc: "/lovable-uploads/0827b300-8847-4aed-9e8c-2a62a2eb7e53.png",
       socialLinks: [
-        { type: "linkedin", url: "https://www.linkedin.com/in/sobrat-dayal/" },
-        { type: "instagram", url: "https://www.instagram.com/sobratdayal2022/" }
+        { type: "linkedin" as const, url: "https://www.linkedin.com/in/sobrat-dayal/" },
+        { type: "instagram" as const, url: "https://www.instagram.com/sobratdayal2022/" }
       ]
     },
   ];
