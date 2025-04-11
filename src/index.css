@@ -49,6 +49,10 @@
     --festival-blue: #3E8CCC;
     --festival-light-blue: #17477E;
     --festival-orange: #F97316;
+    --festival-dark: #0D0E13;
+    --festival-darker: #07080B;
+    --festival-teal: #4FD1C5;
+    --festival-cyan: #22D3EE;
   }
 }
 
@@ -80,12 +84,25 @@
   }
 }
 
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(79, 209, 197, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(79, 209, 197, 0.7);
+  }
+}
+
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
 
 .animate-pulse-slow {
   animation: pulse-slow 4s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
 }
 
 .glass-morphism {
@@ -96,10 +113,22 @@
   @apply backdrop-blur-2xl bg-black/40 border border-white/10;
 }
 
+.tech-card {
+  @apply backdrop-blur-xl bg-white/5 border border-festival-teal/30 hover:border-festival-teal/60 transition-all duration-300;
+}
+
 .text-gradient {
   @apply bg-gradient-to-br from-white via-white/90 to-white/70 bg-clip-text text-transparent;
 }
 
 .text-gradient-primary {
   @apply bg-gradient-to-br from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent;
+}
+
+.text-gradient-teal {
+  @apply bg-gradient-to-br from-festival-teal via-festival-cyan to-blue-400 bg-clip-text text-transparent;
+}
+
+.btn-glow {
+  @apply relative overflow-hidden hover:before:opacity-100 before:absolute before:inset-0 before:bg-gradient-to-r before:from-festival-teal/0 before:via-festival-teal/30 before:to-festival-teal/0 before:opacity-0 before:transition-opacity before:duration-500;
 }

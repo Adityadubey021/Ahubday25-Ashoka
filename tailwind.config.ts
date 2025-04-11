@@ -73,8 +73,11 @@ export default {
 					'blue': '#3E8CCC',
 					'light-blue': '#17477E',
 					'orange': '#F97316',
-					'dark': '#1A1F2C',
-					'dark-purple': '#2D1A45'
+					'dark': '#0D0E13',
+					'darker': '#07080B',
+					'dark-purple': '#2D1A45',
+					'teal': '#4FD1C5',
+					'cyan': '#22D3EE'
 				}
 			},
 			borderRadius: {
@@ -106,6 +109,10 @@ export default {
 				'pulse-slow': {
 					'0%, 100%': { opacity: '1' },
 					'50%': { opacity: '0.8' },
+				},
+				'glow': {
+					'0%, 100%': { boxShadow: '0 0 15px rgba(79, 209, 197, 0.4)' },
+					'50%': { boxShadow: '0 0 30px rgba(79, 209, 197, 0.7)' },
 				}
 			},
 			animation: {
@@ -113,6 +120,7 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'float': 'float 6s ease-in-out infinite',
 				'pulse-slow': 'pulse-slow 3s ease-in-out infinite',
+				'glow': 'glow 3s ease-in-out infinite',
 			}
 		}
 	},

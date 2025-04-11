@@ -11,14 +11,17 @@ import AboutEvent from '@/components/AboutEvent';
 
 const Index: React.FC = () => {
   return (
-    <div className="font-poppins min-h-screen bg-festival-dark text-white">
+    <div className="font-poppins min-h-screen bg-festival-darker text-white">
       <Navbar />
       <Hero />
-      <AboutEvent />
-      <Schedule />
-      <Events />
-      <Coordinators />
-      <Sponsors />
+      <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-festival-darker to-festival-dark z-0"></div>
+        <AboutEvent />
+        <Schedule />
+        <Events />
+        <Coordinators />
+        <Sponsors />
+      </div>
       <Footer />
     </div>
   );
