@@ -43,13 +43,9 @@ const Navbar: React.FC = () => {
           <img 
             src="/lovable-uploads/a15de4f2-1ba0-466c-8068-10aaddbab593.png" 
             alt="Ashoka Institute Logo" 
-            className="h-20 mr-3 transition-transform duration-300 hover:scale-105" 
+            className="h-24 md:h-28 mr-3 transition-transform duration-300 hover:scale-105" 
           />
-          <div className="flex flex-col items-start">
-            <div className="text-white font-bold text-xs md:text-sm">
-              25-26 APRIL 2025
-            </div>
-          </div>
+          {/* Removed date that was here */}
         </div>
 
         {/* Desktop Menu */}

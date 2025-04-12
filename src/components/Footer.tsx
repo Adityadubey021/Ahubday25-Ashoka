@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center mb-4">
-              <img alt="Ashoka Institute Logo" src="/lovable-uploads/a15de4f2-1ba0-466c-8068-10aaddbab593.png" className="h-16 mr-2 bg-white/10 p-1 rounded object-fill" />
+              <img alt="Ashoka Institute Logo" src="/lovable-uploads/a15de4f2-1ba0-466c-8068-10aaddbab593.png" className="h-20 mr-2 bg-white/10 p-1 rounded object-fill" />
               <div className="flex flex-col ml-2">
                 <h3 className="text-xl font-bold">Abhyuday 2025</h3>
                 <p className="text-sm text-white/80">April 25-26, 2025</p>

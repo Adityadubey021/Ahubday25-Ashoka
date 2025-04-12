@@ -38,11 +38,11 @@ const Hero: React.FC = () => {
           <div className="mb-6 flex flex-col justify-center items-center relative">
             <div className="absolute -inset-5 bg-gradient-to-r from-festival-blue/20 via-festival-purple/20 to-festival-orange/20 rounded-full blur-xl animate-pulse-slow opacity-70"></div>
             
-            {/* Ashoka Logo */}
-            <img src="/lovable-uploads/a15de4f2-1ba0-466c-8068-10aaddbab593.png" alt="Ashoka Institute Logo" className="h-400 md:h-48 relative z-10 mb-1" />
+            {/* Ashoka Logo - made bigger */}
+            <img src="/lovable-uploads/a15de4f2-1ba0-466c-8068-10aaddbab593.png" alt="Ashoka Institute Logo" className="h-60 md:h-72 relative z-10 mb-6 bg-white/10 p-2 rounded-md" />
             
-            {/* Abhyuday Logo */}
-            <img src="/lovable-uploads/6d1c6f5a-bce0-4674-b9e9-96eb92011b8f.png" alt="Abhyuday 2025 Logo" className="h-32 md:h-40 relative z-10" />
+            {/* Abhyuday Logo - replaced with the new image */}
+            <img src="/lovable-uploads/a8c0776c-b911-43b5-8397-fb3075ac7d3d.png" alt="Abhyuday 2025 Logo" className="h-40 md:h-48 relative z-10" />
           </div>
           
           <div className="mb-6 inline-block px-6 py-3 bg-[#1A1F2C]/50 text-festival-orange rounded-full text-sm font-semibold animate-pulse-slow border border-festival-orange/30">
