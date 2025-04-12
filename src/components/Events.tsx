@@ -2,7 +2,6 @@ import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import EventDetails from './EventDetails';
-
 interface EventProps {
   title: string;
   subtitle: string;
@@ -10,10 +9,14 @@ interface EventProps {
   description: string;
   details: string;
 }
-
-const EventCard: React.FC<EventProps> = ({ title, subtitle, price, description, details }) => {
-  return (
-    <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg border-t-4 border-t-festival-orange h-full bg-[#1A1F2C]/50 backdrop-blur-sm text-white border border-white/10">
+const EventCard: React.FC<EventProps> = ({
+  title,
+  subtitle,
+  price,
+  description,
+  details
+}) => {
+  return <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg border-t-4 border-t-festival-orange h-full bg-[#1A1F2C]/50 backdrop-blur-sm text-white border border-white/10">
       <CardHeader className="pb-3">
         <CardTitle className="text-xl font-bold text-festival-orange">{title}</CardTitle>
         <CardDescription className="text-sm font-medium text-gray-300">{subtitle}</CardDescription>
@@ -23,18 +26,10 @@ const EventCard: React.FC<EventProps> = ({ title, subtitle, price, description, 
       </CardContent>
       <CardFooter className="flex justify-between items-center pt-3 border-t border-gray-700">
         <div className="text-festival-orange font-bold">Entry Fee: {price}</div>
-        <EventDetails 
-          title={title}
-          subtitle={subtitle}
-          description={description}
-          price={price}
-          details={details}
-        />
+        <EventDetails title={title} subtitle={subtitle} description={description} price={price} details={details} />
       </CardFooter>
-    </Card>
-  );
+    </Card>;
 };
-
 const Events = () => {
   const eventDetailsMap = {
     roboSumo: `1. Introduction
@@ -80,7 +75,6 @@ during a match—results in immediate disqualification.
 Teams are responsible for providing their own equipment and spare parts.
 All decisions made by the judges and organizing committee are final.
 Note : Organisers reserve the right to modify rules as necessary to ensure safety and maintain fair competition.`,
-
     roboSoccer: `1. Introduction
 Robo Soccer is a robotic soccer competition in which teams design and build a robot to maneuver on a designated
 soccer field and push a tennis ball to score goals.
@@ -133,7 +127,6 @@ All decisions made by the referees and Judgement panel are final.
 
 8. Prize & Recognition
 The top three teams will receive prizes and certificates.`,
-
     eSports: `1. Games
 The tournament features the following BGMI (Battlegrounds Mobile India)
 Free Fire
@@ -171,7 +164,6 @@ Failure to join matches within the prescribed time limits may also warrant disqu
 8. Prize & Recognition
 The top three teams will receive prizes and certificates.
 Additionally, MVP (Most Valuable Player) awards may be presented based on individual performance.`,
-
     codeStorm: `1. Introduction
 The Individual Coding Event is a competitive programming contest designed to evaluate participants' problem-
 solving abilities and coding eﬃciency in an oﬄine environment.
@@ -209,7 +201,6 @@ Participants are responsible for ensuring the accuracy and functionality of thei
 Competitors must adhere to all contest rules and guidelines as stated herein.
 Organizers reserve the right to modify or clarify any rules as necessary, and all decisions by the judges are
 final.`,
-
     coreSync: `1. Introduction
 Core Sync - Bridging Hardware & Software Innovations is a 2-day competition designed to showcase pre-built
 projects that integrate hardware and/or software innovations, aligned with the theme of smart, society, and
@@ -250,7 +241,6 @@ the designated 8–10-minute presentation slot when requested.
 Organizers reserve the right to adjust rules or timelines as necessary to ensure fairness and smooth conduct
 of the event.
 All decisions made by the judges are final.`,
-
     thinkInk: `1. Theme - Innovations for a Sustainable and Healthier Future.
 The event invites students to present innovative ideas, technologies, and strategies that address sustainability
 challenges and promote healthier living. Participation is open to all students from Engineering, Pharmacy, and
@@ -301,7 +291,6 @@ Innovation and Creativity 20
 Visual Appeal and Design 20
 Clarity of Content and Message 20
 Presentation and Explaination 20`,
-
     poeticBattle: `Rules and regulations:
 • Participants perform original poetic pieces (Hindi or English both are allowed)
 • Time limit: 2-3 minutes per round.
@@ -309,21 +298,18 @@ Presentation and Explaination 20`,
 Rhyming, lyrical depth, creativity, and stage presence.
 • Use of hate speech or oﬀensive language is strictly prohibited.
 • Exceeding time will result in disqualification.`,
-
     treasureHunt: `Rules and regulations:
 • Teams of 4 members.
 • Clues will be provided in a sequential manner.
 • Time limit: 120 mins.
 • The first team to find the treasure wins; points will be given for each correct clue solved.
 • Teams must not tamper with or share clues with others.`,
-
     declamation: `Rules and regulations:
 • Participants must choose a speech from a well-known personality.
 • Time limit: 3-5 minutes.
 • Judgement Criteria: Content, delivery, pronunciation, fluency, and impact.
 • Use of oﬀensive or politically sensitive content is prohibited.
 • Exceeding the time limit will result in penalties.`,
-
     adMad: `Rules and regulations:
 • A team may consist of 4 members.
 • The team will be asked to create a marketing plan including creating a full-fledged creative campaign.
@@ -335,7 +321,6 @@ Rhyming, lyrical depth, creativity, and stage presence.
 • The criteria for assessment include content, spontaneity and adherence to the topic, coordination.
 • Use of vulgar expression and language will lead to disqualification of the team.
 • Decisions of the judges will be final.`,
-
     bestShot: `Theme
 People Celebrating Architecture:
 The photographs should reflect moments where people are engaging with, celebrating, or
@@ -357,7 +342,6 @@ Judgement Criteria
 • Creativity
 • Visual Impact
 • Composition and Clarity`,
-
     sinkingShip: `Rules and Regulations:
 • Participants will be role playing famous historical character (e.g., Ashoka, Napoleon, Rani Lakshmi Bai, Albert Einstein, Cleopatra, etc.).
 • Students can also dress up to be more presentable as the character.
@@ -372,7 +356,6 @@ Judgement Criteria:
 2. Creativity and historical accuracy
 3. Public speaking skills and persuasion
 4. Relevance to the character's contributions to society`,
-
     craftATale: `Creative Story Writing
 
 Description:
@@ -409,7 +392,6 @@ Judging Criteria:
 • Language and Grammar – Use of vocabulary, sentence structure.
 • Narrative Structure – Flow, coherence, and storytelling style.
 • Impact – Emotional, humorous, or dramatic effect.`,
-
     startupSimulation: `Objective
 Teams will be given a mystery image that represents a real-world scene, context, or issue.
 Based solely on this visual, teams must:
@@ -500,7 +482,6 @@ Awards include: (26.04.2025)
 Best Overall Start-up
 Most Creative Interpretation
 Social Impact Award`,
-
     pitchDeck: `"An exclusive event for showcasing student startups, innovations, and ideas."
 
 Objective of the Event
@@ -579,7 +560,6 @@ Registration Link
 Registration fee 200/-
 
 Selected teams will be informed via email about their participation.`,
-
     hackathon: `Rules for Hackathon:
 
 a. Eligibility
@@ -637,133 +617,108 @@ Teams should focus on their projects and refrain from causing any unnecessary di
 f. Submission
 Each team must submit their complete project source code within the designated time.
 Projects must be deployed and fully functional by the end of the 24-hour event.
-Incomplete or non-functional submissions will be penalized.`,
-
+Incomplete or non-functional submissions will be penalized.`
   };
-
-  const technicalEvents = [
-    {
-      title: "Robo Sumo",
-      subtitle: "Robo Rumble: The Ultimate Showdown",
-      price: "₹200",
-      description: "Design and build a robot to push opponents out of a designated arena. Test your engineering skills and strategic control.",
-      details: eventDetailsMap.roboSumo
-    },
-    {
-      title: "Robo Soccer",
-      subtitle: "CuberKick: Robo Soccer League",
-      price: "₹200",
-      description: "Build a robot to maneuver on a designated soccer field and push a tennis ball to score goals.",
-      details: eventDetailsMap.roboSoccer
-    },
-    {
-      title: "E-Sports",
-      subtitle: "Game On: Esports Championship - BGMI & FreeFire",
-      price: "₹100",
-      description: "Compete in popular mobile games BGMI and FreeFire to win exciting prizes. Show off your gaming skills and strategic gameplay.",
-      details: eventDetailsMap.eSports
-    },
-    {
-      title: "Code Storm",
-      subtitle: "Competitive Programming Challenge",
-      price: "₹50",
-      description: "Solve complex programming problems under time constraints. Test your coding skills, logic, and efficiency.",
-      details: eventDetailsMap.codeStorm
-    },
-    {
-      title: "Core Sync",
-      subtitle: "Bridging Hardware & Software Innovations",
-      price: "₹50",
-      description: "Showcase pre-built projects that integrate hardware and/or software innovations aligned with smart, society, and sustainability themes.",
-      details: eventDetailsMap.coreSync
-    },
-    {
-      title: "ThinkInk",
-      subtitle: "Poster Presentation Competition",
-      price: "₹50",
-      description: "Present innovative ideas through posters addressing sustainability challenges and promoting healthier living.",
-      details: eventDetailsMap.thinkInk
-    }
-  ];
-
-  const literaryEvents = [
-    {
-      title: "Poetic Battle",
-      subtitle: "Verse vs. Verse",
-      price: "₹100",
-      description: "Showcase your poetic talent with original pieces in Hindi or English. Express emotions and creativity through words.",
-      details: eventDetailsMap.poeticBattle
-    },
-    {
-      title: "Treasure Hunt",
-      subtitle: "Campus-wide Adventure",
-      price: "₹200/team",
-      description: "Solve clues and puzzles to find hidden treasures across the campus. Test your problem-solving skills and teamwork.",
-      details: eventDetailsMap.treasureHunt
-    },
-    {
-      title: "Declamation",
-      subtitle: "Public Speaking Challenge",
-      price: "₹100",
-      description: "Deliver a powerful speech from a well-known personality with conviction and eloquence.",
-      details: eventDetailsMap.declamation
-    },
-    {
-      title: "Ad-Mad",
-      subtitle: "Advertisement Madness",
-      price: "₹200/team",
-      description: "Create and present an advertisement for a given product in the most creative way. Show your marketing skills and creativity.",
-      details: eventDetailsMap.adMad
-    },
-    {
-      title: "Best Shot on the Spot",
-      subtitle: "People Celebrating Architecture",
-      price: "₹100",
-      description: "Capture photographs reflecting moments where people interact with architectural environments.",
-      details: eventDetailsMap.bestShot
-    },
-    {
-      title: "Sinking Ship",
-      subtitle: "Historical Characters Edition",
-      price: "₹100",
-      description: "Role-play historical characters and argue why you deserve to be saved from a sinking ship.",
-      details: eventDetailsMap.sinkingShip
-    },
-    {
-      title: "Craft a Tale",
-      subtitle: "Creative Story Writing",
-      price: "₹50",
-      description: "Weave a creative story connecting two distinct images in a meaningful and original way.",
-      details: eventDetailsMap.craftATale
-    }
-  ];
-
-  const entrepreneurshipEvents = [
-    {
-      title: "Startup Simulation Challenge",
-      subtitle: "Create a Startup Concept",
-      price: "₹200/team",
-      description: "Interpret a mystery image, identify a problem, and build a startup concept around your solution.",
-      details: eventDetailsMap.startupSimulation
-    },
-    {
-      title: "Ashoka Startup Showcase Meet",
-      subtitle: "Startup Pitch Competition",
-      price: "₹200/team",
-      description: "Present your startup idea, network with mentors and investors, and gain valuable feedback.",
-      details: eventDetailsMap.pitchDeck
-    },
-    {
-      title: "Kashi Hackathon 2025",
-      subtitle: "24-Hour Coding Marathon",
-      price: "₹200/team",
-      description: "Develop sustainable solutions through a 24-hour collaborative development event.",
-      details: eventDetailsMap.hackathon
-    }
-  ];
-
-  return (
-    <section id="events" className="py-20 bg-[#121621] relative">
+  const technicalEvents = [{
+    title: "Robo Sumo",
+    subtitle: "Robo Rumble: The Ultimate Showdown",
+    price: "₹200",
+    description: "Design and build a robot to push opponents out of a designated arena. Test your engineering skills and strategic control.",
+    details: eventDetailsMap.roboSumo
+  }, {
+    title: "Robo Soccer",
+    subtitle: "CuberKick: Robo Soccer League",
+    price: "₹200",
+    description: "Build a robot to maneuver on a designated soccer field and push a tennis ball to score goals.",
+    details: eventDetailsMap.roboSoccer
+  }, {
+    title: "E-Sports",
+    subtitle: "Game On: Esports Championship - BGMI & FreeFire",
+    price: "₹100",
+    description: "Compete in popular mobile games BGMI and FreeFire to win exciting prizes. Show off your gaming skills and strategic gameplay.",
+    details: eventDetailsMap.eSports
+  }, {
+    title: "Code Storm",
+    subtitle: "Competitive Programming Challenge",
+    price: "₹50",
+    description: "Solve complex programming problems under time constraints. Test your coding skills, logic, and efficiency.",
+    details: eventDetailsMap.codeStorm
+  }, {
+    title: "Core Sync",
+    subtitle: "Bridging Hardware & Software Innovations",
+    price: "₹50",
+    description: "Showcase pre-built projects that integrate hardware and/or software innovations aligned with smart, society, and sustainability themes.",
+    details: eventDetailsMap.coreSync
+  }, {
+    title: "ThinkInk",
+    subtitle: "Poster Presentation Competition",
+    price: "₹50",
+    description: "Present innovative ideas through posters addressing sustainability challenges and promoting healthier living.",
+    details: eventDetailsMap.thinkInk
+  }];
+  const literaryEvents = [{
+    title: "Poetic Battle",
+    subtitle: "Verse vs. Verse",
+    price: "₹100",
+    description: "Showcase your poetic talent with original pieces in Hindi or English. Express emotions and creativity through words.",
+    details: eventDetailsMap.poeticBattle
+  }, {
+    title: "Treasure Hunt",
+    subtitle: "Campus-wide Adventure",
+    price: "₹200/team",
+    description: "Solve clues and puzzles to find hidden treasures across the campus. Test your problem-solving skills and teamwork.",
+    details: eventDetailsMap.treasureHunt
+  }, {
+    title: "Declamation",
+    subtitle: "Public Speaking Challenge",
+    price: "₹100",
+    description: "Deliver a powerful speech from a well-known personality with conviction and eloquence.",
+    details: eventDetailsMap.declamation
+  }, {
+    title: "Ad-Mad",
+    subtitle: "Advertisement Madness",
+    price: "₹200/team",
+    description: "Create and present an advertisement for a given product in the most creative way. Show your marketing skills and creativity.",
+    details: eventDetailsMap.adMad
+  }, {
+    title: "Best Shot on the Spot",
+    subtitle: "People Celebrating Architecture",
+    price: "₹100",
+    description: "Capture photographs reflecting moments where people interact with architectural environments.",
+    details: eventDetailsMap.bestShot
+  }, {
+    title: "Sinking Ship",
+    subtitle: "Historical Characters Edition",
+    price: "₹100",
+    description: "Role-play historical characters and argue why you deserve to be saved from a sinking ship.",
+    details: eventDetailsMap.sinkingShip
+  }, {
+    title: "Craft a Tale",
+    subtitle: "Creative Story Writing",
+    price: "₹50",
+    description: "Weave a creative story connecting two distinct images in a meaningful and original way.",
+    details: eventDetailsMap.craftATale
+  }];
+  const entrepreneurshipEvents = [{
+    title: "Startup Simulation Challenge",
+    subtitle: "Create a Startup Concept",
+    price: "₹200/team",
+    description: "Interpret a mystery image, identify a problem, and build a startup concept around your solution.",
+    details: eventDetailsMap.startupSimulation
+  }, {
+    title: "Ashoka Startup Showcase Meet",
+    subtitle: "Startup Pitch Competition",
+    price: "₹200/team",
+    description: "Present your startup idea, network with mentors and investors, and gain valuable feedback.",
+    details: eventDetailsMap.pitchDeck
+  }, {
+    title: "Kashi Hackathon 2025",
+    subtitle: "24-Hour Coding Marathon",
+    price: "₹200/team",
+    description: "Develop sustainable solutions through a 24-hour collaborative development event.",
+    details: eventDetailsMap.hackathon
+  }];
+  return <section id="events" className="py-20 bg-[#121621] relative">
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-festival-orange font-montserrat">Festival Events</h2>
@@ -773,66 +728,31 @@ Incomplete or non-functional submissions will be penalized.`,
         <Tabs defaultValue="technical" className="max-w-6xl mx-auto">
           <div className="flex justify-center mb-8">
             <TabsList className="bg-[#1A1F2C]">
-              <TabsTrigger value="technical" className="text-lg px-8 py-3 data-[state=active]:bg-festival-orange data-[state=active]:text-white">
-                Technical
-              </TabsTrigger>
-              <TabsTrigger value="literary" className="text-lg px-8 py-3 data-[state=active]:bg-festival-orange data-[state=active]:text-white">
-                Literary
-              </TabsTrigger>
-              <TabsTrigger value="entrepreneurship" className="text-lg px-8 py-3 data-[state=active]:bg-festival-orange data-[state=active]:text-white">
-                Entrepreneurship
-              </TabsTrigger>
+              <TabsTrigger value="technical" className="text-lg px-8 py-3 data-[state=active]:bg-festival-orange data-[state=active]:text-white">Techसृजन</TabsTrigger>
+              <TabsTrigger value="literary" className="text-lg px-8 py-3 data-[state=active]:bg-festival-orange data-[state=active]:text-white">साहित्य Spectrum</TabsTrigger>
+              <TabsTrigger value="entrepreneurship" className="text-lg px-8 py-3 data-[state=active]:bg-festival-orange data-[state=active]:text-white">Entrepreneur Summit</TabsTrigger>
             </TabsList>
           </div>
 
           <TabsContent value="technical" className="mt-2">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {technicalEvents.map((event, index) => (
-                <EventCard
-                  key={`tech-${index}`}
-                  title={event.title}
-                  subtitle={event.subtitle}
-                  price={event.price}
-                  description={event.description}
-                  details={event.details}
-                />
-              ))}
+              {technicalEvents.map((event, index) => <EventCard key={`tech-${index}`} title={event.title} subtitle={event.subtitle} price={event.price} description={event.description} details={event.details} />)}
             </div>
           </TabsContent>
 
           <TabsContent value="literary" className="mt-2">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {literaryEvents.map((event, index) => (
-                <EventCard
-                  key={`lit-${index}`}
-                  title={event.title}
-                  subtitle={event.subtitle}
-                  price={event.price}
-                  description={event.description}
-                  details={event.details}
-                />
-              ))}
+              {literaryEvents.map((event, index) => <EventCard key={`lit-${index}`} title={event.title} subtitle={event.subtitle} price={event.price} description={event.description} details={event.details} />)}
             </div>
           </TabsContent>
 
           <TabsContent value="entrepreneurship" className="mt-2">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {entrepreneurshipEvents.map((event, index) => (
-                <EventCard
-                  key={`entr-${index}`}
-                  title={event.title}
-                  subtitle={event.subtitle}
-                  price={event.price}
-                  description={event.description}
-                  details={event.details}
-                />
-              ))}
+              {entrepreneurshipEvents.map((event, index) => <EventCard key={`entr-${index}`} title={event.title} subtitle={event.subtitle} price={event.price} description={event.description} details={event.details} />)}
             </div>
           </TabsContent>
         </Tabs>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Events;
