@@ -42,7 +42,7 @@ const FacultyCoordinators: React.FC = () => {
       contact: "+91 8317066128"
     },
     {
-      name: "Technical ChairpersonEr. Avinash Prasad",
+      name: "Er. Avinash Prasad",
       role: "Er. Avinash Prasad",
       contact: "+91 9415555413"
     },
