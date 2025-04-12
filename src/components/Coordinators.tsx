@@ -74,12 +74,22 @@ const Coordinators: React.FC = () => {
     },
     {
       name: "Swami Charan Singh",
-      department: "B.Tech",
+      department: "MBA",
       contact: "8318180062", // Added placeholder contact as it wasn't provided
       imageSrc: "/lovable-uploads/96b27789-e728-469f-8108-632611031cd5.png",
       socialLinks: [
         { type: 'linkedin', url: 'https://www.instagram.com/swami_singh_smartest/' }, // Note: LinkedIn URL is set to Instagram as per your instructions
         { type: 'instagram', url: 'https://www.instagram.com/swami_singh_smartest/' }
+      ] as SocialLink[]
+    }
+    {
+      name: "Samarth Rao",
+      department: "B.tech (AI&ML)",
+      contact: "8318180062", // Added placeholder contact as it wasn't provided
+      imageSrc: "/Users/adityadubey/Downloads/WhatsApp Image 2025-04-12 at 13.59.05.jpeg",
+      socialLinks: [
+        { type: 'linkedin', url: 'https://www.linkedin.com/in/samarth-rao-24620a1ab/' }, // Note: LinkedIn URL is set to Instagram as per your instructions
+        { type: 'instagram', url: 'https://www.instagram.com/samarthrao34/' }
       ] as SocialLink[]
     }
   ];
