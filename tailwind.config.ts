@@ -68,9 +68,9 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				festival: {
-					'purple': '#6E59A5',
+					'purple': '#9b87f5',
 					'light-purple': '#E5DEFF',
-					'blue': '#1EAEDB',
+					'blue': '#3b82f6',
 					'light-blue': '#D3E4FD',
 					'orange': '#F97316',
 				}
@@ -111,6 +111,9 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'float': 'float 6s ease-in-out infinite',
 				'pulse-slow': 'pulse-slow 3s ease-in-out infinite',
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 			}
 		}
 	},

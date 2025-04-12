@@ -3,7 +3,6 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Events from '@/components/Events';
-import Registration from '@/components/Registration';
 import Coordinators from '@/components/Coordinators';
 import FacultyCoordinators from '@/components/FacultyCoordinators';
 import Sponsors from '@/components/Sponsors';
@@ -13,7 +12,7 @@ import PastHighlights from '@/components/PastHighlights';
 
 const Index: React.FC = () => {
   return (
-    <div className="font-poppins min-h-screen bg-white">
+    <div className="font-poppins min-h-screen bg-[#121621] text-white">
       <Navbar />
       <Hero />
       <Schedule />

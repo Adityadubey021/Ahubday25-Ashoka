@@ -2,7 +2,6 @@
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import EventDetails from './EventDetails';
 
 interface EventProps {
@@ -15,16 +14,16 @@ interface EventProps {
 
 const EventCard: React.FC<EventProps> = ({ title, subtitle, price, description, details }) => {
   return (
-    <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg border-t-4 border-t-festival-purple h-full">
+    <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg border-t-4 border-t-festival-orange h-full bg-[#1A1F2C]/50 backdrop-blur-sm text-white border border-white/10">
       <CardHeader className="pb-3">
-        <CardTitle className="text-xl font-bold text-festival-purple">{title}</CardTitle>
-        <CardDescription className="text-sm font-medium">{subtitle}</CardDescription>
+        <CardTitle className="text-xl font-bold text-festival-orange">{title}</CardTitle>
+        <CardDescription className="text-sm font-medium text-gray-300">{subtitle}</CardDescription>
       </CardHeader>
       <CardContent className="pb-4">
-        <p className="text-gray-600 text-sm">{description}</p>
+        <p className="text-gray-300 text-sm">{description}</p>
       </CardContent>
-      <CardFooter className="flex justify-between items-center pt-3 border-t">
-        <div className="text-festival-purple font-bold">Entry Fee: {price}</div>
+      <CardFooter className="flex justify-between items-center pt-3 border-t border-gray-700">
+        <div className="text-festival-orange font-bold">Entry Fee: {price}</div>
         <EventDetails 
           title={title}
           subtitle={subtitle}
@@ -39,384 +38,674 @@ const EventCard: React.FC<EventProps> = ({ title, subtitle, price, description, 
 
 const Events = () => {
   const eventDetailsMap = {
-    roboSumo: `Introduction:
-Welcome to Robosumo, an exciting competition where student-designed robots battle it out.
-The goal is for a wireless-controlled robot to push its opponents out of the ring to win.
+    roboSumo: `1. Introduction
+Robo sumo is a competitive event where student-designed robots engage in head-to-head matches by pushing
+opponents out of a designated arena. The competition is structured to evaluate design precision, strategic
+control, and real - time decision making.
 
-Team & Robot Requirements:
-Team Size: Each team can have a maximum of 4 students.
-Eligibility: Open to all students from any academic institution.
+2. Team & Robot Requirements
+Team Size: Each team may consists of up to 4 members.
+Eligibility: All students from accredited academic institutions are eligible to participate.
 
-Robot Specifications:
-Weight Limit: The robot must not exceed 8kg.
-Power Source:
-- The robot must be powered by an onboard battery.
-- Power supply must not exceed 24V.
-- Only wireless control is allowed; no wired connections during the match.
+3. Robot Specifications
+Weight Limit: Robots must not weigh more than 8 kg.
+Power Source: Robots must operate using onboard batteries with a maximum voltage of 24 V.
+Only wireless control is permitted, employing approved methods (such as Bluetooth or RF).
+Control: Manual control during matches is mandatory; fully autonomous operation is not allowed.
+Dimensions: No fixed size constraints apply, provided the robot complies with weight and structural stability
+requirements.
 
-Dimensions:
-No specific size constraints, but the robot must meet weight and structural requirements.
+4. Arena & Match Protocol
+Arena: The contest is held in a circular ring with a 1.5-meter diameter featuring a smooth surface to ensure fairness.
+Game Objective: Robots must force opponent robots out of the ring. Any contact by a robot outside the designated
+area will result in elimination.
+Match Duration: Matches are limited to a maximum of 15 minutes per round. If no robot is eliminated within this
+time, the outcome will be determined by a Judgement panel.
 
-Control System:
-- Robots must be controlled wirelessly via Bluetooth, RF communication, or approved wireless method.
-- Fully autonomous robots are not allowed; the robot must be controlled by team members.
+5. Scoring & Progression
+Winning Criteria: The robot remaining within the ring at the end of the match is declared the winner. In
+the event of simultaneous eliminations, the robot still inside the arena is deemed victorious.
+Judgement Parameters: Should the match end without a clear knockout, judges will evaluate performance
+based on aggression, strategy, and control.
+Stages: The competition on will begin with preliminary group rounds, followed by single-elimination on
+knockout rounds leading to the final championship.
 
-Competition Rules:
-1. The Arena:
-The battle takes place in a circular ring (diameter: 3 meters).
-The surface will be smooth to ensure fair play.
+6. Robot Restrictions & Safety Measures
+Prohibited Equipment: Robots must not incorporate weapons, sharp edges, or any hazardous components.
+Movement Mechanism: Allowed mechanisms include wheels, tracks, or legs. Hovercrafts and flying robots are
+strictly prohibited.
+Disqualification: Any violation of weight, control, or safety regulations—or receiving external assistance
+during a match—results in immediate disqualification.
 
-2. Game Objective:
-The goal is to push opponent robots out of the ring within the given time.
-Each round consists of three robots competing simultaneously.
-If any part of a robot touches the ground outside the ring, it is considered out.
+7. Additional Provisions
+Teams are responsible for providing their own equipment and spare parts.
+All decisions made by the judges and organizing committee are final.
+Note : Organisers reserve the right to modify rules as necessary to ensure safety and maintain fair competition.`,
 
-3. Match Duration:
-Each round lasts a maximum of 15 minutes.
-If no robot is pushed out within the time limit, the winner is decided based on aggression, control, and strategy.
+    roboSoccer: `1. Introduction
+Robo Soccer is a robotic soccer competition in which teams design and build a robot to maneuver on a designated
+soccer field and push a tennis ball to score goals.
+The competition emphasizes strategic innovation, manual control, and teamwork.
 
-4. Scoring & Winning Criteria:
-The last remaining robot in the ring is the winner.
-If multiple robots are pushed out simultaneously, the one still inside wins.
-If time runs out with multiple robots still in the ring, judges decide the winner based on:
-- Aggression (constant attacking or pushing)
-- Strategy (effective moves to push others out)
-- Control (robot movements and responses)
+2. Team & Robot Requirements
+Team Size: Each team must consists of 3 to 5 members (students only; professionals are not allowed).
+Eligibility: Only students from accredited academic institutions may participate.
 
-Robot Restrictions:
-Weapons & Hazardous Equipment:
-Robots must not have sharp edges, weapons, or harmful mechanisms.
-Explosives, sparks, or dangerous materials are strictly prohibited.`,
+3. Bot & Arena Specifications
+Arena Dimensions: The playing field measures approximately 8ft x 4ft x 2ft , with a ±10% variation
+permitted.
+Bot Dimensions: The robot must remain within a 30cm x 30cm x 30cm cubic envelope at all times, with a
+±10% variation permitted.
+Battery & Weight Constraints:
+The battery voltage cannot exceed 24V.
+The robot's weight (excluding remote control and wiring) must not exceed 5kg.
+Ball Specification: A standard tennis ball is used in the match.
+Ball Interaction: The robot must not carry the ball continuously; it must interact with the ball on the
+ground.
+Control Requirement: Robots must be operated manually by the participating team during the match.
 
-    roboSoccer: `In this event, participants would be competing against each other in an arena which will be a soccer field. Participants have to use their creative mind to make a robot which plays soccer.
+4. Arena & Match Protocol
+Match Duration: Each match lasts 15 minutes, divided into two halves of 7.5 minutes each.
+Half-Time Break: There is a 2-minute delay between the two halves.
+Kickoﬀ: Matches commence from the center of the arena.
+Time Regulation: No additional time is granted at the conclusion of either half.
+Goal Validity: A goal is counted only when the ball completely crosses the goal line.
+Stalled Ball Rule: If the ball remains stationary for 10 seconds, play is restarted from the center.
+Foul Play: Intentional ramming when the ball is not in play incurs a penalty, and a robot may not continuously
+block the goal for more than 10 seconds.
+Repair Protocol: Should a robot lose a significant component (e.g., a motor or wheel), match play will be paused
+for 10–15 minutes to allow for repairs.
+Referee Authority: Final decisions rest with the referee.
 
-General Overview:
-- The event is a robotic soccer competition.
-- Teams must build a bot that can move itself and push a tennis ball.
-- Teams can have 3-5 members (students only; professionals not allowed).
+5. Penalties & Disqualification
+Penalty Points: Each rule violation results in a deduction of 3 penalty points.
+Ball Handling: A robot may not hold or control the ball for more than 5 seconds consecutively.
+Accumulated Penalties: If a team accumulates excessive penalty points, they will automatically lose the match.
+Damage Provisions: Deliberate damage to the field, tennis ball, or an opponent's robot will lead to disqualification.
 
-Arena and Bot Specifications:
-- The arena size: 8ft x 4ft x 2ft (±10% variation possible).
-- Bot dimensions: Must fit within a 30cm x 30cm x 30cm cube at all times.
-- Battery voltage: Cannot exceed 24V.
-- Bot weight: Cannot exceed 5kg (excluding remote/wires).
-- Ball: A standard tennis ball.
-- The bot must not carry the ball continuously; it should keep the ball on the ground.
+6. Judgement Criteria & Scoring
+Scoring System: Points are awarded based on valid goals scored, with deductions applied for any penalty
+points incurred.
+Scoring Details: The detailed scoring mechanism will be disclosed at the event.
 
-Match Rules:
-- Matches last for 6 minutes (two halves of 3 minutes each with a 1-minute interval).
-- Match starts from the center.
-- No added time at the end of the halves.
-- Goals are valid only if the ball fully crosses the goal line.
-- If the ball remains stationary for 10 seconds, play is restarted from the center.
-- Intentional ramming without the ball in play results in a penalty.
-- Bots cannot fully block the goal for more than 10 seconds.
-- If a bot loses a significant part (motor, wheels, etc.), play will be stopped for up to 10-15 minutes for repairs.
-- Final decisions rest with the referee.
+7. Additional Provisions
+Organizers reserve the right to modify the rules to maintain safety and fair competition.
+All decisions made by the referees and Judgement panel are final.
 
-Penalties:
-- Breaking rules results in 3 penalty points deduction per offense.
-- Bots cannot corner the ball for more than 5 seconds.
-- If a team accumulates too many penalty points, they lose the match automatically.
-- Damaging the field, ball, or opponent bot can lead to disqualification.
+8. Prize & Recognition
+The top three teams will receive prizes and certificates.`,
+
+    eSports: `1. Games
+The tournament features the following BGMI (Battlegrounds Mobile India)
+Free Fire
+titles:
+
+2. Team Composition
+Each team shall consist of 4 players, with the allowance of one substitute.
+
+3. Match Format
+BGMI: Classic Squad Match (Maps: Erangel)
+Free Fire: Battle Royale Squad Mode.
+The maps and match modes will be confirmed prior to the event.
+
+4. Equipment & Internet Requirements
+Players must bring their own mobile devices and accessories (e.g., headphones, triggers).
+A stable internet connection is the responsibility of each participant.
+Use of emulators or tablets is strictly prohibited—only mobile phones are permitted.
+
+5. Tournament Game Rules
+The tournament will be conducted over multiple rounds; advancement is based on total points (Kills + Placement).
+Teammates must not team up with opponents under any circumstances.
+The utilization of hacks, scripts, or any form of unfair advantage will result in immediate disqualification.
+Voice communications must remain free of oﬀensive language and hate speech.
+
+6. Scoring System
+Team rankings will be determined by the combined total of Placement Points and Kill Points.
+The detailed point system will be disclosed prior to the event.
+
+7. Disqualification Criteria
+Use of hacks, unauthorized third-party software, or cheats is strictly forbidden.
+Playing on non-mobile devices (emulators or tablets) will result in disqualification.
+Toxic behavior, hate speech, or abusive language in voice chat will lead to immediate disqualification.
+Failure to join matches within the prescribed time limits may also warrant disqualification.
+
+8. Prize & Recognition
+The top three teams will receive prizes and certificates.
+Additionally, MVP (Most Valuable Player) awards may be presented based on individual performance.`,
+
+    codeStorm: `1. Introduction
+The Individual Coding Event is a competitive programming contest designed to evaluate participants' problem-
+solving abilities and coding eﬃciency in an oﬄine environment.
+
+2. Allowed Languages
+Participants may use the following programming languages:
+1. C
+2. C++
+3. Java
+Use of any language not listed is not permitted.
+
+3. Event Format & Duration
+This is an individual contest; each participant competes independently. The contest duration is strictly 1:30 hours.
+Problems will focus on logic, algorithms, and data structures.
+
+4. Problem Statement, Environment & Submission
+All problem statements will be provided on the day of the contest.
+Participants will use provided computers in an oﬄine setting to write and test their code.
+The problems are designed to assess skills in logical reasoning, algorithm design, and eﬃcient use of
+data structures.
+
+5. Plagiarism & Disqualification
+Code plagiarism is strictly prohibited.
+Any detection of copied or unauthorized code will result in immediate disqualification from the event.
+
+6. Judgement & Scoring
+Submissions will be evaluated based on correctness and eﬃciency.
+Points will be awarded according to the accuracy of the solutions and their performance metrics
+(time and space eﬃciency).
+In the event of a tie, additional criteria such as execution speed may be applied to determine the
+final ranking.
+
+7. Additional Provisions
+Participants are responsible for ensuring the accuracy and functionality of their code before submission.
+Competitors must adhere to all contest rules and guidelines as stated herein.
+Organizers reserve the right to modify or clarify any rules as necessary, and all decisions by the judges are
+final.`,
+
+    coreSync: `1. Introduction
+Core Sync - Bridging Hardware & Software Innovations is a 2-day competition designed to showcase pre-built
+projects that integrate hardware and/or software innovations, aligned with the theme of smart, society, and
+sustainability.
+Projects may be hardware models, software models, or a combination thereof; demonstrating integration is
+optional.
+
+2. Team Composition
+Teams may consist of 1 to 4 members.
+
+3. Presentation Guidelines
+Each team is expected to present their project to the judges for 8 to 10 minutes when the judges arrive.
+Presentations should clearly demonstrate the project's alignment with the event theme and its practical, real-
+world applicability.
+
+4. Project Preparation and Setup
+All projects must be pre-built prior to the event day.
+Onsite, each team will be provided with a 30-minute period to set up and prepare their project for
+demonstration on the provided equipment.
+
+5. Project Requirements
+Projects must align with the theme of smart, society, and sustainability.
+Participants may choose to submit a hardware model, a software model, or an integrated solution.
+Demonstrating the bridging of hardware and software is optional and should only be included if it adds
+significant value to the project.
+
+6. Judgement Criteria
+Creativity and Relevance: Assessment of the originality of the concept and its alignment with the theme
+(including sustainability aspects).
+Technical Depth: Evaluation of the project's technical robustness and sophistication.
+Presentation Skills: Assessment of the clarity, organization, and overall eﬀectiveness of the project
+demonstration.
+
+7. Additional Provisions
+All participants are required to remain at the venue until all events in the annual fest have concluded.
+The schedule for when judges will arrive is not fixed; teams must be prepared to present their project during
+the designated 8–10-minute presentation slot when requested.
+Organizers reserve the right to adjust rules or timelines as necessary to ensure fairness and smooth conduct
+of the event.
+All decisions made by the judges are final.`,
+
+    thinkInk: `1. Theme - Innovations for a Sustainable and Healthier Future.
+The event invites students to present innovative ideas, technologies, and strategies that address sustainability
+challenges and promote healthier living. Participation is open to all students from Engineering, Pharmacy, and
+Management disciplines.
+
+General Guidelines
+1. Eligibility
+• Students from Engineering, Pharmacy, and Management disciplines are eligible.
+• Each team may have up to 2 members; solo participation is permitted.
+
+2. Poster Specifications
+• Posters must be prepared on A1 chart paper in portrait orientation.
+• Posters must be pre-designed and printed prior to the event—on-the-spot poster creation is not permitted.
+• Participants are required to bring their posters with them to the venue, as materials will not be provided.
+
+3. Submission & Display
+• Participants must arrive 30 minutes prior to the event to set up their posters in the assigned display area.
+• Teams must remain near their posters during the event for interactions with judges.
+
+4. Content Guidelines
+• Posters should align with the theme "Innovations for a Sustainable and Healthier Future."
+• Content must be clear, concise, and supported with relevant visuals, such as graphs or diagrams.
+• Posters must be original, and plagiarism is strictly prohibited—violations will result in disqualification.
+
+6. Event Schedule
+• Date: [Event Date]
+• Time: [Event Time]
+• Venue: [Event Venue]
+• Posters must be submitted 30 minutes before the event starts for setup.
+
+7. Disqualification Criteria
+• Late submissions or absence during evaluation.
+• Content that is offensive, inappropriate, or irrelevant.
+• Use of copyrighted materials without proper permissions.
+
+Important Note for Participants
+• All posters must be prepared in advance on A1 chart paper and brought to the event venue.
+• No on-site poster creation will be allowed.
+
+Prize Details
+• Awards for 1st, 2nd, and 3rd place winners based on judging criteria.
+Certificates of participation will be provided to all participants.
+
+JUDGING CRITERIA
+CATEGORY POINTS Weight(%)
+Relevance To The Theme 20
+Innovation and Creativity 20
+Visual Appeal and Design 20
+Clarity of Content and Message 20
+Presentation and Explaination 20`,
+
+    poeticBattle: `Rules and regulations:
+• Participants perform original poetic pieces (Hindi or English both are allowed)
+• Time limit: 2-3 minutes per round.
+• Judgement Criteria:
+Rhyming, lyrical depth, creativity, and stage presence.
+• Use of hate speech or oﬀensive language is strictly prohibited.
+• Exceeding time will result in disqualification.`,
+
+    treasureHunt: `Rules and regulations:
+• Teams of 4 members.
+• Clues will be provided in a sequential manner.
+• Time limit: 120 mins.
+• The first team to find the treasure wins; points will be given for each correct clue solved.
+• Teams must not tamper with or share clues with others.`,
+
+    declamation: `Rules and regulations:
+• Participants must choose a speech from a well-known personality.
+• Time limit: 3-5 minutes.
+• Judgement Criteria: Content, delivery, pronunciation, fluency, and impact.
+• Use of oﬀensive or politically sensitive content is prohibited.
+• Exceeding the time limit will result in penalties.`,
+
+    adMad: `Rules and regulations:
+• A team may consist of 4 members.
+• The team will be asked to create a marketing plan including creating a full-fledged creative campaign.
+• Students have to present a conceptual ad of either a product or a service.
+• Students will act out a TV/Radio script and present ideas relevant on creating social awareness, etc.
+• Maximum Time Limit for performing the Ad is 3 minutes.
+• The topics for the Ad Mad Show will be provided 30 minutes prior.
+• Topics/Activities performed during Ad Mad show should not relate with Politics and Religions.
+• The criteria for assessment include content, spontaneity and adherence to the topic, coordination.
+• Use of vulgar expression and language will lead to disqualification of the team.
+• Decisions of the judges will be final.`,
+
+    bestShot: `Theme
+People Celebrating Architecture:
+The photographs should reflect moments where people are engaging with, celebrating, or
+enhancing the architectural environment. The architecture itself can be any type of space,
+whether indoor or outdoor, public or private, traditional or modern. The interaction between
+people and architecture is central to this theme.
+
+Rules and regulations:
+• Each participant must capture 5 unique photographs on the spot during the event, adhering to the theme.
+• All photographs must be taken within the 120-minute time frame provided during the competition.
+• Participants are free to use any medium to capture their photographs.
+• Acceptable devices include: Mobile phones, Digital cameras, Tablets, Any other photo-capturing devices.
+• All photographs submitted must be geo-tagged to verify that they were taken at the designated location during the competition window. This ensures the authenticity of the "on-the-spot" capture.
+• Ensure your device's location services are activated before the event begins.
+• Late submissions will not be considered for Judgement.
+
+Judgement Criteria
+• Justification of the Theme: The primary focus for Judgement will be how well the photographs align with and express the theme of "People Celebrating Architecture."
+• Creativity
+• Visual Impact
+• Composition and Clarity`,
+
+    sinkingShip: `Rules and Regulations:
+• Participants will be role playing famous historical character (e.g., Ashoka, Napoleon, Rani Lakshmi Bai, Albert Einstein, Cleopatra, etc.).
+• Students can also dress up to be more presentable as the character.
+• Each participant must argue why they deserve to be saved from the sinking ship.
+• Time limit: 1-2 minutes per participant to present their case.
+• The audience or a panel of judges will vote on who survives.
+• Participants must stay in character and avoid anachronisms.
+• Any oﬀensive or factually incorrect portrayal of historical figures will lead to penalties or disqualification.
+
+Judgement Criteria:
+1. Strength of argument
+2. Creativity and historical accuracy
+3. Public speaking skills and persuasion
+4. Relevance to the character's contributions to society`,
+
+    craftATale: `Creative Story Writing
+
+Description:
+Let your imagination take flight! In Craft a Tale, participants will be provided with two distinct images,
+and they must weave a single creative story that connects both visuals in a meaningful, engaging, and
+original way.
+
+Rules and Guidelines:
+• Participants will be shown 2 images at the beginning of the competition.
+• The story must creatively combine elements from both images.
+• The connection should be clear and central to the storyline.
+
+Submission Requirements:
+• Word Limit: 500 – 1000 words.
+• Language: English only.
+• Format: Typed (if online) or legibly handwritten (if offline).
+• Story must have a title.
+• Submission must be original and unpublished.
+
+Time Limit:
+• Total time: 60 minutes.
+• First 5-10 minutes: Image reveal and planning.
+• Remaining time: Writing and submission.
+
+Do's and Don'ts:
+• Do ensure your story has a beginning, middle, and end.
+• Do incorporate both images logically and creatively.
+• Don't use inappropriate or offensive content.
+• Don't copy from existing works (Plagiarism leads to disqualification)
 
 Judging Criteria:
-- Points are awarded based on goals scored and negative penalties.
-- The exact scoring system will be revealed at the event.`,
+• Creativity and Originality – Unique plot, imaginative use of images.
+• Relevance to Images – How well both images are integrated.
+• Language and Grammar – Use of vocabulary, sentence structure.
+• Narrative Structure – Flow, coherence, and storytelling style.
+• Impact – Emotional, humorous, or dramatic effect.`,
 
-    eSports: `Games: BGMI (Battlegrounds Mobile India) & Free Fire
+    startupSimulation: `Objective
+Teams will be given a mystery image that represents a real-world scene, context, or issue.
+Based solely on this visual, teams must:
+1. Interpret the image
+2. Identify a core problem or opportunity
+3. Brainstorm multiple solutions
+4. Choose the best one
+5. Simulate a start-up around that idea, including Value proposition, business model.
 
-Team Size: 4 players (+1 substitute allowed)
+1. Team Composition
+Teams must have 2–5 members.
+Each team is encouraged to assign functional roles.
+Collaboration, delegation, and communication are key to succeeding within time limits.
 
-Match Format:
-BGMI: Classic Squad Match (Erangel, Miramar, or Sanhok)
-Free Fire: Battle Royale Squad Mode
-Maps & match modes will be decided before the event.
+2. Image-Based Simulation Setup
+Image Reveal
+All teams receive the same image at the start of the challenge.
+The image will be open to interpretation, with no explanation provided.
+It may depict a social issue, tech challenge, community setting, urban scene, environmental context, etc.
 
-Rules & Regulations:
-Device & Internet:
-- Players must bring their own mobile phones & accessories (headphones, triggers, etc.).
-- Stable internet connection is the responsibility of players.
-- No emulators or tablets allowed (Mobile only).
+Problem Discovery
+Teams must extract a meaningful problem from the image (e.g., lack of clean water, mobility issues, ineﬃciencies, safety risks).
+Multiple interpretations are allowed — creativity is encouraged.
 
-Game Rules:
-- The tournament will be played in multiple rounds. The top teams will advance based on total points (Kills + Placement).
-- Teaming with opponents is strictly prohibited.
-- Any use of hacks, scripts, or unfair advantages will result in immediate disqualification.
-- Voice chat must not contain offensive language or hate speech.
+3. Simulation Phases
+Each phase has a strict time limit and deliverables.
+Time must be managed wisely across idea on, research, and preparation.
 
-Scoring System:
-- Placement Points + Kill Points will determine the rankings.
-- The exact point system will be shared before the event.
+Phase 1: Image Analysis & Problem Framing
+Time: 15 mins
+Goal: Observe the image and define the key issue it presents.
+Deliverables:
+Problem Statement
+Target Users / Aﬀected Stakeholders
+Supporting reasoning (Why this problem matters)
 
-Disqualification Criteria:
-- Using hacks, third-party software, or cheats.
-- Using emulators or playing on non-mobile devices.
-- Toxic behavior, hate speech, or abusive language.
-- Exceeding time limits for joining matches.
+Phase 2: Solution Brainstorming & Selection
+Time: 15 mins
+Goal: Brainstorm at least 3 feasible solutions, then choose the best one to develop further.
+Deliverables:
+List of 3 possible solutions (briefly described)
+Chosen Solution (with justification for selection)
 
-Prize & Recognition:
-- The top 3 teams will receive prizes and certificates.
-- MVP (Most Valuable Player) awards may be given based on performance.`,
+Phase 3: Startup Simulation
+Time: 30 mins
+Goal: Build a start-up concept around the chosen solution.
+Deliverables:
+Start-up Name & Mission Statement
+Value proposition, Customer pain and gain Analysis, Customer segment
+Business Model Canvas or Lean Canvas
+Tech Stack (for both software/hardware if relevant)
+Financial Plan (basic cost and revenue streams)
+Team Roles & Responsibilities
 
-    cCoding: `Individual Event
+Phase 4: Final Presentation
+Time: 5–10 minutes per team.
+Goal: Present your full startup simulation to the panel.
+Must include:
+Problem & Image Interpretation
+Solution Chosen
+Business Model Overview
+Market & Growth Plan
+Team Summary
 
-Languages Allowed:
-C, C++, Python, Java
+4. Time & Submission Rules
+Each phase will be timed and announced.
+Late submissions may incur penalties unless prior approval is given.
+Final pitch timing is strictly enforced — teams exceeding time may be stopped.
 
-Rules:
-- Time limit: 2 hours
-- Problems will be based on logic, algorithms, and data structures.
-- Code plagiarism will result in disqualification.
-- Submissions will be evaluated based on correctness and efficiency.`,
+5. Judgement Criteria (100 Points)
+CATEGORY POINTS
+Image Interpretation & Insight 10
+Problem Identification 15
+Solution Feasibility 20
+Innovation & Creativity 20
+Business Model Quality 20
+Presentation & Teamwork 15
+Bonus (5 pts): For creativity in MVP, marketing, or use of emerging tech.
 
-    techDebate: `Team Size: 2 members per team (1 for, 1 against).
+6. Ethics & Fair Play
+All work must be original.
+Respect the event space and all participants.
+Any form of plagiarism or copying will result in disqualification.
+Judges decisions are final.
 
-Rules:
-- Each speaker gets 3 minutes for their argument.
-- 1-minute rebuttal round per speaker.
-- No personal attacks or inappropriate language.
+7. Awards
+Awards include: (26.04.2025)
+Best Overall Start-up
+Most Creative Interpretation
+Social Impact Award`,
 
-Judging Criteria:
-- Strength of arguments
-- Clarity and fluency
-- Logical reasoning
-- Counterarguments`,
+    pitchDeck: `"An exclusive event for showcasing student startups, innovations, and ideas."
 
-    techQuiz: `Overview
-Tech quiz is all about startups, innovations and tech happenings in recent times.
+Objective of the Event
+The Ashoka Startup Showcase Meet provides a platform for student start-ups to present
+their ideas, network with potential mentors, investors, and fellow entrepreneurs, and gain
+valuable feedback to further their entrepreneurial journey.
 
-Team Composition:
-- Each team may have up to two members. Solo participation is allowed.
-- Team members should register together before the event starts.
+The event aims to:
+1. Showcase innovative student startups.
+2. Provide a space for networking with mentors and investors.
+3. Foster collaboration and feedback from experienced entrepreneurs and the community.
+4. Recognize and award top startups for their innovation and execution.
 
-Conduct:
-- Participants must maintain decorum throughout the event.
-- Cheating, disruptive behavior, or use of unfair means will result in immediate disqualification.
+Eligibility:
+Open to student startups or early-stage entrepreneurs from diﬀerent institutions
+(undergraduate, graduate students, or alumni).
+Startup Stage: Teams with an idea, prototype, or minimum viable product (MVP).
+Team Composition: Teams must have 2 to 5 members, with at least one member from a
+business or technical background.
+Solo Founders: Allowed if justified (e.g., solo research or product).
+Previous Funding: Teams who have raised over a certain amount of seed funding may be
+excluded (optional cap).
 
-Time Management:
-- All rounds will have specific time limits, and teams must adhere to them.
-- Late entries or answers will not be accepted.
+Event Structure & Format
+Session 1: Startup Presentations
+Each startup team will have 5-10 minutes to pitch their idea, followed by 3–5 minutes
+for Q&A from the judges and audience.
 
-Round-wise Rules:
-Round 1: MCQ (Multiple Choice Questions)
-- Each question will have 4 options, and teams must choose the correct one.
-- Teams will have 10 seconds to answer each question.
-- Scores will be awarded based on the number of correct answers.
+Pitch Deck: Teams should submit a pitch deck (maximum of 10 slides) that covers:
+1. Problem
+2. Solution
+3. Market Opportunity
+4. Product or MVP
+5. Business Model
+6. Go-to-Market Strategy
+7. Team
+8. Ask (Funding, partnerships, mentorship)
 
-Round 2: Rapid Fire
-- Teams will answer as many questions as possible within a set time frame (e.g., 2 minutes).
-- Each correct answer awards points.
-- Only one team member may respond at a time.
+Session 3: Award Ceremony & Closing Remarks
+Awards will be presented to the Top 3 startups
 
-Round 3: Audio-Visual Round
-- Teams will be presented with audio or visual clues and must identify or analyze them.
-- Each clue will have a set time limit for responses (15–30 seconds depending on complexity).
-- Scores will be awarded based on accuracy and speed of answers.`,
+Judgement Criteria (100 Points)
+CATEGORY POINTS
+Problem Definition 10
+Product/Innovation 15
+Market Opportunity 15
+Business Model & Scalability 15
+Go-to-Market Strategy 10
+Presentation Quality 10
+Team & Execution Potential 10
+Social Impact (if applicable) 10
+Bonus (5 pts): For creative use of technology, social impact, or innovative approaches
 
-    modelPresentation: `Team Size: 1-4 members
+Awards & Recognition
+The top 3 teams will receive the following:
+1st Place:
+Recognition as the best startup.
+Mentorship and Networking opportunities.
+2nd Place:
+Advisory services and marketing support.
+3rd Place:
+Co-working space access for 3 months and advisory support.
 
-Rules:
-- Presentation time: 5-7 minutes.
-- AI models should align with the theme.
-- Demonstrate real-world applications.
-- Models should be pre-built.
-- 30 minutes will be given to the students to set up their models.
+Event Timeline
+STAGE DATE
+Registration Opens 12.04.2025
+Pitch Deck Submission Deadline 24.04.2025
+Event Day 26.04.2025
+Award Ceremony 26.04.2025
 
-Judging Criteria:
-- Creativity and relevance to sustainability
-- Technical depth
-- Presentation skills`,
+Registration and Participation
+Application Process:
+Startups must complete an online application form and submit their pitch
+deck by [insert deadline].
+Registration Link
+Registration fee 200/-
+
+Selected teams will be informed via email about their participation.`,
 
     hackathon: `Rules for Hackathon:
 
-Eligibility:
-- The hackathon is open to all college students.
-- Teams can consist of members from different universities and institutes.
+a. Eligibility
+The hackathon is open to all college students.
+Teams may include members from diﬀerent universities and institutes.
 
-Team Formation:
-- Each team can consist of 1 to 4 members.
-- Teams must work together to develop their solution.
-- Teams can only submit one project for judging.
+b. Team Formation
+Each team can consist of 1 to 4 members.
+All team members must collaborate in developing a single project.
+Only one project submission is allowed per team for Judgement.
 
-Judging Criteria:
-- Innovation & Creativity (30%): How unique and creative is the solution?
-- Technical Execution (30%): How well the solution is implemented?
-- Impact (20%): How much value or impact does it bring to the community, users, or industry?
-- Presentation (20%): How well the project is presented, including user interface, demo, and clarity in explaining the solution.
+c. Theme – Sustainability
+All projects should consider the theme of sustainability.
+Participants are encouraged to design solutions that incorporate sustainable
+practices or address environmental, social, or economic sustainability challenges.
 
-Code of Conduct:
-- No plagiarism: Participants must work on their own code. Plagiarism or using code from other sources (except for approved libraries/APIs) will lead to disqualification.
-- Respect others: Participants should treat their peers, mentors, and organizers with respect.
-- No disruptive behavior: Teams should focus on developing their projects and avoid causing unnecessary disruptions.
+d. Judgement Criteria
+CATEGORY POINTS
+Innovation & Creativity 30
+Technical Execution 30
+Impact 20
+Presentation 20
 
-Submission:
-- Each team must submit their project source code in due time.
-- Projects must be deployed and functional by the end of the event.`,
+Innovation & Creativity
+Evaluation of how unique and creative the solution is, including its
+sustainable elements.
 
-    declamation: `Rules and regulations:
-- Participants must choose a speech from a well-known personality.
-- Time limit: 3-5 minutes.
-- Judging Criteria: Content, delivery, pronunciation, fluency, and impact.
-- Use of offensive or politically sensitive content is prohibited.
-- Exceeding the time limit will result in penalties.
+Technical Execution
+Assessment of the project's implementation, technical robustness, and
+overall methodology.
 
-Date: 25/APRIL/2025, 1:30pm – 3:00pm`,
+Impact
+Measurement of the value or impact the solution brings to the community, users, or
+industry—especially in terms of sustainability outcomes.
 
-    adMad: `Rules and regulations:
-- A team may consist of 4 members.
-- The team will be asked to create a marketing plan including creating a full-fledged creative campaign.
-- Students have to present a conceptual ad of either a product or a service.
-- Students will act out a TV/Radio script and present ideas relevant on creating social awareness, etc.
-- The Time allotted for this activity is 3 minutes.
+Presentation
+Evaluation of the project presentation, including the quality of the user interface,
+demonstration, and clarity in explaining the solution.
 
-Rules:
-- The topics for the Ad Mad Show will be provided 30 minutes prior.
-- Topics/Activities performed during Ad Mad show should not relate with Politics and Religions.
-- Maximum Time Limit for performing the Ad is 3 minutes.
-- The criteria for assessment include content, spontaneity and adherence to the topic, coordination.
-- Use of vulgar expression and language will lead to disqualification of the team.
+Bonus:
+Up to 5 additional points may be awarded for exceptional creativity in MVP, marketing,
+or the innovative use of emerging technologies.
 
-Criteria for Judgement:
-- Content-information, Awareness and Humour.
-- Spontaneity/expressions/Acting/ fluency.
-- Appeal of the Advertisement.
-- Overall Script and Play.
+e. Code of Conduct
+Respect Others:
+All participants are expected to treat their peers, mentors, and organizers with respect.
 
-Date: 25/APRIL/2025, 11:00am – 12:30pm`,
+No Plagiarism:
+Participants must use their own original code. Use of code from external sources
+(except for approved libraries/APIs) will lead to disqualification.
 
-    treasureHunt: `Rules and regulations:
-- Teams of 2-4 members.
-- Clues will be provided in a sequential manner.
-- Time limit: 120 mins.
-- The first team to find the treasure wins; points for each correct clue solved.
-- Teams must not tamper with or share clues with others.
+No Disruptive Behaviour:
+Teams should focus on their projects and refrain from causing any unnecessary disruptions.
 
-Date: 25/APRIL/2025, 9:30am - 11:00am`,
-
-    sinkingShip: `Rules and regulations:
-- Participants will be role playing famous historical characters (e.g., Ashoka, Napoleon, Rani Lakshmi Bai, Albert Einstein, Cleopatra, etc.).
-- Students can also dress up to be more presentable as the character.
-- Each participant must argue why they deserve to be saved from the sinking ship.
-- Time limit: 1-2 minutes per participant to present their case.
-
-Judging Criteria:
-- Strength of argument
-- Creativity and historical accuracy
-- Public speaking skills and persuasion
-- Relevance to the character's contributions to society
-- The audience or a panel of judges will vote on who survives.
-- Participants must stay in character and avoid anachronisms.
-- Any offensive or factually incorrect portrayal of historical figures will lead to penalties or disqualification.
-
-Date: 26/APRIL/2025, 1:30pm – 3:00pm`,
-
-    poeticBattle: `Rules and regulations:
-- Participants perform original poetic pieces (Hindi or English both are allowed)
-- Time limit: 2-3 minutes per round.
-- Judging Criteria: Rhythm, rhyming, lyrical depth, creativity, and stage presence.
-- Use of hate speech or offensive language is strictly prohibited.
-- Exceeding time will result in disqualification.
-
-Date: 26/APRIL/2025, 11:00am – 12:30pm`,
-
-    bestShot: `Overview:
-This competition encourages participants to explore and capture the relationship between people and architecture. The aim is to celebrate architectural spaces through photography, showcasing how people interact with and celebrate architecture in their daily lives.
-
-Theme: People Celebrating Architecture
-The photographs should reflect moments where people are engaging with, celebrating, or enhancing the architectural environment.
-
-Participation Requirements:
-- Each participant must capture 5 unique photographs on the spot during the event, adhering to the theme.
-- All photographs must be taken within the 120-minute time frame provided during the competition.
-
-Photography Equipment:
-- Participants are free to use any medium to capture their photographs.
-- Acceptable devices include: Mobile phones, Digital cameras, Tablets, any other photo-capturing devices.
-
-Geotagging Requirement:
-- All photographs submitted must be geo-tagged to verify they were taken at the designated location.
-- Ensure your device's location services are activated before the event begins.
-
-Time Limit:
-- Participants will have a total of 120 minutes to capture all five photographs.
-- Late submissions will not be considered for judging.
-
-Judging Criteria:
-- Justification of the Theme
-- Creativity
-- Visual Impact
-- Composition and Clarity
-- Geotag Accuracy
-
-Date: 26/APRIL/2025, 9:30am – 11:00am`
+f. Submission
+Each team must submit their complete project source code within the designated time.
+Projects must be deployed and fully functional by the end of the 24-hour event.
+Incomplete or non-functional submissions will be penalized.`
   };
 
   const technicalEvents = [
     {
-      title: "Robo Sumo – Robo Rumble",
+      title: "Robo Sumo",
       subtitle: "The Ultimate Showdown",
       price: "₹500",
-      description: "Design and build a robot to push the opponent out of the arena. Test your engineering skills and strategic thinking in this exciting competition.",
+      description: "Design and build a robot to push opponents out of a designated arena. Test your engineering skills and strategic control.",
       details: eventDetailsMap.roboSumo
     },
     {
-      title: "Robo Soccer – CuberKick",
-      subtitle: "Robo Soccer League",
+      title: "Robo Soccer",
+      subtitle: "Robotic Soccer Challenge",
       price: "₹500",
-      description: "Program robots to play soccer against each other. Combine robotics with sports in this thrilling event that tests coding skills and teamwork.",
+      description: "Build a robot to maneuver on a designated soccer field and push a tennis ball to score goals.",
       details: eventDetailsMap.roboSoccer
     },
     {
-      title: "E-Sports – Game On",
-      subtitle: "BGMI & FreeFire Championship",
+      title: "E-Sports",
+      subtitle: "BGMI & Free Fire Tournament",
       price: "₹300",
       description: "Compete in popular mobile games BGMI and FreeFire to win exciting prizes. Show off your gaming skills and strategic gameplay.",
       details: eventDetailsMap.eSports
     },
     {
-      title: "C-Coding – Code Storm",
-      subtitle: "Programming Challenge",
+      title: "Code Storm",
+      subtitle: "Competitive Programming Challenge",
       price: "₹200",
-      description: "Solve complex programming problems in C language under time constraints. Test your coding skills, logic, and efficiency.",
-      details: eventDetailsMap.cCoding
+      description: "Solve complex programming problems under time constraints. Test your coding skills, logic, and efficiency.",
+      details: eventDetailsMap.codeStorm
     },
     {
-      title: "Tech Debate – ByteBattles",
-      subtitle: "Tech War of Debate",
-      price: "₹200",
-      description: "Debate on cutting-edge technology topics with other tech enthusiasts. Showcase your knowledge and communication skills.",
-      details: eventDetailsMap.techDebate
-    },
-    {
-      title: "Tech Quiz – Quiz Tech Masters",
-      subtitle: "Test Your Tech Knowledge",
-      price: "₹150",
-      description: "Participate in a quiz covering various aspects of technology, from history to latest innovations. Show off your tech awareness.",
-      details: eventDetailsMap.techQuiz
-    },
-    {
-      title: "Model Presentation – AI Expo",
-      subtitle: "Shaping the Future",
+      title: "Core Sync",
+      subtitle: "Bridging Hardware & Software Innovations",
       price: "₹400",
-      description: "Present your innovative AI model or concept to judges and attendees. Get feedback and recognition for your innovative ideas.",
-      details: eventDetailsMap.modelPresentation
+      description: "Showcase pre-built projects that integrate hardware and/or software innovations aligned with smart, society, and sustainability themes.",
+      details: eventDetailsMap.coreSync
     },
     {
-      title: "Hackathon (24 Hrs)",
-      subtitle: "Code Marathon",
-      price: "₹1000",
-      description: "A 24-hour coding marathon to build solutions for real-world problems. Collaborate, innovate, and create working prototypes.",
-      details: eventDetailsMap.hackathon
+      title: "ThinkInk",
+      subtitle: "Poster Presentation Competition",
+      price: "₹200",
+      description: "Present innovative ideas through posters addressing sustainability challenges and promoting healthier living.",
+      details: eventDetailsMap.thinkInk
     }
   ];
 
   const literaryEvents = [
     {
+      title: "Poetic Battle",
+      subtitle: "Verse vs. Verse",
+      price: "₹100",
+      description: "Showcase your poetic talent with original pieces in Hindi or English. Express emotions and creativity through words.",
+      details: eventDetailsMap.poeticBattle
+    },
+    {
+      title: "Treasure Hunt",
+      subtitle: "Campus-wide Adventure",
+      price: "₹300",
+      description: "Solve clues and puzzles to find hidden treasures across the campus. Test your problem-solving skills and teamwork.",
+      details: eventDetailsMap.treasureHunt
+    },
+    {
       title: "Declamation",
       subtitle: "Public Speaking Challenge",
       price: "₹150",
-      description: "Deliver a powerful speech on a given topic with conviction and eloquence. Demonstrate your oratory skills and persuasive abilities.",
+      description: "Deliver a powerful speech from a well-known personality with conviction and eloquence.",
       details: eventDetailsMap.declamation
     },
     {
@@ -427,60 +716,71 @@ Date: 26/APRIL/2025, 9:30am – 11:00am`
       details: eventDetailsMap.adMad
     },
     {
-      title: "Treasure Hunt",
-      subtitle: "Campus-wide Adventure",
-      price: "₹300",
-      description: "Solve clues and puzzles to find hidden treasures across the campus. Test your problem-solving skills and teamwork.",
-      details: eventDetailsMap.treasureHunt
+      title: "Best Shot on the Spot",
+      subtitle: "People Celebrating Architecture",
+      price: "₹250",
+      description: "Capture photographs reflecting moments where people interact with architectural environments.",
+      details: eventDetailsMap.bestShot
     },
     {
       title: "Sinking Ship",
       subtitle: "Historical Characters Edition",
       price: "₹150",
-      description: "Play the role of a historical character and convince judges why you should be saved from a sinking ship. Combine history knowledge with persuasive skills.",
+      description: "Role-play historical characters and argue why you deserve to be saved from a sinking ship.",
       details: eventDetailsMap.sinkingShip
     },
     {
-      title: "Poetic Battle",
-      subtitle: "Verse vs. Verse",
+      title: "Craft a Tale",
+      subtitle: "Creative Story Writing",
       price: "₹100",
-      description: "Showcase your poetic talent in this head-to-head poetry competition. Express emotions and creativity through words.",
-      details: eventDetailsMap.poeticBattle
+      description: "Weave a creative story connecting two distinct images in a meaningful and original way.",
+      details: eventDetailsMap.craftATale
+    }
+  ];
+
+  const entrepreneurshipEvents = [
+    {
+      title: "Startup Simulation Challenge",
+      subtitle: "Create a Startup Concept",
+      price: "₹300",
+      description: "Interpret a mystery image, identify a problem, and build a startup concept around your solution.",
+      details: eventDetailsMap.startupSimulation
     },
     {
-      title: "Best Shot on the Spot",
-      subtitle: "Impromptu Photography",
-      price: "₹250",
-      description: "Capture the best moments of the fest with your camera within a time limit. Demonstrate your photography skills and creative eye.",
-      details: eventDetailsMap.bestShot
+      title: "Pitch Deck Challenge",
+      subtitle: "Ashoka Startup Showcase Meet",
+      price: "₹200",
+      description: "Present your startup idea, network with mentors and investors, and gain valuable feedback.",
+      details: eventDetailsMap.pitchDeck
+    },
+    {
+      title: "Kashi Hackathon 2025",
+      subtitle: "24-Hour Coding Marathon",
+      price: "₹1000",
+      description: "Develop sustainable solutions through a 24-hour collaborative development event.",
+      details: eventDetailsMap.hackathon
     }
   ];
 
   return (
-    <section id="events" className="py-20 bg-white relative">
-      {/* Abhyuday Logo Watermark */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5">
-        <img 
-          src="/lovable-uploads/402a0cba-8c65-4177-bcdd-090ce95b7db1.png" 
-          alt="Abhyuday Watermark" 
-          className="w-3/4 max-w-3xl"
-        />
-      </div>
-      
+    <section id="events" className="py-20 bg-[#121621] relative">
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-festival-purple font-montserrat">Festival Events</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">Participate in our diverse range of technical and literary events designed to challenge your skills and creativity.</p>
+          <h2 className="text-4xl font-bold mb-4 text-festival-orange font-montserrat">Festival Events</h2>
+          <p className="text-gray-300 max-w-2xl mx-auto">Participate in our diverse range of technical, literary, and entrepreneurship events designed to challenge your skills and creativity.</p>
         </div>
 
         <Tabs defaultValue="technical" className="max-w-6xl mx-auto">
           <div className="flex justify-center mb-8">
-            <TabsList className="bg-festival-light-purple/50">
-              <TabsTrigger value="technical" className="text-lg px-8 py-3 data-[state=active]:bg-festival-purple data-[state=active]:text-white">
+            <TabsList className="bg-[#1A1F2C]">
+              <TabsTrigger value="technical" className="text-lg px-8 py-3 data-[state=active]:bg-festival-orange data-[state=active]:text-white">
                 Technical
               </TabsTrigger>
-              <TabsTrigger value="literary" className="text-lg px-8 py-3 data-[state=active]:bg-festival-purple data-[state=active]:text-white">
+              <TabsTrigger value="literary" className="text-lg px-8 py-3 data-[state=active]:bg-festival-orange data-[state=active]:text-white">
                 Literary
+              </TabsTrigger>
+              <TabsTrigger value="entrepreneurship" className="text-lg px-8 py-3 data-[state=active]:bg-festival-orange data-[state=active]:text-white">
+                Entrepreneurship
               </TabsTrigger>
             </TabsList>
           </div>
@@ -505,6 +805,21 @@ Date: 26/APRIL/2025, 9:30am – 11:00am`
               {literaryEvents.map((event, index) => (
                 <EventCard
                   key={`lit-${index}`}
+                  title={event.title}
+                  subtitle={event.subtitle}
+                  price={event.price}
+                  description={event.description}
+                  details={event.details}
+                />
+              ))}
+            </div>
+          </TabsContent>
+
+          <TabsContent value="entrepreneurship" className="mt-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {entrepreneurshipEvents.map((event, index) => (
+                <EventCard
+                  key={`entr-${index}`}
                   title={event.title}
                   subtitle={event.subtitle}
                   price={event.price}

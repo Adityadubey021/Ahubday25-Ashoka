@@ -1,7 +1,9 @@
+
 import React from 'react';
 import { Phone, Mail, Globe, MapPin } from 'lucide-react';
 import SocialMediaLinks from './SocialMediaLinks';
 import { SocialLink } from './SocialMediaLinks';
+
 const Footer: React.FC = () => {
   const instituteSocialLinks: SocialLink[] = [{
     type: 'instagram',
@@ -16,12 +18,14 @@ const Footer: React.FC = () => {
     type: 'twitter',
     url: 'https://twitter.com/aitmvnsz'
   }];
-  return <footer className="bg-festival-purple text-white">
+
+  return (
+    <footer className="bg-[#1A1F2C] text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center mb-4">
-              <img alt="Ashoka Institute Logo" src="/lovable-uploads/6eb1861d-a9d6-4adb-93b5-22f28bb886c5.png" className="h-16 mr-2 bg-white p-1 rounded object-fill" />
+              <img alt="Ashoka Institute Logo" src="/lovable-uploads/a15de4f2-1ba0-466c-8068-10aaddbab593.png" className="h-16 mr-2 bg-white/10 p-1 rounded object-fill" />
               <div className="flex flex-col ml-2">
                 <h3 className="text-xl font-bold">Abhyuday 2025</h3>
                 <p className="text-sm text-white/80">April 25-26, 2025</p>
@@ -37,19 +41,19 @@ const Footer: React.FC = () => {
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-white/80">
               <li>
-                <a href="#home" className="hover:text-white transition-colors">Home</a>
+                <a href="#home" className="hover:text-festival-orange transition-colors">Home</a>
               </li>
               <li>
-                <a href="#events" className="hover:text-white transition-colors">Events</a>
+                <a href="#events" className="hover:text-festival-orange transition-colors">Events</a>
               </li>
               <li>
-                <a href="#registration" className="hover:text-white transition-colors">Registration</a>
+                <a href="#schedule" className="hover:text-festival-orange transition-colors">Schedule</a>
               </li>
               <li>
-                <a href="#schedule" className="hover:text-white transition-colors">Schedule</a>
+                <a href="#faculty-coordinators" className="hover:text-festival-orange transition-colors">Faculty Coordinators</a>
               </li>
               <li>
-                <a href="https://ashokainstitute.com/" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-white transition-colors">
+                <a href="https://ashokainstitute.com/" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-festival-orange transition-colors">
                   <Globe size={16} className="mr-2" />
                   <span>ashokainstitute.com</span>
                 </a>
@@ -86,10 +90,12 @@ const Footer: React.FC = () => {
             © 2025 Ashoka Institute of Technology and Management. All rights reserved.
           </div>
           <div className="text-white/80 text-sm text-center">
-            <div>Designed for TECHxVEDA 2025 | State Level Lit-Tech Fiesta</div>
+            <div>Designed for Abhyuday 2025 | State Level Lit-Tech Fiesta</div>
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;

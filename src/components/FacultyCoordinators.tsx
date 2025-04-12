@@ -11,13 +11,13 @@ interface FacultyCoordinatorProps {
 
 const FacultyCoordinatorCard: React.FC<FacultyCoordinatorProps> = ({ name, role, contact }) => {
   return (
-    <Card className="overflow-hidden transition-transform duration-300 hover:scale-105 border-none shadow-lg bg-white/90">
+    <Card className="overflow-hidden transition-transform duration-300 hover:scale-105 border-none shadow-lg bg-[#1A1F2C]/80 text-white">
       <CardContent className="p-6">
-        <h3 className="text-xl font-bold text-center text-gray-800 mb-1">{name}</h3>
-        <p className="text-gray-500 text-center text-sm mb-4">{role}</p>
-        <div className="flex items-center justify-center space-x-2 bg-festival-light-purple/50 py-2 px-4 rounded-full">
-          <Phone size={16} className="text-festival-purple" />
-          <span className="text-festival-purple font-medium">{contact}</span>
+        <h3 className="text-xl font-bold text-center text-gray-100 mb-1">{name}</h3>
+        <p className="text-gray-300 text-center text-sm mb-4">{role}</p>
+        <div className="flex items-center justify-center space-x-2 bg-festival-orange/20 py-2 px-4 rounded-full">
+          <Phone size={16} className="text-festival-orange" />
+          <span className="text-festival-orange font-medium">{contact}</span>
         </div>
       </CardContent>
     </Card>
@@ -54,11 +54,11 @@ const FacultyCoordinators: React.FC = () => {
   ];
 
   return (
-    <section id="faculty-coordinators" className="py-16 bg-white">
+    <section id="faculty-coordinators" className="py-16 bg-[#121621]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 text-festival-purple font-montserrat">Faculty Coordinators</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">Meet our dedicated faculty coordinators leading Abhyuday 2025</p>
+          <h2 className="text-4xl font-bold mb-4 text-festival-orange font-montserrat">Faculty Coordinators</h2>
+          <p className="text-gray-300 max-w-2xl mx-auto">Meet our dedicated faculty coordinators leading Abhyuday 2025</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
