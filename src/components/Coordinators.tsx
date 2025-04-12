@@ -14,7 +14,7 @@ interface CoordinatorProps {
 
 const CoordinatorCard: React.FC<CoordinatorProps> = ({ name, department, contact, socialLinks, imageSrc }) => {
   return (
-    <Card className="overflow-hidden transition-transform duration-300 hover:scale-105 border-none shadow-lg bg-white">
+    <Card className="overflow-hidden transition-transform duration-300 hover:scale-105 border-none shadow-lg bg-black">
       <CardContent className="p-6">
         <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-2 border-festival-purple">
           <img src={imageSrc} alt={name} className="w-full h-full object-cover" />
