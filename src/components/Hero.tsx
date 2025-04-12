@@ -1,9 +1,17 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
+
 const Hero: React.FC = () => {
   const openRegistrationForm = () => {
     window.open('https://docs.google.com/forms/d/e/1FAIpQLSfd3gaB4TXlIKNanGRxXfiVsnANlwmeRgu4wSESAynpNnawcw/viewform?usp=sharing', '_blank');
   };
+
+  const scrollToChiefGuest = () => {
+    // This will scroll to the Sponsors section which now contains the Chief Guest
+    document.querySelector('.bg-white')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return <section id="home" className="relative min-h-screen pt-20 overflow-hidden">
       {/* College Building Background Image */}
       <div className="absolute inset-0 z-0">
@@ -73,8 +81,11 @@ const Hero: React.FC = () => {
             </Button>
           </div>
 
-          {/* CTA for schedule */}
-          <div className="mt-6">
+          {/* CTA for Chief Guest and Schedule */}
+          <div className="mt-6 flex flex-wrap justify-center gap-4">
+            <button onClick={scrollToChiefGuest} className="text-festival-orange hover:text-white underline underline-offset-4 transition-colors">
+              Meet Our Chief Guest
+            </button>
             <button onClick={() => document.getElementById('schedule')?.scrollIntoView({
             behavior: 'smooth'
           })} className="text-festival-orange hover:text-white underline underline-offset-4 transition-colors">
@@ -104,4 +115,5 @@ const Hero: React.FC = () => {
       <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#121621] to-transparent"></div>
     </section>;
 };
+
 export default Hero;
