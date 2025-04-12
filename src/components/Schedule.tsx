@@ -49,9 +49,9 @@ const Schedule: React.FC = () => {
                 </TableHeader>
                 <TableBody>
                   <TableRow>
-                    <TableCell className="font-medium">09:00 AM – 10:30 AM</TableCell>
-                    <TableCell>Opening Ceremony</TableCell>
-                    <TableCell>Seminar Hall</TableCell>
+                    <TableCell className="font-medium text-black">09:00 AM – 10:30 AM</TableCell>
+                    <TableCell className="text-black">Opening Ceremony</TableCell>
+                    <TableCell className="text-black">Seminar Hall</TableCell>
                   </TableRow>
                   
                   <TableRow className="bg-gray-50">
@@ -59,34 +59,34 @@ const Schedule: React.FC = () => {
                   </TableRow>
                   
                   <TableRow>
-                    <TableCell className="font-medium">10:30 AM - 12:00 PM</TableCell>
-                    <TableCell>Robo Sumo</TableCell>
-                    <TableCell>D-Block</TableCell>
+                    <TableCell className="font-medium text-black">10:30 AM - 12:00 PM</TableCell>
+                    <TableCell className="text-black">Robo Sumo</TableCell>
+                    <TableCell className="text-black">D-Block</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">12:30 PM - 02:00 PM</TableCell>
-                    <TableCell>Robo Soccer</TableCell>
-                    <TableCell>D-Block</TableCell>
+                    <TableCell className="font-medium text-black">12:30 PM - 02:00 PM</TableCell>
+                    <TableCell className="text-black">Robo Soccer</TableCell>
+                    <TableCell className="text-black">D-Block</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">11:00 AM Onwards</TableCell>
-                    <TableCell>Hackathon Kickoff & Briefing</TableCell>
-                    <TableCell>CSE Department (Lab No.1,2 and 3)</TableCell>
+                    <TableCell className="font-medium text-black">11:00 AM Onwards</TableCell>
+                    <TableCell className="text-black">Hackathon Kickoff & Briefing</TableCell>
+                    <TableCell className="text-black">CSE Department (Lab No.1,2 and 3)</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">12:00 PM - 1:00 PM</TableCell>
-                    <TableCell>ThinkInk (Poster Presentation)</TableCell>
-                    <TableCell>MBA Classes</TableCell>
+                    <TableCell className="font-medium text-black">12:00 PM - 1:00 PM</TableCell>
+                    <TableCell className="text-black">ThinkInk (Poster Presentation)</TableCell>
+                    <TableCell className="text-black">MBA Classes</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">11:00 AM - 01:00 PM</TableCell>
-                    <TableCell>Code Storm</TableCell>
-                    <TableCell>Language Lab + ECE Computer Lab</TableCell>
+                    <TableCell className="font-medium text-black">11:00 AM - 01:00 PM</TableCell>
+                    <TableCell className="text-black">Code Storm</TableCell>
+                    <TableCell className="text-black">Language Lab + ECE Computer Lab</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">10:30 AM Onwards</TableCell>
-                    <TableCell>Core Sync Model Presentation</TableCell>
-                    <TableCell>Mechanical Workshop Lab</TableCell>
+                    <TableCell className="font-medium text-black">10:30 AM Onwards</TableCell>
+                    <TableCell className="text-black">Core Sync Model Presentation</TableCell>
+                    <TableCell className="text-black">Mechanical Workshop Lab</TableCell>
                   </TableRow>
                   
                   <TableRow className="bg-gray-50">
@@ -94,34 +94,34 @@ const Schedule: React.FC = () => {
                   </TableRow>
                   
                   <TableRow>
-                    <TableCell className="font-medium">10:30 AM - 12:00 PM</TableCell>
-                    <TableCell>Poetic Battle</TableCell>
-                    <TableCell>Seminar Hall</TableCell>
+                    <TableCell className="font-medium text-black">10:30 AM - 12:00 PM</TableCell>
+                    <TableCell className="text-black">Poetic Battle</TableCell>
+                    <TableCell className="text-black">Seminar Hall</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">10:30 AM - 01:00 PM</TableCell>
-                    <TableCell>Treasure Hunt</TableCell>
-                    <TableCell>Mechanical Department Computer Lab 5</TableCell>
+                    <TableCell className="font-medium text-black">10:30 AM - 01:00 PM</TableCell>
+                    <TableCell className="text-black">Treasure Hunt</TableCell>
+                    <TableCell className="text-black">Mechanical Department Computer Lab 5</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">11:00 AM – 12:00 PM</TableCell>
-                    <TableCell>Craft a Tale</TableCell>
-                    <TableCell>MBA Classes</TableCell>
+                    <TableCell className="font-medium text-black">11:00 AM – 12:00 PM</TableCell>
+                    <TableCell className="text-black">Craft a Tale</TableCell>
+                    <TableCell className="text-black">MBA Classes</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">12:30 PM - 02:00 PM</TableCell>
-                    <TableCell>Ad Mad</TableCell>
-                    <TableCell>Seminar Hall</TableCell>
+                    <TableCell className="font-medium text-black">12:30 PM - 02:00 PM</TableCell>
+                    <TableCell className="text-black">Ad Mad</TableCell>
+                    <TableCell className="text-black">Seminar Hall</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">02:00 PM - 03:30 PM</TableCell>
-                    <TableCell>Declamation</TableCell>
-                    <TableCell>Seminar Hall</TableCell>
+                    <TableCell className="font-medium text-black">02:00 PM - 03:30 PM</TableCell>
+                    <TableCell className="text-black">Declamation</TableCell>
+                    <TableCell className="text-black">Seminar Hall</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">03:30 PM – 04:30 PM</TableCell>
-                    <TableCell>(DAY 01) Prize Distribution</TableCell>
-                    <TableCell>Seminar Hall</TableCell>
+                    <TableCell className="font-medium text-black">03:30 PM – 04:30 PM</TableCell>
+                    <TableCell className="text-black">(DAY 01) Prize Distribution</TableCell>
+                    <TableCell className="text-black">Seminar Hall</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
@@ -144,34 +144,34 @@ const Schedule: React.FC = () => {
                   </TableRow>
                   
                   <TableRow>
-                    <TableCell className="font-medium">10:00 AM Onwards</TableCell>
-                    <TableCell>Esports</TableCell>
-                    <TableCell>Language Lab + ECE Computer Lab</TableCell>
+                    <TableCell className="font-medium text-black">10:00 AM Onwards</TableCell>
+                    <TableCell className="text-black">Esports</TableCell>
+                    <TableCell className="text-black">Language Lab + ECE Computer Lab</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">10:00 AM Onwards</TableCell>
-                    <TableCell>Ashoka Startup Showcase Meet</TableCell>
-                    <TableCell>Seminar Hall</TableCell>
+                    <TableCell className="font-medium text-black">10:00 AM Onwards</TableCell>
+                    <TableCell className="text-black">Ashoka Startup Showcase Meet</TableCell>
+                    <TableCell className="text-black">Seminar Hall</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">10:00 AM – 12:00 PM</TableCell>
-                    <TableCell>(Interaction with – Srikanth Bolla)</TableCell>
-                    <TableCell>Seminar Hall</TableCell>
+                    <TableCell className="font-medium text-black">10:00 AM – 12:00 PM</TableCell>
+                    <TableCell className="text-black">(Interaction with – Srikanth Bolla)</TableCell>
+                    <TableCell className="text-black">Seminar Hall</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">12:30 PM - 03:30 PM</TableCell>
-                    <TableCell>Startup Simulation Challenge</TableCell>
-                    <TableCell>MBA Classes</TableCell>
+                    <TableCell className="font-medium text-black">12:30 PM - 03:30 PM</TableCell>
+                    <TableCell className="text-black">Startup Simulation Challenge</TableCell>
+                    <TableCell className="text-black">MBA Classes</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">10:00 AM Onwards</TableCell>
-                    <TableCell>Core Sync Model Presentation</TableCell>
-                    <TableCell>Mechanical Workshop Lab</TableCell>
+                    <TableCell className="font-medium text-black">10:00 AM Onwards</TableCell>
+                    <TableCell className="text-black">Core Sync Model Presentation</TableCell>
+                    <TableCell className="text-black">Mechanical Workshop Lab</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">11:00 AM</TableCell>
-                    <TableCell>Hackathon Final Submission</TableCell>
-                    <TableCell>Hackathon Zone</TableCell>
+                    <TableCell className="font-medium text-black">11:00 AM</TableCell>
+                    <TableCell className="text-black">Hackathon Final Submission</TableCell>
+                    <TableCell className="text-black">Hackathon Zone</TableCell>
                   </TableRow>
                   
                   <TableRow className="bg-gray-50">
@@ -179,19 +179,19 @@ const Schedule: React.FC = () => {
                   </TableRow>
                   
                   <TableRow>
-                    <TableCell className="font-medium">10:00 AM – 12:30 PM</TableCell>
-                    <TableCell>Best Shot on The Spot</TableCell>
-                    <TableCell>GD Room</TableCell>
+                    <TableCell className="font-medium text-black">10:00 AM – 12:30 PM</TableCell>
+                    <TableCell className="text-black">Best Shot on The Spot</TableCell>
+                    <TableCell className="text-black">GD Room</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">09:00 AM – 10:30 AM</TableCell>
-                    <TableCell>Sinking Ship</TableCell>
-                    <TableCell>MBA Classes</TableCell>
+                    <TableCell className="font-medium text-black">09:00 AM – 10:30 AM</TableCell>
+                    <TableCell className="text-black">Sinking Ship</TableCell>
+                    <TableCell className="text-black">MBA Classes</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">03:00 PM - 04:00 PM</TableCell>
-                    <TableCell>Closing & Prize Distribution Ceremony</TableCell>
-                    <TableCell>Seminar Hall</TableCell>
+                    <TableCell className="font-medium text-black">03:00 PM - 04:00 PM</TableCell>
+                    <TableCell className="text-black">Closing & Prize Distribution Ceremony</TableCell>
+                    <TableCell className="text-black">Seminar Hall</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>

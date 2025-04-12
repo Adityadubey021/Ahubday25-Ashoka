@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -638,49 +637,50 @@ Teams should focus on their projects and refrain from causing any unnecessary di
 f. Submission
 Each team must submit their complete project source code within the designated time.
 Projects must be deployed and fully functional by the end of the 24-hour event.
-Incomplete or non-functional submissions will be penalized.`
+Incomplete or non-functional submissions will be penalized.`,
+
   };
 
   const technicalEvents = [
     {
       title: "Robo Sumo",
-      subtitle: "The Ultimate Showdown",
-      price: "₹500",
+      subtitle: "Robo Rumble: The Ultimate Showdown",
+      price: "₹200",
       description: "Design and build a robot to push opponents out of a designated arena. Test your engineering skills and strategic control.",
       details: eventDetailsMap.roboSumo
     },
     {
       title: "Robo Soccer",
-      subtitle: "Robotic Soccer Challenge",
-      price: "₹500",
+      subtitle: "CuberKick: Robo Soccer League",
+      price: "₹200",
       description: "Build a robot to maneuver on a designated soccer field and push a tennis ball to score goals.",
       details: eventDetailsMap.roboSoccer
     },
     {
       title: "E-Sports",
-      subtitle: "BGMI & Free Fire Tournament",
-      price: "₹300",
+      subtitle: "Game On: Esports Championship - BGMI & FreeFire",
+      price: "₹100",
       description: "Compete in popular mobile games BGMI and FreeFire to win exciting prizes. Show off your gaming skills and strategic gameplay.",
       details: eventDetailsMap.eSports
     },
     {
       title: "Code Storm",
       subtitle: "Competitive Programming Challenge",
-      price: "₹200",
+      price: "₹50",
       description: "Solve complex programming problems under time constraints. Test your coding skills, logic, and efficiency.",
       details: eventDetailsMap.codeStorm
     },
     {
       title: "Core Sync",
       subtitle: "Bridging Hardware & Software Innovations",
-      price: "₹400",
+      price: "₹50",
       description: "Showcase pre-built projects that integrate hardware and/or software innovations aligned with smart, society, and sustainability themes.",
       details: eventDetailsMap.coreSync
     },
     {
       title: "ThinkInk",
       subtitle: "Poster Presentation Competition",
-      price: "₹200",
+      price: "₹50",
       description: "Present innovative ideas through posters addressing sustainability challenges and promoting healthier living.",
       details: eventDetailsMap.thinkInk
     }
@@ -697,42 +697,42 @@ Incomplete or non-functional submissions will be penalized.`
     {
       title: "Treasure Hunt",
       subtitle: "Campus-wide Adventure",
-      price: "₹300",
+      price: "₹200/team",
       description: "Solve clues and puzzles to find hidden treasures across the campus. Test your problem-solving skills and teamwork.",
       details: eventDetailsMap.treasureHunt
     },
     {
       title: "Declamation",
       subtitle: "Public Speaking Challenge",
-      price: "₹150",
+      price: "₹100",
       description: "Deliver a powerful speech from a well-known personality with conviction and eloquence.",
       details: eventDetailsMap.declamation
     },
     {
       title: "Ad-Mad",
       subtitle: "Advertisement Madness",
-      price: "₹200",
+      price: "₹200/team",
       description: "Create and present an advertisement for a given product in the most creative way. Show your marketing skills and creativity.",
       details: eventDetailsMap.adMad
     },
     {
       title: "Best Shot on the Spot",
       subtitle: "People Celebrating Architecture",
-      price: "₹250",
+      price: "₹100",
       description: "Capture photographs reflecting moments where people interact with architectural environments.",
       details: eventDetailsMap.bestShot
     },
     {
       title: "Sinking Ship",
       subtitle: "Historical Characters Edition",
-      price: "₹150",
+      price: "₹100",
       description: "Role-play historical characters and argue why you deserve to be saved from a sinking ship.",
       details: eventDetailsMap.sinkingShip
     },
     {
       title: "Craft a Tale",
       subtitle: "Creative Story Writing",
-      price: "₹100",
+      price: "₹50",
       description: "Weave a creative story connecting two distinct images in a meaningful and original way.",
       details: eventDetailsMap.craftATale
     }
@@ -742,21 +742,21 @@ Incomplete or non-functional submissions will be penalized.`
     {
       title: "Startup Simulation Challenge",
       subtitle: "Create a Startup Concept",
-      price: "₹300",
+      price: "₹200/team",
       description: "Interpret a mystery image, identify a problem, and build a startup concept around your solution.",
       details: eventDetailsMap.startupSimulation
     },
     {
-      title: "Pitch Deck Challenge",
-      subtitle: "Ashoka Startup Showcase Meet",
-      price: "₹200",
+      title: "Ashoka Startup Showcase Meet",
+      subtitle: "Startup Pitch Competition",
+      price: "₹200/team",
       description: "Present your startup idea, network with mentors and investors, and gain valuable feedback.",
       details: eventDetailsMap.pitchDeck
     },
     {
       title: "Kashi Hackathon 2025",
       subtitle: "24-Hour Coding Marathon",
-      price: "₹1000",
+      price: "₹200/team",
       description: "Develop sustainable solutions through a 24-hour collaborative development event.",
       details: eventDetailsMap.hackathon
     }
