@@ -84,7 +84,7 @@ const Coordinators: React.FC = () => {
     }
     {
       name: "Samarth Rao",
-      department: "B.tech (AI&ML)",
+      department: "B.tech (CSE-AI&ML)",
       contact: "8318180062", // Added placeholder contact as it wasn't provided
       imageSrc: "/Users/adityadubey/Downloads/WhatsApp Image 2025-04-12 at 13.59.05.jpeg",
       socialLinks: [
