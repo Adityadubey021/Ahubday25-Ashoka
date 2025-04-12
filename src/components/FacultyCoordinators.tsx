@@ -27,28 +27,28 @@ const FacultyCoordinatorCard: React.FC<FacultyCoordinatorProps> = ({ name, role,
 const FacultyCoordinators: React.FC = () => {
   const facultyCoordinators = [
     {
-      name: "Er. Sajjad Ali",
-      role: "Faculty Coordinator, IIC President",
+      name: "IIC President",
+      role: "Er. Sajjad Ali",
       contact: "+91 9695128786"
     },
     {
-      name: "Dr. Sharmila Singh",
-      role: "Faculty Coordinator, SAC President",
+      name: "SAC President",
+      role: "Dr. Sharmila Singh",
       contact: "+91 7619944491"
     },
     {
-     role: "Faculty Coordinator , SAC Vice President",
-      name: "SAC Vice PresidentMr. Arvind Kumar",
+     role: "Er.Arvind Kumar",
+      name: "SAC Vice President",
       contact: "+91 8317066128"
     },
     {
-      name: "Er. Avinash Prasad",
-      role: "Faculty Coordinator (Technical)",
+      name: "Technical ChairpersonEr. Avinash Prasad",
+      role: "Er. Avinash Prasad",
       contact: "+91 9415555413"
     },
     {
-      name: "Dr. Pallavi Singh",
-      role: "Faculty Coordinator ( Literary)",
+      name: " Literary Chairperson",
+      role: "Dr. Pallavi Singh",
       contact: "+91 8881279991"
     }
   ];
