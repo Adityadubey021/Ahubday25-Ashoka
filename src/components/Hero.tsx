@@ -1,15 +1,24 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
+
 const Hero: React.FC = () => {
   const scrollToRegistration = () => {
-    const registrationSection = document.getElementById('registration');
-    if (registrationSection) {
-      registrationSection.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
+    // Instead of scrolling to registration section, we'll now open the Google Form
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSfd3gaB4TXlIKNanGRxXfiVsnANlwmeRgu4wSESAynpNnawcw/viewform?usp=sharing', '_blank');
   };
-  return <section id="home" className="relative min-h-screen bg-gradient-to-b from-festival-light-purple/40 to-white pt-20 overflow-hidden">
+
+  return (
+    <section id="home" className="relative min-h-screen pt-20 overflow-hidden">
+      {/* College Building Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="/lovable-uploads/9a673412-b4ae-4e27-943f-5555bceb3882.png" 
+          alt="Ashoka Institute Building" 
+          className="w-full h-full object-cover opacity-15"
+        />
+      </div>
+      
       {/* Enhanced 3D Decorative elements */}
       <div className="absolute top-20 left-10 w-32 h-32 bg-festival-light-blue rounded-full blur-3xl opacity-50 animate-float"></div>
       <div className="absolute bottom-20 right-10 w-40 h-40 bg-festival-light-purple rounded-full blur-3xl opacity-50 animate-pulse-slow"></div>
@@ -17,25 +26,15 @@ const Hero: React.FC = () => {
       
       {/* Dynamic moving shapes */}
       <div className="absolute top-1/4 left-1/4 w-16 h-16 bg-festival-blue/20 rounded-full blur-xl opacity-40 animate-float" style={{
-      animationDelay: '1s',
-      animationDuration: '7s'
-    }}></div>
+        animationDelay: '1s',
+        animationDuration: '7s'
+      }}></div>
       <div className="absolute bottom-1/3 left-1/3 w-20 h-20 bg-festival-orange/30 rounded-full blur-xl opacity-30 animate-float" style={{
-      animationDelay: '2s',
-      animationDuration: '8s'
-    }}></div>
-      
-      {/* Abhyuday Logo Watermark */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5">
-        <img src="/lovable-uploads/cc24c81f-4e39-450d-b4ab-1c850d241296.png" alt="Abhyuday Watermark" className="w-3/4 max-w-3xl" />
-      </div>
+        animationDelay: '2s',
+        animationDuration: '8s'
+      }}></div>
       
       <div className="container mx-auto px-4 py-24 md:py-32 flex flex-col items-center z-10 relative">
-        {/* Ashoka Institute Logo - Center Top */}
-        <div className="mb-8">
-          
-        </div>
-        
         <div className="text-center max-w-4xl mx-auto">
           <div className="mb-6 flex justify-center relative">
             <div className="absolute -inset-5 bg-gradient-to-r from-festival-blue/20 via-festival-purple/20 to-festival-orange/20 rounded-full blur-xl animate-pulse-slow opacity-70"></div>
@@ -48,8 +47,8 @@ const Hero: React.FC = () => {
           
           <h1 className="font-montserrat font-extrabold text-5xl md:text-7xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-festival-purple via-festival-blue to-festival-purple relative">
             <span style={{
-            animationDuration: '6s'
-          }} className="animate-float inline-block text-amber-600">ABHYUDAY 2025</span>
+              animationDuration: '6s'
+            }} className="animate-float inline-block text-amber-600">ABHYUDAY 2025</span>
             <div className="absolute -inset-2 bg-gradient-to-r from-festival-blue/20 via-festival-purple/20 to-festival-orange/20 rounded-xl blur-md -z-10"></div>
           </h1>
           
@@ -76,8 +75,8 @@ const Hero: React.FC = () => {
             </Button>
             
             <Button variant="outline" size="lg" className="border-festival-purple text-festival-purple hover:bg-festival-purple/10 font-semibold text-lg px-10 shadow-md hover:shadow-lg transition-all" onClick={() => document.getElementById('events')?.scrollIntoView({
-            behavior: 'smooth'
-          })}>
+              behavior: 'smooth'
+            })}>
               Explore Events
             </Button>
           </div>
@@ -85,8 +84,8 @@ const Hero: React.FC = () => {
           {/* CTA for schedule */}
           <div className="mt-6">
             <button onClick={() => document.getElementById('schedule')?.scrollIntoView({
-            behavior: 'smooth'
-          })} className="text-festival-purple hover:text-festival-blue underline underline-offset-4 transition-colors">
+              behavior: 'smooth'
+            })} className="text-festival-purple hover:text-festival-blue underline underline-offset-4 transition-colors">
               View Full Schedule
             </button>
           </div>
@@ -111,6 +110,8 @@ const Hero: React.FC = () => {
       </div>
       
       <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"></div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;

@@ -5,6 +5,7 @@ import Hero from '@/components/Hero';
 import Events from '@/components/Events';
 import Registration from '@/components/Registration';
 import Coordinators from '@/components/Coordinators';
+import FacultyCoordinators from '@/components/FacultyCoordinators';
 import Sponsors from '@/components/Sponsors';
 import Footer from '@/components/Footer';
 import Schedule from '@/components/Schedule';
@@ -18,7 +19,7 @@ const Index: React.FC = () => {
       <Schedule />
       <Events />
       <PastHighlights />
-      <Registration />
+      <FacultyCoordinators />
       <Coordinators />
       <Sponsors />
       <Footer />

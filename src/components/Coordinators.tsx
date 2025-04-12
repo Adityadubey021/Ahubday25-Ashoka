@@ -71,6 +71,16 @@ const Coordinators: React.FC = () => {
         { type: 'linkedin', url: 'https://www.linkedin.com/in/sobrat-dayal/' },
         { type: 'instagram', url: 'https://www.instagram.com/sobratdayal2022/' }
       ] as SocialLink[]
+    },
+    {
+      name: "Swami Charan Singh",
+      department: "B.Tech",
+      contact: "9876543210", // Added placeholder contact as it wasn't provided
+      imageSrc: "/lovable-uploads/96b27789-e728-469f-8108-632611031cd5.png",
+      socialLinks: [
+        { type: 'linkedin', url: 'https://www.instagram.com/swami_singh_smartest/' }, // Note: LinkedIn URL is set to Instagram as per your instructions
+        { type: 'instagram', url: 'https://www.instagram.com/swami_singh_smartest/' }
+      ] as SocialLink[]
     }
   ];
 
@@ -78,11 +88,11 @@ const Coordinators: React.FC = () => {
     <section id="coordinators" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 text-festival-purple font-montserrat">Event Coordinators</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">Connect with our event coordinators for any queries regarding the events or registration process.</p>
+          <h2 className="text-4xl font-bold mb-4 text-festival-purple font-montserrat">Student Organisers</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">Connect with our student organisers for any queries regarding the events or registration process.</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 max-w-6xl mx-auto">
           {coordinators.map((coordinator, index) => (
             <CoordinatorCard
               key={index}
