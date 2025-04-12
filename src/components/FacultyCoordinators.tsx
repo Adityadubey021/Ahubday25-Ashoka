@@ -38,7 +38,7 @@ const FacultyCoordinators: React.FC = () => {
     },
     {
      role: "Faculty Coordinator , SAC Vice President",
-      name: "Mr. Arvind Kumar",
+      name: "SAC Vice PresidentMr. Arvind Kumar",
       contact: "+91 8317066128"
     },
     {
