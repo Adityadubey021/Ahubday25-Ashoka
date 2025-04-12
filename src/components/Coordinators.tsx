@@ -75,7 +75,7 @@ const Coordinators: React.FC = () => {
     {
       name: "Swami Charan Singh",
       department: "B.Tech",
-      contact: "9876543210", // Added placeholder contact as it wasn't provided
+      contact: "8318180062", // Added placeholder contact as it wasn't provided
       imageSrc: "/lovable-uploads/96b27789-e728-469f-8108-632611031cd5.png",
       socialLinks: [
         { type: 'linkedin', url: 'https://www.instagram.com/swami_singh_smartest/' }, // Note: LinkedIn URL is set to Instagram as per your instructions
