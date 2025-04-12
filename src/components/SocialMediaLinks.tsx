@@ -38,7 +38,7 @@ const SocialMediaLinks: React.FC<SocialMediaLinksProps> = ({ links, className = 
           href={link.url} 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="bg-white/20 p-2 rounded-full hover:bg-black/30 transition-colors"
+          className="bg-black/20 p-2 rounded-full hover:bg-black/30 transition-colors"
           aria-label={`${link.type} link`}
         >
           {getIcon(link.type)}
