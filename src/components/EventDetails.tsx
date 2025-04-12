@@ -61,10 +61,13 @@ const EventDetails: React.FC<EventDetailsProps> = ({
         </ScrollArea>
         
         <DialogFooter className="mt-4">
-          <Button className="bg-festival-orange hover:bg-orange-600" onClick={() => window.open('https://forms.google.com/registration-form', '_blank'document.getElementById('registration')?.scrollIntoView({ behavior: 'smooth' })}>
-            
-                  Register for This Event
-          </Button>
+          <Button
+                    size="lg"
+                    className="bg-festival-orange hover:bg-orange-600 w-full text-white font-semibold text-lg"
+                    onClick={() => window.open('https://forms.google.com/registration-form', '_blank')}
+                  >
+                    Register this Event
+                  </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
