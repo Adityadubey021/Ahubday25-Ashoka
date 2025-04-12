@@ -69,7 +69,7 @@ const Sponsors: React.FC = () => {
         
         <div className="flex flex-col items-center justify-center">
           <div className="mb-12">
-            <h3 className="text-xl text-center font-semibold text-gray-700 mb-6">Title Sponsor</h3>
+            
             
           </div>
 

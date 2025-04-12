@@ -1,9 +1,7 @@
-
 import React from 'react';
 import { Phone, Mail, Globe, MapPin } from 'lucide-react';
 import SocialMediaLinks from './SocialMediaLinks';
 import { SocialLink } from './SocialMediaLinks';
-
 const Footer: React.FC = () => {
   const instituteSocialLinks: SocialLink[] = [{
     type: 'instagram',
@@ -18,9 +16,7 @@ const Footer: React.FC = () => {
     type: 'twitter',
     url: 'https://twitter.com/aitmvnsz'
   }];
-
-  return (
-    <footer className="bg-[#1A1F2C] text-white">
+  return <footer className="bg-[#1A1F2C] text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
@@ -90,12 +86,10 @@ const Footer: React.FC = () => {
             © 2025 Ashoka Institute of Technology and Management. All rights reserved.
           </div>
           <div className="text-white/80 text-sm text-center">
-            <div>Designed for Abhyuday 2025 | State Level Lit-Tech Fiesta</div>
+            <div>Designed by TECHxVEDA  | State Level Lit-Tech Fiesta</div>
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
