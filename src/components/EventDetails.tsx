@@ -1,9 +1,8 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Calendar } from 'lucide-react';
-import React, { useState } from 'react';
 import { 
   Dialog, 
   DialogContent, 
@@ -13,7 +12,6 @@ import {
   DialogDescription,
   DialogFooter
 } from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
 interface EventDetailsProps {
@@ -66,12 +64,12 @@ const EventDetails: React.FC<EventDetailsProps> = ({
         
         <DialogFooter className="mt-4">
           <Button
-                    size="lg"
-                    className="bg-festival-orange hover:bg-orange-600 w-full text-white font-semibold text-lg"
-                    onClick={() => window.open('https://forms.google.com/registration-form', '_blank')}
-                  >
-                    Register this Event
-                  </Button>
+            size="lg"
+            className="bg-festival-orange hover:bg-orange-600 w-full text-white font-semibold text-lg"
+            onClick={() => window.open('https://forms.google.com/registration-form', '_blank')}
+          >
+            Register this Event
+          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
