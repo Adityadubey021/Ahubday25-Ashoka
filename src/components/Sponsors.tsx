@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowDown } from 'lucide-react';
@@ -111,7 +110,7 @@ const Sponsors: React.FC = () => {
                 <div className="relative group overflow-hidden transform transition-all duration-500">
                   <div className="absolute inset-0 bg-gradient-to-t from-purple-900 to-transparent opacity-40 group-hover:opacity-20 transition-opacity"></div>
                   <img 
-                    src="/lovable-uploads/b0ddc253-c1b0-43f0-bb0e-6e4dc58b53c4.png" 
+                    src="/lovable-uploads/a99f095c-5ce8-4c66-962e-ebf96a8e93ea.png" 
                     alt="Mr. Srikanth Bolla" 
                     className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" 
                   />
@@ -132,7 +131,7 @@ const Sponsors: React.FC = () => {
             <Card className="overflow-hidden shadow-2xl border-0 hover:shadow-3xl transition-all duration-500 bg-gradient-to-r from-blue-900/80 to-indigo-800/80 backdrop-blur-md">
               <div className="grid grid-cols-1 md:grid-cols-5">
                 <div className="p-8 flex flex-col justify-center md:col-span-3">
-                  <div className="text-lg font-medium text-festival-orange mb-2">Special Feature - Day 1</div>
+                  <div className="text-lg font-medium text-festival-orange mb-2">Special Feature - Day 1 & 2</div>
                   <h3 className="text-3xl font-bold text-white mb-4">Innovation & Entrepreneurship Summit</h3>
                   <p className="text-gray-200 mb-6 leading-relaxed">
                     Join us for an engaging session with successful entrepreneurs, investors, and industry experts. Get insights on startup ecosystem, funding opportunities, and the journey from ideation to execution.

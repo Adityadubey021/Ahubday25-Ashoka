@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -8,8 +7,8 @@ const Hero: React.FC = () => {
   };
 
   const scrollToChiefGuest = () => {
-    // This will scroll to the Sponsors section which contains the Chief Guest
-    document.querySelector('.bg-white')?.scrollIntoView({ behavior: 'smooth' });
+    // This will scroll to the Chief Guest section
+    document.getElementById('chief-guest')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return <section id="home" className="relative min-h-screen pt-20 overflow-hidden">
@@ -41,8 +40,6 @@ const Hero: React.FC = () => {
         <div className="text-center max-w-4xl mx-auto">
           <div className="mb-6 flex flex-col justify-center items-center relative">
             <div className="absolute -inset-5 bg-gradient-to-r from-festival-blue/20 via-festival-purple/20 to-festival-orange/20 rounded-full blur-xl animate-pulse-slow opacity-70"></div>
-            
-            {/* Removed Ashoka logo from center as requested */}
             
             {/* Abhyuday Logo - made larger */}
             <img src="/lovable-uploads/a8c0776c-b911-43b5-8397-fb3075ac7d3d.png" alt="Abhyuday 2025 Logo" className="h-48 md:h-56 relative z-10" />

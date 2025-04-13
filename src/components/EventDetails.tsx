@@ -66,7 +66,7 @@ const EventDetails: React.FC<EventDetailsProps> = ({
           <Button
             size="lg"
             className="bg-festival-orange hover:bg-orange-600 w-full text-white font-semibold text-lg"
-            onClick={() => window.open('https://forms.google.com/registration-form', '_blank')}
+            onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSfd3gaB4TXlIKNanGRxXfiVsnANlwmeRgu4wSESAynpNnawcw/viewform', '_blank')}
           >
             Register this Event
           </Button>
