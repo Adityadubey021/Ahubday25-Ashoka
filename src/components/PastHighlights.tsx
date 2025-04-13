@@ -1,20 +1,9 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const PastHighlights: React.FC = () => {
   const galleryImages = [
-    // Previous images
-    "/lovable-uploads/789a44d4-c706-45e8-8dbe-a9601944ce45.png", 
-    "/lovable-uploads/6d535949-5e2a-42e3-bc09-e17b802ec2c9.png", 
-    "/lovable-uploads/6ee2ba58-4bb9-43b1-9f33-3efda114f474.png", 
-    "/lovable-uploads/4e8bf57b-c820-460a-9eb9-e6a4527d0dd0.png", 
-    "/lovable-uploads/2559af22-4086-4159-b894-cfd4439e9ca5.png", 
-    "/lovable-uploads/cecbf07f-2b26-4757-8a35-886f5b6e45bb.png", 
-    "/lovable-uploads/1a1b47d7-f59c-443f-b753-0dee0973d6ad.png", 
-    "/lovable-uploads/582be96d-890a-4791-a8cb-94b0561cc1fd.png",
-    // New uploaded images
     "/lovable-uploads/954a3897-9dde-45a3-ad7d-cafdd7336f08.png",
     "/lovable-uploads/3b3daad0-67ce-4b63-b47a-9cf7b4b6aba7.png",
     "/lovable-uploads/7735f666-c401-440c-b49e-6990132240d3.png",

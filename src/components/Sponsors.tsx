@@ -25,7 +25,7 @@ const Sponsors: React.FC = () => {
   
   const sponsorCategories = [{
     id: "title",
-    title: "Our Sponsors",
+    title: "Previous Sponsors",
     logos: [{
       src: "/lovable-uploads/2082213f-e96d-4935-ac60-2148f794db68.png",
       alt: "Hotel Surbhi International",
@@ -120,7 +120,7 @@ const Sponsors: React.FC = () => {
             </Card>
           </div>
 
-          {/* Entrepreneur Summit Section - New highlighted section */}
+          {/* Entrepreneur Summit Section - Enhanced highlighted section */}
           <div className="mb-16 max-w-5xl mx-auto mt-16">
             <div className="text-center mb-8">
               <h2 className="text-4xl font-bold text-white font-montserrat">Entrepreneur Summit</h2>
@@ -172,16 +172,16 @@ const Sponsors: React.FC = () => {
         </div>
       </section>
 
-      {/* Sponsors Section - Moved to the bottom */}
-      <section id="sponsors" className="py-16 bg-white relative overflow-hidden">
+      {/* Sponsors Section - Changed to "Previous Sponsors" */}
+      <section id="previous-sponsors" className="py-16 bg-white relative overflow-hidden">
         <div className="absolute top-20 left-10 w-32 h-32 bg-festival-light-purple rounded-full blur-3xl opacity-40 animate-float"></div>
         <div className="absolute bottom-20 right-10 w-40 h-40 bg-festival-orange/20 rounded-full blur-3xl opacity-30 animate-pulse-slow"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-festival-purple font-montserrat">Our Sponsors</h2>
+            <h2 className="text-4xl font-bold mb-4 text-festival-purple font-montserrat">Previous Sponsors</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              We thank our sponsors for making Abhyuday 2025 possible
+              We thank our previous sponsors for making Abhyuday possible
             </p>
           </div>
         

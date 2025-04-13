@@ -15,12 +15,12 @@ const Index: React.FC = () => {
     <div className="font-poppins min-h-screen bg-[#121621] text-white">
       <Navbar />
       <Hero />
-      <Sponsors /> {/* Chief Guest section and Entrepreneur Summit */}
       <Schedule />
       <Events />
       <PastHighlights /> {/* Gallery section with all photos */}
       <FacultyCoordinators />
       <Coordinators />
+      <Sponsors /> {/* Moved to bottom, above Footer */}
       <Footer />
     </div>
   );
