@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Phone } from 'lucide-react';
@@ -33,7 +32,7 @@ const CoordinatorCard: React.FC<CoordinatorProps> = ({ name, department, contact
 
 const Coordinators: React.FC = () => {
   const coordinators = [
-   {
+    {
       name: "Aditya Dubey",
       department: "B.Tech (CSE-AIML)",
       contact: "8932056388",
@@ -52,7 +51,8 @@ const Coordinators: React.FC = () => {
         { type: 'linkedin', url: 'https://www.linkedin.com/in/diwakar-patel-151393277/' },
         { type: 'instagram', url: 'https://www.instagram.com/diwakarpatel453t/' }
       ] as SocialLink[]
-    }, {
+    },
+    {
       name: "Swami Charan Singh",
       department: "MBA",
       contact: "8318180062",
@@ -61,7 +61,7 @@ const Coordinators: React.FC = () => {
         { type: 'linkedin', url: 'https://www.instagram.com/swami_singh_smartest/' },
         { type: 'instagram', url: 'https://www.instagram.com/swami_singh_smartest/' }
       ] as SocialLink[]
-    }
+    },
     {
       name: "Malay Vishwakarma",
       department: "B.Tech (CSE)",
@@ -69,15 +69,6 @@ const Coordinators: React.FC = () => {
       imageSrc: "/lovable-uploads/ff0804e8-3dfc-45ee-b091-ae6b26c62022.png",
       socialLinks: [
         { type: 'linkedin', url: 'https://www.linkedin.com/in/malay-vishwakarma-45a892248/' }
-      ] as SocialLink[]
-    }, {
-      name: "Samarth Rao",
-      department: "B.Tech (AI&ML)",
-      contact: "8960356600",
-      imageSrc: "/lovable-uploads/d53d2153-2730-43ec-8384-11ca302918c7.png",
-      socialLinks: [
-        { type: 'linkedin', url: 'https://www.linkedin.com/in/samarth-rao-24620a1ab' },
-        { type: 'instagram', url: 'https://www.instagram.com/samarthrao34/' }
       ] as SocialLink[]
     },
     {
@@ -99,7 +90,16 @@ const Coordinators: React.FC = () => {
         { type: 'instagram', url: 'https://www.instagram.com/_0335_.a/' }
       ] as SocialLink[]
     },
-   
+    {
+      name: "Samarth Rao",
+      department: "B.Tech (AI&ML)",
+      contact: "8960356600",
+      imageSrc: "/lovable-uploads/d53d2153-2730-43ec-8384-11ca302918c7.png",
+      socialLinks: [
+        { type: 'linkedin', url: 'https://www.linkedin.com/in/samarth-rao-24620a1ab' },
+        { type: 'instagram', url: 'https://www.instagram.com/samarthrao34/' }
+      ] as SocialLink[]
+    },
     {
       name: "Sobrat Dayal",
       department: "B.Tech (CSE)",
@@ -108,16 +108,6 @@ const Coordinators: React.FC = () => {
       socialLinks: [
         { type: 'linkedin', url: 'https://www.linkedin.com/in/sobrat-dayal/' },
         { type: 'instagram', url: 'https://www.instagram.com/sobratdayal2022/' }
-      ] as SocialLink[]
-    },
-    {
-      name: "Swami Charan Singh",
-      department: "MBA",
-      contact: "8318180062",
-      imageSrc: "/lovable-uploads/96b27789-e728-469f-8108-632611031cd5.png",
-      socialLinks: [
-        { type: 'linkedin', url: 'https://www.instagram.com/swami_singh_smartest/' },
-        { type: 'instagram', url: 'https://www.instagram.com/swami_singh_smartest/' }
       ] as SocialLink[]
     }
   ];
