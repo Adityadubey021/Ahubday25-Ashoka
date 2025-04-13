@@ -33,7 +33,44 @@ const CoordinatorCard: React.FC<CoordinatorProps> = ({ name, department, contact
 
 const Coordinators: React.FC = () => {
   const coordinators = [
+   {
+      name: "Aditya Dubey",
+      department: "B.Tech (CSE-AIML)",
+      contact: "8932056388",
+      imageSrc: "/lovable-uploads/02a20942-650a-4beb-b1cc-b61c3e592759.png",
+      socialLinks: [
+        { type: 'linkedin', url: 'https://www.linkedin.com/in/aditya-dubey-49129a248/' },
+        { type: 'instagram', url: 'https://www.instagram.com/aditya__dubey21/' }
+      ] as SocialLink[]
+    },
     {
+      name: "Diwakar Patel",
+      department: "B.Tech (CSE-AIML)",
+      contact: "9235508350",
+      imageSrc: "/lovable-uploads/c9438579-b726-4ee1-9a1e-fb6601f84a00.png",
+      socialLinks: [
+        { type: 'linkedin', url: 'https://www.linkedin.com/in/diwakar-patel-151393277/' },
+        { type: 'instagram', url: 'https://www.instagram.com/diwakarpatel453t/' }
+      ] as SocialLink[]
+    }, {
+      name: "Swami Charan Singh",
+      department: "MBA",
+      contact: "8318180062",
+      imageSrc: "/lovable-uploads/96b27789-e728-469f-8108-632611031cd5.png",
+      socialLinks: [
+        { type: 'linkedin', url: 'https://www.instagram.com/swami_singh_smartest/' },
+        { type: 'instagram', url: 'https://www.instagram.com/swami_singh_smartest/' }
+      ] as SocialLink[]
+    }
+    {
+      name: "Malay Vishwakarma",
+      department: "B.Tech (CSE)",
+      contact: "8471059969",
+      imageSrc: "/lovable-uploads/ff0804e8-3dfc-45ee-b091-ae6b26c62022.png",
+      socialLinks: [
+        { type: 'linkedin', url: 'https://www.linkedin.com/in/malay-vishwakarma-45a892248/' }
+      ] as SocialLink[]
+    }, {
       name: "Samarth Rao",
       department: "B.Tech (AI&ML)",
       contact: "8960356600",
@@ -62,35 +99,7 @@ const Coordinators: React.FC = () => {
         { type: 'instagram', url: 'https://www.instagram.com/_0335_.a/' }
       ] as SocialLink[]
     },
-    {
-      name: "Aditya Dubey",
-      department: "B.Tech (CSE-AIML)",
-      contact: "8932056388",
-      imageSrc: "/lovable-uploads/02a20942-650a-4beb-b1cc-b61c3e592759.png",
-      socialLinks: [
-        { type: 'linkedin', url: 'https://www.linkedin.com/in/aditya-dubey-49129a248/' },
-        { type: 'instagram', url: 'https://www.instagram.com/aditya__dubey21/' }
-      ] as SocialLink[]
-    },
-    {
-      name: "Diwakar Patel",
-      department: "B.Tech (CSE-AIML)",
-      contact: "9235508350",
-      imageSrc: "/lovable-uploads/c9438579-b726-4ee1-9a1e-fb6601f84a00.png",
-      socialLinks: [
-        { type: 'linkedin', url: 'https://www.linkedin.com/in/diwakar-patel-151393277/' },
-        { type: 'instagram', url: 'https://www.instagram.com/diwakarpatel453t/' }
-      ] as SocialLink[]
-    },
-    {
-      name: "Malay Vishwakarma",
-      department: "B.Tech (CSE)",
-      contact: "8471059969",
-      imageSrc: "/lovable-uploads/ff0804e8-3dfc-45ee-b091-ae6b26c62022.png",
-      socialLinks: [
-        { type: 'linkedin', url: 'https://www.linkedin.com/in/malay-vishwakarma-45a892248/' }
-      ] as SocialLink[]
-    },
+   
     {
       name: "Sobrat Dayal",
       department: "B.Tech (CSE)",
