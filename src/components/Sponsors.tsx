@@ -59,7 +59,7 @@ const Sponsors: React.FC = () => {
 
   return (
     <>
-      {/* Chief Guest Section - Now completely separate and more prominent */}
+      {/* Chief Guest Section - Full Screen with enhanced animations */}
       <section id="chief-guest" className="py-16 bg-gradient-to-b from-[#121621] to-purple-900 relative overflow-hidden min-h-screen flex items-center">
         {/* Enhanced 3D decorative elements */}
         <div className="absolute top-20 left-10 w-64 h-64 bg-festival-light-purple rounded-full blur-3xl opacity-20 animate-float"></div>
@@ -120,15 +120,59 @@ const Sponsors: React.FC = () => {
             </Card>
           </div>
 
+          {/* Entrepreneur Summit Section - New highlighted section */}
+          <div className="mb-16 max-w-5xl mx-auto mt-16">
+            <div className="text-center mb-8">
+              <h2 className="text-4xl font-bold text-white font-montserrat">Entrepreneur Summit</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto mt-2">
+                A platform for future entrepreneurs to connect, learn and grow
+              </p>
+            </div>
+            
+            <Card className="overflow-hidden shadow-2xl border-0 hover:shadow-3xl transition-all duration-500 bg-gradient-to-r from-blue-900/80 to-indigo-800/80 backdrop-blur-md">
+              <div className="grid grid-cols-1 md:grid-cols-5">
+                <div className="p-8 flex flex-col justify-center md:col-span-3">
+                  <div className="text-lg font-medium text-festival-orange mb-2">Special Feature - Day 1</div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Innovation & Entrepreneurship Summit</h3>
+                  <p className="text-gray-200 mb-6 leading-relaxed">
+                    Join us for an engaging session with successful entrepreneurs, investors, and industry experts. Get insights on startup ecosystem, funding opportunities, and the journey from ideation to execution.
+                  </p>
+                  <div className="space-y-3">
+                    <div className="bg-white/10 p-3 rounded-lg backdrop-blur-sm">
+                      <span className="text-white font-semibold">Panel Discussion:</span> 
+                      <span className="text-gray-200"> "Building Sustainable Startups in Today's Market"</span>
+                    </div>
+                    <div className="bg-white/10 p-3 rounded-lg backdrop-blur-sm">
+                      <span className="text-white font-semibold">Pitch Competition:</span> 
+                      <span className="text-gray-200"> Present your business ideas and win mentorship opportunities</span>
+                    </div>
+                    <div className="bg-white/10 p-3 rounded-lg backdrop-blur-sm">
+                      <span className="text-white font-semibold">Workshop:</span> 
+                      <span className="text-gray-200"> "From College Project to Profitable Business"</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="md:col-span-2 relative group overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900 to-transparent opacity-40 group-hover:opacity-20 transition-opacity"></div>
+                  <img 
+                    src="/lovable-uploads/bcb54839-ffb6-461f-8da5-5affb0a961c1.png" 
+                    alt="Entrepreneur Summit" 
+                    className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" 
+                  />
+                </div>
+              </div>
+            </Card>
+          </div>
+
           {/* Scroll down indicator */}
           <div className="flex flex-col items-center justify-center mt-10 animate-bounce">
-            <p className="text-gray-300 mb-2">Scroll to see our sponsors</p>
+            <p className="text-gray-300 mb-2">Continue exploring Abhyuday 2025</p>
             <ArrowDown className="text-white" />
           </div>
         </div>
       </section>
 
-      {/* Sponsors Section - Now completely separate */}
+      {/* Sponsors Section - Moved to the bottom */}
       <section id="sponsors" className="py-16 bg-white relative overflow-hidden">
         <div className="absolute top-20 left-10 w-32 h-32 bg-festival-light-purple rounded-full blur-3xl opacity-40 animate-float"></div>
         <div className="absolute bottom-20 right-10 w-40 h-40 bg-festival-orange/20 rounded-full blur-3xl opacity-30 animate-pulse-slow"></div>
