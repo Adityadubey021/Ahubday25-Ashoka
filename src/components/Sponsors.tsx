@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import { ArrowDown } from 'lucide-react';
 
 const Sponsors: React.FC = () => {
   // Partners and sponsors logos
@@ -56,81 +57,122 @@ const Sponsors: React.FC = () => {
     }]
   }];
 
-  return <section className="py-16 bg-white relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-festival-light-purple rounded-full blur-3xl opacity-40 animate-float"></div>
-      <div className="absolute bottom-20 right-10 w-40 h-40 bg-festival-orange/20 rounded-full blur-3xl opacity-30 animate-pulse-slow"></div>
-      
-      {/* Abhyuday Logo Watermark */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5">
-        <img src="/lovable-uploads/cc24c81f-4e39-450d-b4ab-1c850d241296.png" alt="Abhyuday Watermark" className="w-3/4 max-w-3xl" />
-      </div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 text-festival-purple font-montserrat">Our Special Guest</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">Abhyuday 2025 brings you inspiring leaders</p>
+  return (
+    <>
+      {/* Chief Guest Section - Now completely separate and more prominent */}
+      <section id="chief-guest" className="py-16 bg-gradient-to-b from-[#121621] to-purple-900 relative overflow-hidden min-h-screen flex items-center">
+        {/* Enhanced 3D decorative elements */}
+        <div className="absolute top-20 left-10 w-64 h-64 bg-festival-light-purple rounded-full blur-3xl opacity-20 animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-festival-orange/20 rounded-full blur-3xl opacity-15 animate-pulse-slow"></div>
+        <div className="absolute top-1/3 right-1/4 w-48 h-48 bg-festival-purple/10 rounded-full blur-3xl opacity-20"></div>
+        
+        {/* Animated Floating Particles */}
+        {[...Array(10)].map((_, i) => (
+          <div 
+            key={i}
+            className="absolute w-4 h-4 bg-white/10 rounded-full blur-sm opacity-60 animate-float"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              animationDuration: `${5 + Math.random() * 10}s`,
+              animationDelay: `${Math.random() * 5}s`
+            }}
+          ></div>
+        ))}
+        
+        {/* Abhyuday Logo Watermark */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5">
+          <img src="/lovable-uploads/cc24c81f-4e39-450d-b4ab-1c850d241296.png" alt="Abhyuday Watermark" className="w-full max-w-5xl" />
         </div>
         
-        {/* Chief Guest Section */}
-        <div className="mb-16 max-w-4xl mx-auto">
-          <h3 className="text-2xl font-bold text-festival-purple mb-6 text-center">Chief Guest - Day 2</h3>
-          <Card className="overflow-hidden shadow-lg border-0 hover:shadow-xl transition-all duration-300">
-            <div className="grid grid-cols-1 md:grid-cols-2">
-              <div className="p-6 flex flex-col justify-center bg-gradient-to-br from-white to-purple-50">
-                <h4 className="text-2xl font-bold text-festival-purple mb-3">Mr. Srikanth Bolla</h4>
-                <p className="text-gray-600 font-medium mb-3 text-lg">Founder & Chairman, Bollant Industries</p>
-                <p className="text-gray-600 mb-4">
-                  Despite being born blind, Srikanth Bolla became the first international blind student at MIT and later founded Bollant Industries, creating sustainable packaging solutions and employment opportunities for people with disabilities.
-                </p>
-                <div className="mt-2 inline-block px-4 py-2 bg-festival-light-purple text-festival-purple rounded-lg font-semibold text-sm">
-                  Special Talk - April 26, 2025
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold mb-4 text-white font-montserrat">Our Special Guest</h2>
+            <p className="text-gray-300 max-w-2xl mx-auto text-xl">
+              Abhyuday 2025 brings you an inspiring leader whose journey will motivate all attendees
+            </p>
+          </div>
+          
+          {/* Chief Guest Card - Enhanced with animations and 3D effects */}
+          <div className="mb-16 max-w-5xl mx-auto">
+            <Card className="overflow-hidden shadow-2xl border-0 hover:shadow-3xl transition-all duration-500 bg-gradient-to-r from-purple-900/80 to-purple-800/80 backdrop-blur-md">
+              <div className="grid grid-cols-1 md:grid-cols-2">
+                <div className="p-8 flex flex-col justify-center">
+                  <div className="text-lg font-medium text-festival-orange mb-2">Chief Guest - Day 2</div>
+                  <h3 className="text-3xl font-bold text-white mb-4 animate-pulse-slow">Mr. Srikanth Bolla</h3>
+                  <p className="text-gray-200 font-medium mb-4 text-xl">Founder & Chairman, Bollant Industries</p>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    Despite being born blind, Srikanth Bolla became the first international blind student at MIT and later founded Bollant Industries, creating sustainable packaging solutions and employment opportunities for people with disabilities.
+                  </p>
+                  <div className="inline-block px-6 py-3 bg-festival-purple/30 text-white rounded-lg font-semibold text-md backdrop-blur-sm border border-purple-500/30">
+                    Special Talk - April 26, 2025
+                  </div>
+                </div>
+                <div className="relative group overflow-hidden transform transition-all duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-t from-purple-900 to-transparent opacity-40 group-hover:opacity-20 transition-opacity"></div>
+                  <img 
+                    src="/lovable-uploads/b0ddc253-c1b0-43f0-bb0e-6e4dc58b53c4.png" 
+                    alt="Mr. Srikanth Bolla" 
+                    className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" 
+                  />
                 </div>
               </div>
-              <div>
-                <img 
-                  src="/lovable-uploads/b0ddc253-c1b0-43f0-bb0e-6e4dc58b53c4.png" 
-                  alt="Mr. Srikanth Bolla" 
-                  className="w-full h-full object-cover object-center" 
-                />
-              </div>
-            </div>
-          </Card>
-        </div>
+            </Card>
+          </div>
 
-        {/* Sponsor section now completely separate */}
-        <div className="mt-20">
-          <h2 className="text-4xl font-bold mb-4 text-festival-purple font-montserrat text-center">Our Sponsors</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-center mb-10">
-            We thank our sponsors for making Abhyuday 2025 possible
-          </p>
+          {/* Scroll down indicator */}
+          <div className="flex flex-col items-center justify-center mt-10 animate-bounce">
+            <p className="text-gray-300 mb-2">Scroll to see our sponsors</p>
+            <ArrowDown className="text-white" />
+          </div>
+        </div>
+      </section>
+
+      {/* Sponsors Section - Now completely separate */}
+      <section id="sponsors" className="py-16 bg-white relative overflow-hidden">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-festival-light-purple rounded-full blur-3xl opacity-40 animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-festival-orange/20 rounded-full blur-3xl opacity-30 animate-pulse-slow"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 text-festival-purple font-montserrat">Our Sponsors</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              We thank our sponsors for making Abhyuday 2025 possible
+            </p>
+          </div>
         
           {/* Technical Partners */}
           <div className="mb-12 w-full max-w-5xl mx-auto">
             <h3 className="text-xl text-center font-semibold text-gray-700 mb-6">Technical Partners</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-              {partnerLogos.map((logo, idx) => <Card key={idx} className="overflow-hidden shadow-md hover:shadow-lg transition-all">
+              {partnerLogos.map((logo, idx) => (
+                <Card key={idx} className="overflow-hidden shadow-md hover:shadow-lg transition-all">
                   <CardContent className="p-6 flex flex-col items-center justify-center bg-white">
                     <img src={logo.src} alt={logo.alt} className="h-20 object-contain mb-3" />
                     <p className="text-center text-gray-700 font-medium">{logo.alt}</p>
                     <p className="text-center text-gray-500 text-sm">{logo.category}</p>
                   </CardContent>
-                </Card>)}
+                </Card>
+              ))}
             </div>
           </div>
 
           {/* Sponsor Categories */}
           <div className="grid grid-cols-1 gap-y-8 max-w-5xl mx-auto w-full">
-            {sponsorCategories.map(category => <div key={category.id} className="w-full">
+            {sponsorCategories.map(category => (
+              <div key={category.id} className="w-full">
                 <h3 className="text-xl font-semibold text-gray-700 mb-6 text-center">{category.title}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {category.logos.map((logo, idx) => <Card key={idx} className="overflow-hidden shadow-md hover:shadow-lg transition-all">
+                  {category.logos.map((logo, idx) => (
+                    <Card key={idx} className="overflow-hidden shadow-md hover:shadow-lg transition-all">
                       <CardContent className="p-6 flex items-center justify-center bg-white">
                         <img src={logo.src} alt={logo.alt} className="" />
                       </CardContent>
-                    </Card>)}
+                    </Card>
+                  ))}
                 </div>
-              </div>)}
+              </div>
+            ))}
           </div>
 
           <div className="mt-12">
@@ -139,8 +181,9 @@ const Sponsors: React.FC = () => {
             </p>
           </div>
         </div>
-      </div>
-    </section>;
+      </section>
+    </>
+  );
 };
 
 export default Sponsors;

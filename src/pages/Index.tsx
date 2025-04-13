@@ -14,11 +14,11 @@ const Index: React.FC = () => {
     <div className="font-poppins min-h-screen bg-[#121621] text-white">
       <Navbar />
       <Hero />
+      <Sponsors /> {/* Moved up to make the Chief Guest section appear directly after the hero */}
       <Schedule />
       <Events />
       <FacultyCoordinators />
       <Coordinators />
-      <Sponsors />
       <Footer />
     </div>
   );

@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
   };
 
   const scrollToChiefGuest = () => {
-    // This will scroll to the Sponsors section which now contains the Chief Guest
+    // This will scroll to the Sponsors section which contains the Chief Guest
     document.querySelector('.bg-white')?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -18,31 +18,34 @@ const Hero: React.FC = () => {
         <img src="/lovable-uploads/9a673412-b4ae-4e27-943f-5555bceb3882.png" alt="Ashoka Institute Building" className="w-full h-full object-cover brightness-[0.2]" />
       </div>
       
-      {/* Enhanced 3D Decorative elements */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-festival-blue rounded-full blur-3xl opacity-30 animate-float"></div>
-      <div className="absolute bottom-20 right-10 w-40 h-40 bg-festival-orange rounded-full blur-3xl opacity-30 animate-pulse-slow"></div>
-      <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-festival-purple/20 rounded-full blur-xl opacity-40"></div>
+      {/* Enhanced 3D Decorative elements - made more animated and prominent */}
+      <div className="absolute top-20 left-10 w-40 h-40 bg-festival-blue rounded-full blur-3xl opacity-40 animate-float"></div>
+      <div className="absolute bottom-20 right-10 w-48 h-48 bg-festival-orange rounded-full blur-3xl opacity-40 animate-pulse-slow"></div>
+      <div className="absolute top-1/3 right-1/4 w-32 h-32 bg-festival-purple/30 rounded-full blur-xl opacity-50"></div>
       
-      {/* Dynamic moving shapes */}
-      <div className="absolute top-1/4 left-1/4 w-16 h-16 bg-festival-orange/20 rounded-full blur-xl opacity-40 animate-float" style={{
-      animationDelay: '1s',
-      animationDuration: '7s'
-    }}></div>
-      <div className="absolute bottom-1/3 left-1/3 w-20 h-20 bg-festival-blue/30 rounded-full blur-xl opacity-30 animate-float" style={{
-      animationDelay: '2s',
-      animationDuration: '8s'
-    }}></div>
+      {/* Dynamic moving shapes - added more for enhanced 3D effect */}
+      <div className="absolute top-1/4 left-1/4 w-24 h-24 bg-festival-orange/30 rounded-full blur-xl opacity-50 animate-float" style={{
+        animationDelay: '1s',
+        animationDuration: '7s'
+      }}></div>
+      <div className="absolute bottom-1/3 left-1/3 w-28 h-28 bg-festival-blue/40 rounded-full blur-xl opacity-40 animate-float" style={{
+        animationDelay: '2s',
+        animationDuration: '8s'
+      }}></div>
+      <div className="absolute top-1/2 right-1/3 w-36 h-36 bg-festival-purple/20 rounded-full blur-2xl opacity-30 animate-pulse-slow" style={{
+        animationDelay: '3s',
+        animationDuration: '10s'
+      }}></div>
       
       <div className="container mx-auto px-4 py-24 md:py-32 flex flex-col items-center z-10 relative">
         <div className="text-center max-w-4xl mx-auto">
           <div className="mb-6 flex flex-col justify-center items-center relative">
             <div className="absolute -inset-5 bg-gradient-to-r from-festival-blue/20 via-festival-purple/20 to-festival-orange/20 rounded-full blur-xl animate-pulse-slow opacity-70"></div>
             
-            {/* Ashoka Logo - made bigger */}
-            <img src="/lovable-uploads/a15de4f2-1ba0-466c-8068-10aaddbab593.png" alt="Ashoka Institute Logo" className="h-60 md:h-72 relative z-10 mb-6 bg-white/10 p-2 rounded-md" />
+            {/* Removed Ashoka logo from center as requested */}
             
-            {/* Abhyuday Logo - replaced with the new image */}
-            <img src="/lovable-uploads/a8c0776c-b911-43b5-8397-fb3075ac7d3d.png" alt="Abhyuday 2025 Logo" className="h-40 md:h-48 relative z-10" />
+            {/* Abhyuday Logo - made larger */}
+            <img src="/lovable-uploads/a8c0776c-b911-43b5-8397-fb3075ac7d3d.png" alt="Abhyuday 2025 Logo" className="h-48 md:h-56 relative z-10" />
           </div>
           
           <div className="mb-6 inline-block px-6 py-3 bg-[#1A1F2C]/50 text-festival-orange rounded-full text-sm font-semibold animate-pulse-slow border border-festival-orange/30">
@@ -51,8 +54,8 @@ const Hero: React.FC = () => {
           
           <h1 className="font-montserrat font-extrabold text-5xl md:text-7xl mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400 relative">
             <span style={{
-            animationDuration: '6s'
-          }} className="animate-float inline-block">STATE LEVEL LIT-TECH FIESTA</span>
+              animationDuration: '6s'
+            }} className="animate-float inline-block">STATE LEVEL LIT-TECH FIESTA</span>
             <div className="absolute -inset-2 bg-gradient-to-r from-festival-blue/20 via-festival-purple/20 to-festival-orange/20 rounded-xl blur-md -z-10"></div>
           </h1>
           
@@ -75,20 +78,20 @@ const Hero: React.FC = () => {
             </Button>
             
             <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10 font-semibold text-lg px-10 shadow-md hover:shadow-lg transition-all" onClick={() => document.getElementById('events')?.scrollIntoView({
-            behavior: 'smooth'
-          })}>
+              behavior: 'smooth'
+            })}>
               Explore Events
             </Button>
           </div>
 
-          {/* CTA for Chief Guest and Schedule */}
-          <div className="mt-6 flex flex-wrap justify-center gap-4">
-            <button onClick={scrollToChiefGuest} className="text-festival-orange hover:text-white underline underline-offset-4 transition-colors">
+          {/* CTA for Chief Guest - made more prominent */}
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <button onClick={scrollToChiefGuest} className="text-festival-orange hover:text-white py-2 px-4 rounded-full bg-white/10 hover:bg-festival-orange/20 transition-colors border border-festival-orange/30">
               Meet Our Chief Guest
             </button>
             <button onClick={() => document.getElementById('schedule')?.scrollIntoView({
-            behavior: 'smooth'
-          })} className="text-festival-orange hover:text-white underline underline-offset-4 transition-colors">
+              behavior: 'smooth'
+            })} className="text-festival-orange hover:text-white py-2 px-4 rounded-full bg-white/10 hover:bg-festival-orange/20 transition-colors border border-festival-orange/30">
               View Full Schedule
             </button>
           </div>

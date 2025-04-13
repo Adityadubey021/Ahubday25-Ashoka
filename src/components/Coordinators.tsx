@@ -34,6 +34,35 @@ const CoordinatorCard: React.FC<CoordinatorProps> = ({ name, department, contact
 const Coordinators: React.FC = () => {
   const coordinators = [
     {
+      name: "Samarth Rao",
+      department: "B.Tech (AI&ML)",
+      contact: "8960356600",
+      imageSrc: "/lovable-uploads/d53d2153-2730-43ec-8384-11ca302918c7.png",
+      socialLinks: [
+        { type: 'linkedin', url: 'https://www.linkedin.com/in/samarth-rao-24620a1ab' },
+        { type: 'instagram', url: 'https://www.instagram.com/samarthrao34/' }
+      ] as SocialLink[]
+    },
+    {
+      name: "Mimansha Mishra",
+      department: "B.Pharma",
+      contact: "8400133603",
+      imageSrc: "/lovable-uploads/54c72dc7-c08a-423b-92aa-9df7c7bf4053.png",
+      socialLinks: [
+        { type: 'linkedin', url: 'https://www.linkedin.com/in/mimansha-mishra-9bab4432b' },
+        { type: 'instagram', url: 'https://www.instagram.com/_.mimansha._/' }
+      ] as SocialLink[]
+    },
+    {
+      name: "Aastha Prajapati",
+      department: "B.Pharma",
+      contact: "8382834830",
+      imageSrc: "/lovable-uploads/4ccc8e41-abb7-4924-a215-ba2142306223.png",
+      socialLinks: [
+        { type: 'instagram', url: 'https://www.instagram.com/_0335_.a/' }
+      ] as SocialLink[]
+    },
+    {
       name: "Aditya Dubey",
       department: "B.Tech (CSE-AIML)",
       contact: "8932056388",
@@ -75,14 +104,13 @@ const Coordinators: React.FC = () => {
     {
       name: "Swami Charan Singh",
       department: "MBA",
-      contact: "8318180062", // Added placeholder contact as it wasn't provided
+      contact: "8318180062",
       imageSrc: "/lovable-uploads/96b27789-e728-469f-8108-632611031cd5.png",
       socialLinks: [
-        { type: 'linkedin', url: 'https://www.instagram.com/swami_singh_smartest/' }, // Note: LinkedIn URL is set to Instagram as per your instructions
+        { type: 'linkedin', url: 'https://www.instagram.com/swami_singh_smartest/' },
         { type: 'instagram', url: 'https://www.instagram.com/swami_singh_smartest/' }
       ] as SocialLink[]
     }
-    
   ];
 
   return (
@@ -93,7 +121,7 @@ const Coordinators: React.FC = () => {
           <p className="text-gray-600 max-w-2xl mx-auto">Connect with our student organisers for any queries regarding the events or registration process.</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {coordinators.map((coordinator, index) => (
             <CoordinatorCard
               key={index}
